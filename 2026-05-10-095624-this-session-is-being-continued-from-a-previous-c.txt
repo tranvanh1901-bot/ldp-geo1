@@ -1,0 +1,2231 @@
+ ▐▛███▜▌   Claude Code v2.1.138
+▝▜█████▛▘  Sonnet 4.6 · Claude Pro
+  ▘▘ ▝▝    ~\Folder lưu claude
+
+  Opus 4.7 xhigh is now available! · /model to switch
+
+✻ Conversation compacted (ctrl+o for history)
+
+  ⎿  Referenced file LDP GEO\index.html
+
+  Searched for 2 patterns, read 1 file (ctrl+o to expand)
+
+● Now let me read the exact JS section for precise string matching.
+
+  Read 1 file (ctrl+o to expand)
+
+● Now I have everything. Making all three edits:
+
+● Update(LDP GEO\index.html)
+  ⎿  Added 1 line, removed 1 line
+      314  /* ── SECTION 15 ── */
+      315  #s15{padding:100px 0;background:var(--blue-light)}
+      316  #s15 .wrap{display:grid;grid-template-columns:1fr 0.5fr;gap:60
+           px;align-items:stretch}
+      317 -#s15 h2{color:var(--blue-dark);margin-bottom:10px;font-size:cl
+          -amp(16px,2vw,28px)}                                           
+      317 +#s15 h2{color:var(--blue-dark);margin-bottom:10px}            
+      318  .s15-sub{font-size:12px;color:var(--gray);line-height:1.7;marg
+           in-bottom:24px}
+      319  .exp-card{background:#fff;border-radius:16px;padding:22px 20px
+           ;
+      320    box-shadow:0 6px 28px rgba(0,0,0,.1)}
+
+● Update(LDP GEO\index.html)
+  ⎿  Added 1 line, removed 1 line
+      368  .s17-right .s17-vcard{clip-path:polygon(0 5%,100% 0,100% 100%,
+           0 95%)}
+      369  .s17-center-col{flex:1;padding:0 28px;display:flex;flex-direct
+           ion:column;
+      370    align-items:center;gap:18px}
+      371 -.s17-hero-img{border-radius:28px;overflow:hidden;width:100%;he
+          -ight:360px;                                                   
+      371 +.s17-hero-img{border-radius:28px;overflow:hidden;width:100%;ma
+          +x-width:520px;height:360px;                                   
+      372    position:relative;box-shadow:0 20px 60px rgba(0,0,0,.15)}
+      373  .s17-hero-img img{position:absolute;inset:0;width:100%;height:
+           100%;
+      374    object-fit:cover;opacity:0;transition:opacity .8s ease}
+
+● Update(LDP GEO\index.html)
+  ⎿  Added 2 lines, removed 2 lines
+      1293  
+      1294      function normalize(){
+      1295        var t = totalH();
+      1296 -      while(y < -t*2) y += t;                                
+      1297 -      while(y > t)    y -= t;                                
+      1296 +      while(y <= -t) y += t;                                 
+      1297 +      while(y > 0)   y -= t;                                 
+      1298      }
+      1299  
+      1300      function tick(){
+
+● Ba chỉnh sửa đã xong:
+
+  1. Section 15 heading — đã xóa font-size:clamp(16px,2vw,28px) khỏi #s15 h2,
+  giờ heading dùng global clamp(26px,3.5vw,42px) giống section 14.
+  2. Section 17 ảnh giữa — thêm max-width:520px vào .s17-hero-img để ảnh trung
+  tâm không bị kéo rộng quá khi màn hình lớn.
+  3. Section 17 carousel 2 bên — sửa logic normalize() từ while(y < -t*2) thành
+  while(y <= -t) / while(y > 0). Logic cũ chỉ loop trong khoảng −2T đến −T khiến
+   carousel dừng; logic mới giữ y trong khoảng (−T, 0] nên loop vô tận không bao
+   giờ dừng.
+
+✻ Worked for 6m 11s
+
+❯ giữ nguyên các section khác, chỉ thay đổi các section dưới đây theo yêu cầu   
+  chỉnh sửa chút section 14: heading "Đằng sau những thành tựu là               
+  quy trình được chuẩn hóa nghiêm ngặt" cần nhỏ hơn 1 size                      
+  section 17: ok rồi nhưng chỉ chỉnh thêm tí phần tag ảnh ở giữa cần có size    
+  bằng size ảnh                                                                 
+  Section 12: thay lại phần ảnh và phần nền, còn lại ok rồi                     
+
+● Để sửa đúng, tôi cần xem section 12 hiện tại trước.
+
+  Searched for 3 patterns, read 1 file (ctrl+o to expand)
+
+● Cần xem thư mục section 12 có ảnh nào mới để thay.
+
+  Listed 1 directory (ctrl+o to expand)
+
+● Thư mục có một ảnh mới ChatGPT Image 17_20_57 8 thg 5, 2026.png — xem nội dung
+   ảnh để hiểu dùng vào đâu.
+
+  Read 1 file (ctrl+o to expand)
+
+● Xem các ảnh hiện tại trong section 12 để hiểu đầy đủ.
+
+  Read 4 files (ctrl+o to expand)
+
+● Tôi thấy trong thư mục:
+  - Ảnh Decathlon mới (17_20_57 8 thg 5, 2026.png) — sẽ thay thế file (4).png
+  đang bị thiếu
+  - Background nền 12.png vẫn là file cũ (nền xanh gradient)
+
+  Cần hỏi về background: bạn muốn thay nền 12 bằng file mới nào? Hay muốn dùng
+  CSS gradient thay thế (bỏ ảnh nền đi)?
+
+✻ Baked for 1m 8s
+
+❯ nền section 12 cần thay đúng lại                                              
+
+● Bạn cần đặt file ảnh nền mới vào thư mục section 12/ rồi cho tôi biết tên file
+   là gì nhé. Tôi sẽ cập nhật ngay vào code.
+
+✻ Cooked for 13s
+
+❯ & 'c:\Users\ADMIN\Folder lưu claude\LDP GEO\section 12\nền 12.png'            
+
+  Read 1 file (ctrl+o to expand)
+● File nền 12.png đã được CSS dùng đúng rồi — nếu bạn vừa thay nội dung file thì
+   browser sẽ tự hiển thị ảnh mới.
+
+  Tôi tiến hành 3 thay đổi luôn:
+
+  1. Section 12 — sửa đường dẫn ảnh Decathlon (file (4).png bị thiếu → dùng file
+   mới ChatGPT Image 17_20_57 8 thg 5, 2026.png)
+
+  2. Section 14 — heading nhỏ hơn 1 size
+
+  3. Section 17 — info card dưới ảnh bằng width ảnh chính
+
+● Update(LDP GEO\index.html)
+  ⎿  Added 1 line, removed 1 line
+      944          </div>
+      945        </div>
+      946        <div class="case-card">
+      947 -        <img src="section 12/ChatGPT Image 23_50_05 7 thg 5, 2
+          -026 (4).png" class="case-img" alt="Decathlon">                
+      947 +        <img src="section 12/ChatGPT Image 17_20_57 8 thg 5, 2
+          +026.png" class="case-img" alt="Decathlon">                    
+      948          <div class="case-body">
+      949            <div class="case-co">Decathlon</div>
+      950            <div class="case-ind">Bán lẻ thể thao · O2O GEO Stra
+           tegy</div>
+
+● Update(LDP GEO\index.html)
+  ⎿  Added 1 line, removed 1 line
+      292  #s14{padding:100px 0;
+      293    background-image:url('section 14/nền 14.png');
+      294    background-size:cover;background-position:center}
+      295 -#s14 h2{color:var(--blue-dark);margin-bottom:8px}             
+      295 +#s14 h2{color:var(--blue-dark);margin-bottom:8px;font-size:cla
+          +mp(20px,2.6vw,32px)}                                          
+      296  .s14-sub{font-size:11px;color:var(--gray);line-height:1.6;marg
+           in-bottom:28px}
+      297  .acc-list{display:flex;flex-direction:column;gap:12px;max-widt
+           h:800px;
+      298    margin-left:auto;margin-right:0}
+
+● Update(LDP GEO\index.html)
+  ⎿  Added 1 line, removed 1 line
+      374    object-fit:cover;opacity:0;transition:opacity .8s ease}
+      375  .s17-hero-img img.s17-active{opacity:1}
+      376  .s17-info-card{background:#f0f5ff;border-radius:18px;padding:1
+           8px 26px;
+      377 -  width:100%;display:flex;align-items:center;gap:16px;        
+      377 +  width:100%;max-width:520px;display:flex;align-items:center;g
+          +ap:16px;                                                      
+      378    box-shadow:0 2px 12px rgba(26,86,219,.08)}
+      379  .s17-logo-circle{width:50px;height:50px;border-radius:50%;
+      380    background:linear-gradient(135deg,var(--blue),#0A1628);
+
+● Xong cả 3:
+
+  - Section 12: ảnh Decathlon giờ trỏ đúng vào file mới, ảnh nền dùng nền 12.png
+   (nếu bạn đã thay file trên máy thì mở browser sẽ thấy nền mới)
+  - Section 14: heading giảm từ clamp(26px,3.5vw,42px) xuống
+  clamp(20px,2.6vw,32px) — nhỏ hơn rõ 1 cấp
+  - Section 17: .s17-info-card thêm max-width:520px khớp với ảnh chính giữa
+
+✻ Baked for 59s
+
+❯ tất cả ok rồi chỉ chỉnh nốt 2 section sau, section 12: trong từng ô, cho thêm 
+   logo thương hiệu tương ứng vào trên cùng góc trái. section 17: 2 bên chạy    
+  ảnh cần chỉnh gần với ảnh chính giữa                                          
+
+● Xem có logo nào trong thư mục không, đồng thời check CSS section 17.
+
+  Searched for 1 pattern, listed 1 directory (ctrl+o to expand)
+
+● Không có file logo riêng. Tôi sẽ dùng CSS badge với màu thương hiệu cho từng
+  logo — đặt overlay góc trái trên ảnh. Đồng thời giảm padding .s17-center-col
+  để 2 cột bên sát lại.
+
+● Bash(ls "C:\Users\ADMIN\Folder lưu claude\LDP GEO" | findstr -i logo)
+  ⎿  Error: Exit code 1
+
+● Bash(Get-ChildItem -Recurse "C:\Users\ADMIN\Folder lưu claude\LDP GEO"
+      -Include "*.png","*.jpg","*.svg" | Where-Object { $_.Name -match
+      "logo|Logo" } | Select-Object…)
+  ⎿  Error: Exit code 127
+     /usr/bin/bash: line 1: Get-ChildItem: command not found
+     /usr/bin/bash: line 1: Where-Object: command not found
+     /usr/bin/bash: line 1: Select-Object: command not found
+
+● PowerShell(Get-ChildItem -Recurse "C:\Users\ADMIN\Folder lưu claude\LDP GEO"
+            -Include "*.png","*.jpg","*.svg" | Where-Object { $_.Name -match
+            "logo|Logo" } | Select-Object…)
+  ⎿  (No output)
+
+● Không có file logo — dùng CSS badge màu thương hiệu. Đọc HTML case cards để
+  viết edit chính xác.
+
+  Read 1 file (ctrl+o to expand)
+
+● Bây giờ thực hiện 2 thay đổi — CSS trước, HTML sau.
+
+● Update(LDP GEO\index.html)
+  ⎿  Added 4 lines, removed 1 line
+      266  #s12 .sec-hd p{color:rgba(255,255,255,.75)}
+      267  .case-grid{display:grid;grid-template-columns:repeat(2,1fr);ga
+           p:24px}
+      268  .case-card{background:rgba(255,255,255,.08);border:1px solid r
+           gba(255,255,255,.15);
+      269 -  border-radius:20px;overflow:hidden}                         
+      269 +  border-radius:20px;overflow:hidden;position:relative}       
+      270 +.case-logo{position:absolute;top:10px;left:10px;z-index:3;    
+      271 +  padding:4px 10px;border-radius:6px;font-size:11px;font-weigh
+          +t:800;                                                        
+      272 +  color:#fff;letter-spacing:.3px;white-space:nowrap}          
+      273  .case-img{width:100%;height:150px;object-fit:cover}
+      274  .case-body{padding:26px}
+      275  .case-co{font-size:18px;font-weight:800;color:#fff;margin-bott
+           om:3px}
+
+● Update(LDP GEO\index.html)
+  ⎿  Added 1 line, removed 1 line
+      369  .s17-vcard img{width:100%;height:165px;object-fit:cover;displa
+           y:block;pointer-events:none}
+      370  .s17-left .s17-vcard{clip-path:polygon(0 0,100% 5%,100% 95%,0 
+           100%)}
+      371  .s17-right .s17-vcard{clip-path:polygon(0 5%,100% 0,100% 100%,
+           0 95%)}
+      372 -.s17-center-col{flex:1;padding:0 28px;display:flex;flex-direct
+          -ion:column;                                                   
+      372 +.s17-center-col{flex:1;padding:0 10px;display:flex;flex-direct
+          +ion:column;                                                   
+      373    align-items:center;gap:18px}
+      374  .s17-hero-img{border-radius:28px;overflow:hidden;width:100%;ma
+           x-width:520px;height:360px;
+      375    position:relative;box-shadow:0 20px 60px rgba(0,0,0,.15)}
+
+● Giờ thêm logo badge vào từng card:
+
+● Update(LDP GEO\index.html)
+  ⎿  Added 1 line
+      934      </div>
+      935      <div class="case-grid">
+      936        <div class="case-card">
+      937 +        <div class="case-logo" style="background:#E30613">Viet
+          +tel</div>                                                     
+      938          <img src="section 12/ChatGPT Image 23_50_06 7 thg 5, 2
+           026 (5).png" class="case-img" alt="Viettel">
+      939          <div class="case-body">
+      940            <div class="case-co">Viettel Telecom</div>
+
+● Update(LDP GEO\index.html)
+  ⎿  Added 1 line
+      948          </div>
+      949        </div>
+      950        <div class="case-card">
+      951 +        <div class="case-logo" style="background:#0082C3">Deca
+          +thlon</div>                                                   
+      952          <img src="section 12/ChatGPT Image 17_20_57 8 thg 5, 2
+           026.png" class="case-img" alt="Decathlon">
+      953          <div class="case-body">
+      954            <div class="case-co">Decathlon</div>
+
+● Update(LDP GEO\index.html)
+  ⎿  Added 1 line
+      962          </div>
+      963        </div>
+      964        <div class="case-card">
+      965 +        <div class="case-logo" style="background:#00A94F">GHTK
+          +</div>                                                        
+      966          <img src="section 12/ChatGPT Image 23_50_05 7 thg 5, 2
+           026 (3).png" class="case-img" alt="GHTK">
+      967          <div class="case-body">
+      968            <div class="case-co">GHTK Logistics</div>
+
+● Update(LDP GEO\index.html)
+  ⎿  Added 1 line
+      976          </div>
+      977        </div>
+      978        <div class="case-card">
+      979 +        <div class="case-logo" style="background:#0033A0">Viet
+          +nam Airlines</div>                                            
+      980          <img src="section 12/ChatGPT Image 23_50_04 7 thg 5, 2
+           026 (2).png" class="case-img" alt="Vietnam Airlines">
+      981          <div class="case-body">
+      982            <div class="case-co">Vietnam Airlines</div>
+
+● Xong:
+
+  - Section 12: Mỗi card có logo badge màu thương hiệu góc trên-trái — Viettel
+  đỏ, Decathlon xanh dương, GHTK xanh lá, Vietnam Airlines navy
+  - Section 17: Giảm padding .s17-center-col từ 28px xuống 10px, 2 cột ảnh bên
+  sát vào ảnh chính giữa hơn
+✻ Brewed for 1m 38s
+
+❯ tôi muốn có trang quản lý landipage này                                       
+
+● User answered Claude's questions:
+  ⎿  · Trang quản lý cần làm được gì? → Chỉnh sửa nội dung, Thay ảnh / nền, Quản
+      lý lead / form
+
+● Trước khi build, cần xem section 18 có form đăng ký chưa.
+
+  Searched for 1 pattern, read 1 file (ctrl+o to expand)
+
+● Tôi sẽ xây dựng:
+  - admin.html — trang quản lý với 3 tab: Leads / Nội dung / Ảnh
+  - Sửa index.html — form section 18 tự động lưu lead vào localStorage, apply
+  nội dung đã chỉnh
+
+  Đọc phần cuối script của index.html trước.
+
+  Read 1 file (ctrl+o to expand)
+
+● Tôi có đủ thông tin. Bây giờ sẽ làm 3 việc song song:
+  1. Sửa form index.html + thêm JS override loader
+  2. Tạo admin.html
+
+● Update(LDP GEO\index.html)
+  ⎿  Added 5 lines
+      1241            <div class="fgrp"><label>Bạn cần trợ giúp điều gì?<
+            /label><textarea placeholder="Mô tả nhu cầu của bạn..."></tex
+            tarea></div>
+      1242            <button type="submit" class="form-btn">Gửi</button>
+      1243          </form>
+      1244 +        <div id="form-success" style="display:none;text-align
+           +:center;padding:48px 20px">                                  
+      1245 +          <div style="font-size:40px;margin-bottom:12px">✓</d
+           +iv>                                                          
+      1246 +          <div style="font-size:17px;font-weight:800;color:#1
+           +0b981;margin-bottom:8px">Gửi thành công!</div>               
+      1247 +          <div style="font-size:13px;color:#6B7280">Chúng tôi
+           + sẽ liên hệ trong vòng 24 giờ làm việc.</div>                
+      1248 +        </div>                                               
+      1249        </div>
+      1250      </div>
+      1251    </div>
+
+● Update(LDP GEO\index.html)
+  ⎿  Added 1 line, removed 1 line
+      1228          </a>
+      1229        </div>
+      1230        <div class="form-box">
+      1231 -        <form>                                               
+      1231 +        <form id="geo-form">                                 
+      1232            <div class="form-row">
+      1233              <div class="fgrp"><label>Họ và tên</label><input 
+            type="text" placeholder="Nguyễn Văn A"></div>
+      1234              <div class="fgrp"><label>Tên doanh nghiệp</label>
+            <input type="text" placeholder="Công ty ABC"></div>
+
+● Update(LDP GEO\index.html)
+  ⎿  Added 1 line
+      1255  <footer>
+      1256    <div class="f-logo">SEONGON</div>
+      1257    <p>© 2026 SEONGON. Google Marketing Agency TOP 1 Việt Nam.<
+            /p>
+      1258 +  <p style="margin-top:10px"><a href="admin.html" style="font
+           +-size:11px;color:rgba(255,255,255,.25);text-decoration:none">
+           +Admin</a></p>                                                
+      1259  </footer>
+      1260  
+      1261  <script>
+
+● Update(LDP GEO\index.html)
+  ⎿  Added 64 lines
+      1344      document.addEventListener('DOMContentLoaded', init);
+      1345    } else { init(); }
+      1346  })();
+      1347 +                                                             
+      1348 +// ── Admin: content/image overrides + lead capture ──       
+      1349 +(function(){                                                 
+      1350 +  var contentMap = {                                         
+      1351 +    's1_h1':   '#s1 h1',                                     
+      1352 +    's1_desc': '#s1 .hero-desc',                             
+      1353 +    's18_h2':  '#s18 h2',                                    
+      1354 +    's18_p':   '#s18 .s18-p'                                 
+      1355 +  };                                                         
+      1356 +  var imgMap = {                                             
+      1357 +    'img_s1_bg':         {type:'bg',  sel:'#s1'},            
+      1358 +    'img_s12_viettel':   {type:'img', sel:'#s12 .case-card:nt
+           +h-child(1) .case-img'},                                      
+      1359 +    'img_s12_decathlon': {type:'img', sel:'#s12 .case-card:nt
+           +h-child(2) .case-img'},                                      
+      1360 +    'img_s12_ghtk':      {type:'img', sel:'#s12 .case-card:nt
+           +h-child(3) .case-img'},                                      
+      1361 +    'img_s12_vna':       {type:'img', sel:'#s12 .case-card:nt
+           +h-child(4) .case-img'},                                      
+      1362 +    'img_s17_hero':      {type:'img', sel:'.s17-hero-img img.
+           +s17-active'}                                                 
+      1363 +  };                                                         
+      1364 +  function applyOverrides(){                                 
+      1365 +    var ct = JSON.parse(localStorage.getItem('seongon_content
+           +')||'{}');                                                   
+      1366 +    Object.keys(ct).forEach(function(k){                     
+      1367 +      var s=contentMap[k]; if(!s) return;                    
+      1368 +      var el=document.querySelector(s); if(el) el.innerHTML=c
+           +t[k];                                                        
+      1369 +    });                                                      
+      1370 +    if(ct['s18_phone']){                                     
+      1371 +      var ph=document.querySelector('#s18 a[href^="tel"]');  
+      1372 +      if(ph){ ph.href='tel:'+ct['s18_phone'].replace(/\D/g,''
+           +);                                                           
+      1373 +        var t=ph.lastChild; if(t&&t.nodeType===3) t.textConte
+           +nt=ct['s18_phone']; }                                        
+      1374 +    }                                                        
+      1375 +    var im=JSON.parse(localStorage.getItem('seongon_images')|
+           +|'{}');                                                      
+      1376 +    Object.keys(im).forEach(function(k){                     
+      1377 +      var m=imgMap[k]; if(!m) return;                        
+      1378 +      var el=document.querySelector(m.sel); if(!el) return;  
+      1379 +      if(m.type==='bg') el.style.backgroundImage="url('"+im[k
+           +]+"')";                                                      
+      1380 +      else el.src=im[k];                                     
+      1381 +    });                                                      
+      1382 +  }                                                          
+      1383 +  function initForm(){                                       
+      1384 +    var form=document.getElementById('geo-form');            
+      1385 +    var succ=document.getElementById('form-success');        
+      1386 +    if(!form) return;                                        
+      1387 +    form.addEventListener('submit',function(e){              
+      1388 +      e.preventDefault();                                    
+      1389 +      var g=function(sel){var el=form.querySelector(sel);retu
+           +rn el?el.value.trim():'';};                                  
+      1390 +      var lead={                                             
+      1391 +        id:Date.now(),                                       
+      1392 +        time:new Date().toLocaleString('vi-VN'),             
+      1393 +        name:   g('[placeholder="Nguyễn Văn A"]'),           
+      1394 +        company:g('[placeholder="Công ty ABC"]'),            
+      1395 +        phone:  g('[type="tel"]'),                           
+      1396 +        email:  g('[type="email"]'),                         
+      1397 +        website:g('[type="url"]'),                           
+      1398 +        message:g('textarea')                                
+      1399 +      };                                                     
+      1400 +      var arr=JSON.parse(localStorage.getItem('seongon_leads'
+           +)||'[]');                                                    
+      1401 +      arr.push(lead);                                        
+      1402 +      localStorage.setItem('seongon_leads',JSON.stringify(arr
+           +));                                                          
+      1403 +      form.style.display='none';                             
+      1404 +      if(succ) succ.style.display='block';                   
+      1405 +    });                                                      
+      1406 +  }                                                          
+      1407 +  if(document.readyState==='loading'){                       
+      1408 +    document.addEventListener('DOMContentLoaded',function(){a
+           +pplyOverrides();initForm();});                               
+      1409 +  } else { applyOverrides(); initForm(); }                   
+      1410 +})();                                                        
+      1411  </script>
+      1412  </body>
+      1413  </html>
+
+● Bây giờ tạo admin.html:
+
+● Write(LDP GEO\admin.html)
+  ⎿  Wrote 492 lines to LDP GEO\admin.html
+       2 <html lang="vi">
+       3 <head>
+       4 <meta charset="UTF-8">
+       5 <meta name="viewport" content="width=device-width,initial-scale=
+         1">
+       7 <style>Admin – SEONGON Landing Page</title>
+       8 *{box-sizing:border-box;margin:0;padding:0}
+       9 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Rob
+         oto,sans-serif;
+      10   background:#f0f4f8;color:#1a202c;min-height:100vh}
+     … +600 lines (ctrl+o to expand)
+
+● Xong. Đây là những gì đã được tạo:
+
+  ---
+  admin.html — mở file này trong browser để quản lý, mật khẩu mặc định:
+  seongon@admin
+
+  Tab: Leads
+  Chức năng: Xem toàn bộ form submissions, xoá từng lead hoặc xoá hết, xuất CSV
+  ────────────────────────────────────────
+  Tab: Nội dung
+  Chức năng: Sửa tiêu đề H1, mô tả hero, CTA section 18, số điện thoại → lưu vào
+
+    localStorage, tự áp dụng khi reload trang
+  ────────────────────────────────────────
+  Tab: Ảnh
+  Chức năng: Đổi đường dẫn ảnh nền S1, 4 ảnh case study S12, ảnh hero S17
+
+  Thay đổi trong index.html:
+  - Form section 18 (id="geo-form") tự lưu lead vào localStorage khi khách gửi,
+  hiện thông báo thành công ngay trên form
+  - Link Admin nhỏ ở cuối footer để truy cập nhanh
+  - JS tự load content/image overrides từ localStorage khi trang khởi động
+
+✻ Sautéed for 5m 21s
+
+❯ giờ tôi cần vào đường link nào để xem                                         
+
+● Vì đây là file HTML local, bạn chỉ cần mở trực tiếp bằng trình duyệt:
+
+  Landing page:
+  C:\Users\ADMIN\Folder lưu claude\LDP GEO\index.html
+
+  Trang admin:
+  C:\Users\ADMIN\Folder lưu claude\LDP GEO\admin.html
+
+  Cách mở nhanh nhất: Vào thư mục LDP GEO, double-click vào file index.html hoặc
+   admin.html — trình duyệt sẽ tự mở.
+
+  Hoặc kéo file thả thẳng vào cửa sổ Chrome/Edge cũng được.
+
+  ▎ Lưu ý: Leads chỉ lưu vào localStorage của browser đó. Nếu bạn mở bằng Chrome
+  ▎  thì leads chỉ thấy được khi vào admin bằng Chrome, không thấy trên Firefox.
+
+✻ Brewed for 8s
+
+❯ trang andmin đó cần sửa được hết các section cơ                               
+
+● Cần đọc toàn bộ nội dung 18 section để map hết các field có thể chỉnh.
+
+  Read 1 file (ctrl+o to expand)
+
+● Explore(Extract all section headings and key content from landing page)
+  ⎿  Done (4 tool uses · 58.7k tokens · 45s)
+  (ctrl+o to expand)
+
+● Cần đọc thêm để lấy đúng CSS selectors cho section 7, 8, 9.
+
+  Read 1 file (ctrl+o to expand)
+● Cần check thêm CSS nền các section còn lại.
+
+  Searched for 2 patterns (ctrl+o to expand)
+
+● Giờ tôi có đủ thông tin. Viết lại toàn bộ admin.html với đầy đủ 18 sections và
+   cập nhật contentMap trong index.html.
+
+● Write(LDP GEO\admin.html)
+  ⎿  Added 313 lines, removed 282 lines
+       20    font-size:14px;outline:none;margin-bottom:12px;transition:.2
+           s;font-family:inherit}
+       21  .login-inp:focus{border-color:#1A56DB}
+       22  .login-btn{width:100%;padding:13px;background:#1A56DB;color:#f
+           ff;border:none;
+       23 -  border-radius:10px;font-size:14px;font-weight:700;cursor:poi
+          -nter;transition:.2s;letter-spacing:.3px}                      
+       23 +  border-radius:10px;font-size:14px;font-weight:700;cursor:poi
+          +nter;font-family:inherit}                                     
+       24  .login-btn:hover{background:#1446b5}
+       25  .login-err{font-size:12px;color:#ef4444;margin-top:10px;min-he
+           ight:16px}
+       26 +.pw-hint{font-size:11px;color:#9ca3af;margin-top:16px;padding-
+          +top:14px;border-top:1px solid #f0f0f0}                        
+       27  
+       28  /* ── App ── */
+       29  #app{display:none;min-height:100vh;flex-direction:column}
+       29 -                                                              
+       30  header{background:#fff;border-bottom:1px solid #e5e7eb;padding
+           :0 32px;
+       31    display:flex;align-items:center;justify-content:space-betwee
+           n;height:60px;
+       32    position:sticky;top:0;z-index:50;box-shadow:0 1px 8px rgba(0
+           ,0,0,.05)}
+       33 -.hd-left{display:flex;align-items:center;gap:12px}            
+       33 +.hd-left{display:flex;align-items:center;gap:10px}            
+       34  .hd-logo{font-size:17px;font-weight:900;color:#1A56DB;letter-s
+           pacing:.5px}
+       35  .hd-badge{font-size:10px;font-weight:600;background:#EEF4FF;co
+           lor:#1A56DB;
+       36 -  padding:3px 8px;border-radius:20px;letter-spacing:.3px}     
+       37 -.hd-right{display:flex;align-items:center;gap:12px}           
+       36 +  padding:3px 8px;border-radius:20px}                         
+       37 +.hd-right{display:flex;align-items:center;gap:10px}           
+       38  .btn-preview{font-size:13px;color:#1A56DB;text-decoration:none
+           ;font-weight:600;
+       39    padding:7px 14px;border-radius:8px;border:1.5px solid #dce8f
+           f;transition:.2s}
+       40  .btn-preview:hover{background:#EEF4FF}
+       41  .btn-logout{padding:7px 14px;border:1.5px solid #e5e7eb;border
+           -radius:8px;
+       42 -  background:#fff;font-size:13px;cursor:pointer;color:#6B7280;
+          -font-family:inherit;transition:.2s}                           
+       42 +  background:#fff;font-size:13px;cursor:pointer;color:#6B7280;
+          +font-family:inherit}                                          
+       43  .btn-logout:hover{border-color:#ef4444;color:#ef4444}
+       44  
+       45  /* ── Stats ── */
+       46 -.stats-bar{background:#fff;border-bottom:1px solid #e5e7eb;pad
+          -ding:14px 32px;                                               
+       47 -  display:flex;gap:40px;align-items:center}                   
+       46 +.stats-bar{background:#fff;border-bottom:1px solid #e5e7eb;pad
+          +ding:14px 32px;display:flex;gap:40px}                         
+       47  .stat{display:flex;flex-direction:column;gap:2px}
+       48  .stat-n{font-size:22px;font-weight:900;color:#1A56DB}
+       50 -.stat-l{font-size:11px;color:#9ca3af;font-weight:500}         
+       49 +.stat-l{font-size:11px;color:#9ca3af}                         
+       50  
+       51  /* ── Tabs ── */
+       52  .tabs{background:#fff;border-bottom:1px solid #e5e7eb;padding:
+           0 32px;display:flex}
+       54 -.tab-btn{padding:14px 22px;border:none;background:none;font-si
+          -ze:14px;font-weight:600;                                      
+       53 +.tab-btn{padding:14px 20px;border:none;background:none;font-si
+          +ze:13px;font-weight:600;                                      
+       54    color:#6B7280;cursor:pointer;border-bottom:2px solid transpa
+           rent;position:relative;
+       56 -  top:1px;transition:.15s;font-family:inherit}                
+       55 +  top:1px;font-family:inherit}                                
+       56  .tab-btn.active{color:#1A56DB;border-bottom-color:#1A56DB}
+       58 -.tab-btn:hover:not(.active){color:#374151}                    
+       59 -.tab-count{font-size:11px;font-weight:700;background:#EEF4FF;c
+          -olor:#1A56DB;                                                 
+       60 -  padding:1px 6px;border-radius:10px;margin-left:6px}         
+       57 +.tab-count{font-size:10px;font-weight:700;background:#EEF4FF;c
+          +olor:#1A56DB;                                                 
+       58 +  padding:1px 6px;border-radius:10px;margin-left:5px}         
+       59  
+       62 -/* ── Content ── */                                           
+       63 -.content{padding:28px 32px;flex:1}                            
+       60 +/* ── Content area ── */                                      
+       61 +.content{padding:24px 32px;flex:1}                            
+       62  .tab-panel{display:none}
+       63  .tab-panel.active{display:block}
+       64 +.panel-hd{display:flex;align-items:flex-start;justify-content:
+          +space-between;margin-bottom:20px}                             
+       65 +.panel-title{font-size:16px;font-weight:800}                  
+       66 +.panel-desc{font-size:12px;color:#9ca3af;margin-top:3px}      
+       67 +.panel-actions{display:flex;gap:8px;flex-shrink:0}            
+       68  
+       67 -/* ── Panel header ── */                                      
+       68 -.panel-hd{display:flex;align-items:center;justify-content:spac
+          -e-between;margin-bottom:20px}                                 
+       69 -.panel-title{font-size:16px;font-weight:800;color:#1a202c}    
+       70 -.panel-desc{font-size:12px;color:#9ca3af;margin-top:2px}      
+       69 +/* ── Buttons ── */                                           
+       70 +.btn-primary{padding:9px 18px;background:#1A56DB;color:#fff;bo
+          +rder:none;border-radius:8px;                                  
+       71 +  font-size:13px;font-weight:600;cursor:pointer;font-family:in
+          +herit}                                                        
+       72 +.btn-primary:hover{background:#1446b5}                        
+       73 +.btn-danger{padding:9px 18px;background:#fff;color:#ef4444;bor
+          +der:1.5px solid #fecaca;                                      
+       74 +  border-radius:8px;font-size:13px;font-weight:600;cursor:poin
+          +ter;font-family:inherit}                                      
+       75 +.btn-danger:hover{background:#fff5f5}                         
+       76 +.btn-secondary{padding:9px 18px;background:#fff;color:#374151;
+          +border:1.5px solid #e5e7eb;                                   
+       77 +  border-radius:8px;font-size:13px;font-weight:600;cursor:poin
+          +ter;font-family:inherit}                                      
+       78 +.btn-secondary:hover{border-color:#374151}                    
+       79  
+       72 -/* ── Leads ── */                                             
+       73 -.btn-export{padding:9px 18px;background:#1A56DB;color:#fff;bor
+          -der:none;                                                     
+       74 -  border-radius:8px;font-size:13px;font-weight:600;cursor:poin
+          -ter;transition:.2s;font-family:inherit}                       
+       75 -.btn-export:hover{background:#1446b5}                         
+       76 -.btn-del-all{padding:9px 18px;background:#fff;color:#ef4444;bo
+          -rder:1.5px solid #fecaca;                                     
+       77 -  border-radius:8px;font-size:13px;font-weight:600;cursor:poin
+          -ter;font-family:inherit;transition:.2s}                       
+       78 -.btn-del-all:hover{background:#fff5f5}                        
+       79 -.lead-actions{display:flex;gap:10px}                          
+       80 -                                                              
+       81 -.table-wrap{background:#fff;border-radius:14px;overflow:hidden
+          -;                                                             
+       82 -  box-shadow:0 2px 12px rgba(0,0,0,.06)}                      
+       80 +/* ── Leads table ── */                                       
+       81 +.table-wrap{background:#fff;border-radius:14px;overflow:hidden
+          +;box-shadow:0 2px 12px rgba(0,0,0,.06)}                       
+       82  table{width:100%;border-collapse:collapse}
+       84 -thead th{background:#f8fafc;padding:11px 16px;text-align:left;
+          -font-size:11px;                                               
+       85 -  font-weight:700;color:#9ca3af;text-transform:uppercase;lette
+          -r-spacing:.6px;                                               
+       83 +thead th{background:#f8fafc;padding:10px 14px;text-align:left;
+          +font-size:11px;                                               
+       84 +  font-weight:700;color:#9ca3af;text-transform:uppercase;lette
+          +r-spacing:.5px;                                               
+       85    border-bottom:1px solid #f0f0f0}
+       86  tbody tr{border-bottom:1px solid #f7f7f7;transition:.15s}
+       87  tbody tr:last-child{border-bottom:none}
+       88  tbody tr:hover{background:#f8faff}
+       90 -tbody td{padding:12px 16px;font-size:13px;color:#374151;vertic
+          -al-align:top}                                                 
+       91 -.td-time{font-size:11px;color:#9ca3af;white-space:nowrap;min-w
+          -idth:120px}                                                   
+       89 +tbody td{padding:11px 14px;font-size:13px;color:#374151;vertic
+          +al-align:top}                                                 
+       90 +.td-time{font-size:11px;color:#9ca3af;white-space:nowrap}     
+       91  .td-name{font-weight:700;color:#1a202c}
+       93 -.td-co{font-size:12px;color:#6B7280;margin-top:2px}           
+       94 -.td-msg{max-width:180px;white-space:nowrap;overflow:hidden;tex
+          -t-overflow:ellipsis;color:#6B7280}                            
+       95 -.td-del{text-align:center}                                    
+       96 -.btn-del{width:28px;height:28px;border:none;background:none;co
+          -lor:#d1d5db;                                                  
+       97 -  cursor:pointer;font-size:16px;border-radius:6px;transition:.
+          -15s;line-height:1}                                            
+       92 +.td-co{font-size:12px;color:#6B7280;margin-top:1px}           
+       93 +.td-msg{max-width:160px;white-space:nowrap;overflow:hidden;tex
+          +t-overflow:ellipsis;color:#6B7280}                            
+       94 +.btn-del{width:26px;height:26px;border:none;background:none;co
+          +lor:#d1d5db;                                                  
+       95 +  cursor:pointer;font-size:15px;border-radius:5px;line-height:
+          +1}                                                            
+       96  .btn-del:hover{background:#fff5f5;color:#ef4444}
+       99 -.empty-state{text-align:center;padding:60px 20px;color:#9ca3af
+          -}                                                             
+      100 -.empty-ico{font-size:36px;margin-bottom:12px}                 
+      101 -.empty-txt{font-size:14px}                                    
+       97 +.empty-state{text-align:center;padding:56px 20px;color:#9ca3af
+          +}                                                             
+       98 +.empty-ico{font-size:32px;margin-bottom:10px}                 
+       99  
+      103 -/* ── Content fields ── */                                    
+      104 -.field-grid{display:flex;flex-direction:column;gap:14px;max-wi
+          -dth:800px}                                                    
+      105 -.field-card{background:#fff;border-radius:12px;padding:20px 22
+          -px;                                                           
+      106 -  box-shadow:0 2px 8px rgba(0,0,0,.05)}                       
+      107 -.field-sect{font-size:10px;font-weight:700;color:#1A56DB;text-
+          -transform:uppercase;                                          
+      108 -  letter-spacing:.6px;margin-bottom:4px}                      
+      109 -.field-label{font-size:13px;font-weight:700;color:#374151;marg
+          -in-bottom:10px}                                               
+      110 -.field-inp{width:100%;padding:10px 14px;border:1.5px solid #e5
+          -e7eb;border-radius:8px;                                       
+      111 -  font-size:14px;font-family:inherit;outline:none;resize:verti
+          -cal;line-height:1.6;transition:.2s}                           
+      112 -.field-inp:focus{border-color:#1A56DB;box-shadow:0 0 0 3px rgb
+          -a(26,86,219,.08)}                                             
+      113 -.field-actions{display:flex;justify-content:flex-end;gap:10px;
+          -margin-top:20px;                                              
+      114 -  max-width:800px}                                            
+      115 -.btn-save{padding:10px 24px;background:#1A56DB;color:#fff;bord
+          -er:none;                                                      
+      116 -  border-radius:8px;font-size:14px;font-weight:700;cursor:poin
+          -ter;font-family:inherit;transition:.2s}                       
+      117 -.btn-save:hover{background:#1446b5}                           
+      118 -.btn-reset{padding:10px 24px;background:#fff;color:#6B7280;bor
+          -der:1.5px solid #e5e7eb;                                      
+      119 -  border-radius:8px;font-size:14px;font-weight:600;cursor:poin
+          -ter;font-family:inherit;transition:.2s}                       
+      120 -.btn-reset:hover{border-color:#374151;color:#374151}          
+      100 +/* ── Content editor ── */                                    
+      101 +.section-group{margin-bottom:28px}                            
+      102 +.section-group-title{font-size:11px;font-weight:800;color:#1A5
+          +6DB;text-transform:uppercase;                                 
+      103 +  letter-spacing:.8px;margin-bottom:12px;display:flex;align-it
+          +ems:center;gap:8px}                                           
+      104 +.section-group-title::after{content:'';flex:1;height:1px;backg
+          +round:#dce8ff}                                                
+      105 +.field-grid{display:flex;flex-direction:column;gap:10px}      
+      106 +.field-row{background:#fff;border-radius:10px;padding:16px 18p
+          +x;                                                            
+      107 +  box-shadow:0 1px 6px rgba(0,0,0,.05);display:grid;          
+      108 +  grid-template-columns:180px 1fr;gap:16px;align-items:start} 
+      109 +.field-label{font-size:12px;font-weight:700;color:#374151;padd
+          +ing-top:10px;line-height:1.4}                                 
+      110 +.field-label span{display:block;font-size:11px;font-weight:400
+          +;color:#9ca3af;margin-top:3px}                                
+      111 +.field-inp{width:100%;padding:9px 12px;border:1.5px solid #e5e
+          +7eb;border-radius:8px;                                        
+      112 +  font-size:13px;font-family:inherit;outline:none;resize:verti
+          +cal;line-height:1.6;transition:.2s}                           
+      113 +.field-inp:focus{border-color:#1A56DB;box-shadow:0 0 0 3px rgb
+          +a(26,86,219,.07)}                                             
+      114 +.content-actions{display:flex;justify-content:flex-end;gap:10p
+          +x;margin-top:16px;                                            
+      115 +  padding-top:16px;border-top:1px solid #e5e7eb}              
+      116  
+      122 -/* ── Images ── */                                            
+      123 -.img-grid{display:grid;grid-template-columns:repeat(auto-fill,
+          -minmax(260px,1fr));gap:16px}                                  
+      124 -.img-card{background:#fff;border-radius:12px;overflow:hidden; 
+      125 -  box-shadow:0 2px 8px rgba(0,0,0,.05)}                       
+      126 -.img-preview-wrap{width:100%;height:130px;background:#f0f4f8;d
+          -isplay:flex;                                                  
+      127 -  align-items:center;justify-content:center;overflow:hidden}  
+      128 -.img-preview{width:100%;height:100%;object-fit:cover;display:b
+          -lock}                                                         
+      129 -.img-card-body{padding:14px 16px}                             
+      130 -.img-sect{font-size:10px;font-weight:700;color:#1A56DB;text-tr
+          -ansform:uppercase;                                            
+      131 -  letter-spacing:.5px;margin-bottom:3px}                      
+      132 -.img-label{font-size:12px;font-weight:700;color:#374151;margin
+          --bottom:8px}                                                  
+      133 -.img-cur{font-size:11px;color:#9ca3af;margin-bottom:8px;word-b
+          -reak:break-all;                                               
+      134 -  line-height:1.4;padding:6px 8px;background:#f8fafc;border-ra
+          -dius:6px}                                                     
+      135 -.img-inp{width:100%;padding:8px 10px;border:1.5px solid #e5e7e
+          -b;border-radius:7px;                                          
+      136 -  font-size:12px;outline:none;margin-bottom:8px;font-family:in
+          -herit;transition:.2s}                                         
+      117 +/* ── Image manager ── */                                     
+      118 +.img-section-title{font-size:11px;font-weight:800;color:#1A56D
+          +B;text-transform:uppercase;                                   
+      119 +  letter-spacing:.8px;margin:24px 0 12px;display:flex;align-it
+          +ems:center;gap:8px}                                           
+      120 +.img-section-title:first-child{margin-top:0}                  
+      121 +.img-section-title::after{content:'';flex:1;height:1px;backgro
+          +und:#dce8ff}                                                  
+      122 +.img-grid{display:grid;grid-template-columns:repeat(auto-fill,
+          +minmax(240px,1fr));gap:14px;margin-bottom:0}                  
+      123 +.img-card{background:#fff;border-radius:12px;overflow:hidden;b
+          +ox-shadow:0 1px 6px rgba(0,0,0,.06)}                          
+      124 +.img-thumb{width:100%;height:110px;object-fit:cover;background
+          +:#f0f4f8;display:block}                                       
+      125 +.img-body{padding:12px 14px}                                  
+      126 +.img-label{font-size:12px;font-weight:700;color:#374151;margin
+          +-bottom:6px}                                                  
+      127 +.img-cur{font-size:10px;color:#9ca3af;margin-bottom:8px;word-b
+          +reak:break-all;line-height:1.4}                               
+      128 +.img-inp{width:100%;padding:7px 10px;border:1.5px solid #e5e7e
+          +b;border-radius:7px;                                          
+      129 +  font-size:12px;outline:none;margin-bottom:6px;font-family:in
+          +herit}                                                        
+      130  .img-inp:focus{border-color:#1A56DB}
+      138 -.btn-apply{width:100%;padding:8px;background:#1A56DB;color:#ff
+          -f;border:none;                                                
+      139 -  border-radius:7px;font-size:12px;font-weight:600;cursor:poin
+          -ter;font-family:inherit;transition:.2s}                       
+      140 -.btn-apply:hover{background:#1446b5}                          
+      141 -.img-applied{font-size:11px;color:#10b981;text-align:center;ma
+          -rgin-top:6px;                                                 
+      142 -  display:none;font-weight:600}                               
+      131 +.btn-img-apply{width:100%;padding:7px;background:#1A56DB;color
+          +:#fff;border:none;                                            
+      132 +  border-radius:6px;font-size:12px;font-weight:600;cursor:poin
+          +ter;font-family:inherit}                                      
+      133 +.img-ok{font-size:11px;color:#10b981;text-align:center;margin-
+          +top:5px;display:none;font-weight:600}                         
+      134  
+      135  /* ── Toast ── */
+      136  .toast{position:fixed;bottom:28px;left:50%;transform:translate
+           X(-50%);
+      146 -  background:#1a202c;color:#fff;padding:12px 22px;border-radiu
+          -s:10px;                                                       
+      137 +  background:#1a202c;color:#fff;padding:11px 22px;border-radiu
+          +s:10px;                                                       
+      138    font-size:13px;font-weight:600;opacity:0;transition:opacity 
+           .25s;pointer-events:none;z-index:999}
+      139  .toast.show{opacity:1}
+      149 -                                                              
+      150 -/* ── Password hint ── */                                     
+      151 -.pw-hint{font-size:11px;color:#9ca3af;margin-top:16px;padding-
+          -top:16px;                                                     
+      152 -  border-top:1px solid #f0f0f0}                               
+      140  </style>
+      141  </head>
+      142  <body>
+      143  
+      157 -<!-- ── Login ── -->                                          
+      144  <div id="login">
+      145    <div class="login-card">
+      146      <div class="login-logo">SEONGON</div>
+      161 -    <div class="login-tagline">Landing Page Admin</div>       
+      162 -    <input type="password" class="login-inp" id="pw-inp" place
+          -holder="Nhập mật khẩu admin..."                               
+      147 +    <div class="login-tagline">Admin Dashboard</div>          
+      148 +    <input type="password" class="login-inp" id="pw-inp" place
+          +holder="Nhập mật khẩu..."                                     
+      149        onkeydown="if(event.key==='Enter')doLogin()">
+      150      <button class="login-btn" onclick="doLogin()">Đăng nhập</b
+           utton>
+      151      <div class="login-err" id="login-err"></div>
+     ...
+      153    </div>
+      154  </div>
+      155  
+      170 -<!-- ── App ── -->                                            
+      156  <div id="app" style="display:flex;flex-direction:column">
+      172 -                                                              
+      157    <header>
+      158      <div class="hd-left">
+      159        <div class="hd-logo">SEONGON Admin</div>
+     ...
+      166    </header>
+      167  
+      168    <div class="stats-bar">
+      185 -    <div class="stat">                                        
+      186 -      <div class="stat-n" id="stat-total">0</div>             
+      187 -      <div class="stat-l">Tổng leads</div>                    
+      188 -    </div>                                                    
+      189 -    <div class="stat">                                        
+      190 -      <div class="stat-n" id="stat-today">0</div>             
+      191 -      <div class="stat-l">Hôm nay</div>                       
+      192 -    </div>                                                    
+      193 -    <div class="stat">                                        
+      194 -      <div class="stat-n" id="stat-last">—</div>              
+      195 -      <div class="stat-l">Lead gần nhất</div>                 
+      196 -    </div>                                                    
+      169 +    <div class="stat"><div class="stat-n" id="stat-total">0</d
+          +iv><div class="stat-l">Tổng leads</div></div>                 
+      170 +    <div class="stat"><div class="stat-n" id="stat-today">0</d
+          +iv><div class="stat-l">Hôm nay</div></div>                    
+      171 +    <div class="stat"><div class="stat-n" id="stat-last">—</di
+          +v><div class="stat-l">Lead gần nhất</div></div>               
+      172    </div>
+      173  
+      174    <div class="tabs">
+      175      <button class="tab-btn active" id="tbtn-leads" onclick="sh
+           owTab('leads')">
+      176        Leads <span class="tab-count" id="tc-leads">0</span>
+      177      </button>
+      203 -    <button class="tab-btn" id="tbtn-content" onclick="showTab
+          -('content')">Nội dung</button>                                
+      204 -    <button class="tab-btn" id="tbtn-images" onclick="showTab(
+          -'images')">Ảnh</button>                                       
+      178 +    <button class="tab-btn" id="tbtn-content" onclick="showTab
+          +('content')">Nội dung (18 sections)</button>                  
+      179 +    <button class="tab-btn" id="tbtn-images" onclick="showTab(
+          +'images')">Ảnh & Nền</button>                                 
+      180    </div>
+      181  
+      182    <div class="content">
+      183  
+      209 -    <!-- Tab Leads -->                                        
+      184 +    <!-- ── Leads ── -->                                      
+      185      <div class="tab-panel active" id="tab-leads">
+      186        <div class="panel-hd">
+      212 -        <div>                                                 
+      213 -          <div class="panel-title">Danh sách Leads</div>      
+      214 -          <div class="panel-desc">Dữ liệu từ form Section 18 c
+          -ủa landing page</div>                                         
+      187 +        <div><div class="panel-title">Danh sách Leads</div><di
+          +v class="panel-desc">Form đăng ký tư vấn từ landing page</div>
+          +</div>                                                        
+      188 +        <div class="panel-actions">                           
+      189 +          <button class="btn-danger" onclick="deleteAllLeads()
+          +">Xoá tất cả</button>                                         
+      190 +          <button class="btn-primary" onclick="exportCSV()">Xu
+          +ất CSV</button>                                               
+      191          </div>
+      216 -        <div class="lead-actions">                            
+      217 -          <button class="btn-del-all" onclick="deleteAllLeads(
+          -)">Xoá tất cả</button>                                        
+      218 -          <button class="btn-export" onclick="exportCSV()">Xuấ
+          -t CSV</button>                                                
+      219 -        </div>                                                
+      192        </div>
+      193        <div class="table-wrap">
+      194          <table>
+      223 -          <thead>                                             
+      224 -            <tr>                                              
+      225 -              <th>Thời gian</th>                              
+      226 -              <th>Họ tên / Doanh nghiệp</th>                  
+      227 -              <th>Điện thoại</th>                             
+      228 -              <th>Email</th>                                  
+      229 -              <th>Website</th>                                
+      230 -              <th>Nhu cầu</th>                                
+      231 -              <th></th>                                       
+      232 -            </tr>                                             
+      233 -          </thead>                                            
+      195 +          <thead><tr>                                         
+      196 +            <th>Thời gian</th><th>Họ tên / Doanh nghiệp</th>  
+      197 +            <th>Điện thoại</th><th>Email</th><th>Website</th><
+          +th>Nhu cầu</th><th></th>                                      
+      198 +          </tr></thead>                                       
+      199            <tbody id="leads-tbody"></tbody>
+      200          </table>
+      201          <div id="leads-empty" class="empty-state" style="displ
+           ay:none">
+      202            <div class="empty-ico">📭</div>
+      238 -          <div class="empty-txt">Chưa có lead nào. Leads từ fo
+          -rm landing page sẽ xuất hiện ở đây.</div>                     
+      203 +          <div>Chưa có lead nào. Form section 18 sẽ tự động lư
+          +u vào đây.</div>                                              
+      204          </div>
+      205        </div>
+      206      </div>
+      207  
+      243 -    <!-- Tab Nội dung -->                                     
+      208 +    <!-- ── Nội dung ── -->                                   
+      209      <div class="tab-panel" id="tab-content">
+      210        <div class="panel-hd">
+      246 -        <div>                                                 
+      247 -          <div class="panel-title">Chỉnh sửa nội dung</div>   
+      248 -          <div class="panel-desc">Thay đổi sẽ được áp dụng khi
+          - reload landing page</div>                                    
+      249 -        </div>                                                
+      211 +        <div><div class="panel-title">Chỉnh sửa nội dung</div>
+          +<div class="panel-desc">Tiêu đề & mô tả của tất cả 18 sections
+          + — lưu để áp dụng khi reload landing page</div></div>         
+      212        </div>
+      251 -      <div class="field-grid" id="field-grid"></div>          
+      252 -      <div class="field-actions">                             
+      253 -        <button class="btn-reset" onclick="resetContent()">Khô
+          -i phục mặc định</button>                                      
+      254 -        <button class="btn-save" onclick="saveContent()">Lưu t
+          -hay đổi</button>                                              
+      213 +      <div id="content-panels"></div>                         
+      214 +      <div class="content-actions">                           
+      215 +        <button class="btn-secondary" onclick="resetContent()"
+          +>Khôi phục mặc định</button>                                  
+      216 +        <button class="btn-primary" onclick="saveContent()">Lư
+          +u tất cả thay đổi</button>                                    
+      217        </div>
+      218      </div>
+      219  
+      258 -    <!-- Tab Ảnh -->                                          
+      220 +    <!-- ── Ảnh ── -->                                        
+      221      <div class="tab-panel" id="tab-images">
+      222        <div class="panel-hd">
+      261 -        <div>                                                 
+      262 -          <div class="panel-title">Quản lý ảnh</div>          
+      263 -          <div class="panel-desc">Nhập đường dẫn file ảnh mới 
+          -(tương đối so với index.html)</div>                           
+      264 -        </div>                                                
+      223 +        <div><div class="panel-title">Quản lý ảnh & nền</div><
+          +div class="panel-desc">Nhập đường dẫn file mới (tương đối so v
+          +ới thư mục chứa index.html)</div></div>                       
+      224        </div>
+      266 -      <div class="img-grid" id="img-grid"></div>              
+      225 +      <div id="img-panels"></div>                             
+      226      </div>
+      227  
+      228    </div>
+     ...
+      231  <div class="toast" id="toast"></div>
+      232  
+      233  <script>
+      275 -var PASS        = 'seongon@admin';                            
+      276 -var LS_AUTH     = 'seongon_auth';                             
+      277 -var LS_LEADS    = 'seongon_leads';                            
+      278 -var LS_CONTENT  = 'seongon_content';                          
+      279 -var LS_IMAGES   = 'seongon_images';                           
+      234 +var PASS       = 'seongon@admin';                             
+      235 +var LS_AUTH    = 'seongon_auth';                              
+      236 +var LS_LEADS   = 'seongon_leads';                             
+      237 +var LS_CONTENT = 'seongon_content';                           
+      238 +var LS_IMAGES  = 'seongon_images';                            
+      239  
+      281 -/* ─────────────── Auth ─────────────── */                    
+      240 +/* ── Auth ── */                                              
+      241  function doLogin(){
+      283 -  var v = document.getElementById('pw-inp').value;            
+      284 -  if(v === PASS){                                             
+      242 +  var v=document.getElementById('pw-inp').value;              
+      243 +  if(v===PASS){                                               
+      244      sessionStorage.setItem(LS_AUTH,'1');
+      286 -    document.getElementById('login').style.display = 'none';  
+      245 +    document.getElementById('login').style.display='none';    
+      246      init();
+      247    } else {
+      289 -    document.getElementById('login-err').textContent = 'Mật kh
+          -ẩu không đúng. Thử lại.';                                     
+      290 -    document.getElementById('pw-inp').value = '';             
+      248 +    document.getElementById('login-err').textContent='Mật khẩu
+          + không đúng.';                                                
+      249 +    document.getElementById('pw-inp').value='';               
+      250      document.getElementById('pw-inp').focus();
+      251    }
+      252  }
+      294 -function doLogout(){                                          
+      295 -  sessionStorage.removeItem(LS_AUTH);                         
+      296 -  location.reload();                                          
+      297 -}                                                             
+      253 +function doLogout(){ sessionStorage.removeItem(LS_AUTH); locat
+          +ion.reload(); }                                               
+      254  function checkAuth(){
+      299 -  if(sessionStorage.getItem(LS_AUTH) === '1'){                
+      300 -    document.getElementById('login').style.display = 'none';  
+      301 -    init();                                                   
+      255 +  if(sessionStorage.getItem(LS_AUTH)==='1'){                  
+      256 +    document.getElementById('login').style.display='none'; ini
+          +t();                                                          
+      257    }
+      258  }
+      259  
+      305 -/* ─────────────── Tabs ─────────────── */                    
+      306 -function showTab(name){                                       
+      260 +/* ── Tabs ── */                                              
+      261 +function showTab(n){                                          
+      262    ['leads','content','images'].forEach(function(t){
+      263      document.getElementById('tab-'+t).classList.remove('active
+           ');
+      264      document.getElementById('tbtn-'+t).classList.remove('activ
+           e');
+      265    });
+      311 -  document.getElementById('tab-'+name).classList.add('active')
+          -;                                                             
+      312 -  document.getElementById('tbtn-'+name).classList.add('active'
+          -);                                                            
+      266 +  document.getElementById('tab-'+n).classList.add('active');  
+      267 +  document.getElementById('tbtn-'+n).classList.add('active'); 
+      268  }
+      269  
+      315 -/* ─────────────── Stats ─────────────── */                   
+      270 +/* ── Stats ── */                                             
+      271  function updateStats(){
+      317 -  var leads = getLeads();                                     
+      318 -  var today = new Date().toLocaleDateString('vi-VN');         
+      319 -  var todayCount = leads.filter(function(l){                  
+      320 -    return (l.time||'').indexOf(today) === 0;                 
+      321 -  }).length;                                                  
+      322 -  document.getElementById('stat-total').textContent = leads.le
+          -ngth;                                                         
+      323 -  document.getElementById('stat-today').textContent = todayCou
+          -nt;                                                           
+      324 -  document.getElementById('tc-leads').textContent   = leads.le
+          -ngth;                                                         
+      325 -  if(leads.length){                                           
+      326 -    var last = leads[leads.length-1].time || '';              
+      327 -    // show only date+time portion, trimmed                   
+      328 -    document.getElementById('stat-last').textContent = last.sp
+          -lit(' ').slice(0,2).join(' ');                                
+      329 -  }                                                           
+      272 +  var leads=getLeads();                                       
+      273 +  var today=new Date().toLocaleDateString('vi-VN');           
+      274 +  var todayN=leads.filter(function(l){return (l.time||'').inde
+          +xOf(today)===0;}).length;                                     
+      275 +  document.getElementById('stat-total').textContent=leads.leng
+          +th;                                                           
+      276 +  document.getElementById('stat-today').textContent=todayN;   
+      277 +  document.getElementById('tc-leads').textContent=leads.length
+          +;                                                             
+      278 +  document.getElementById('stat-last').textContent=leads.lengt
+          +h?leads[leads.length-1].time.split(' ').slice(0,2).join(' '):'
+          +—';                                                           
+      279  }
+      280  
+      332 -/* ─────────────── Leads ─────────────── */                   
+      333 -function getLeads(){ return JSON.parse(localStorage.getItem(LS
+          -_LEADS)||'[]'); }                                             
+      334 -                                                              
+      281 +/* ── Leads ── */                                             
+      282 +function getLeads(){return JSON.parse(localStorage.getItem(LS_
+          +LEADS)||'[]');}                                               
+      283  function renderLeads(){
+      336 -  var leads = getLeads();                                     
+      337 -  var tbody = document.getElementById('leads-tbody');         
+      338 -  var empty = document.getElementById('leads-empty');         
+      339 -  if(!leads.length){                                          
+      340 -    tbody.innerHTML = '';                                     
+      341 -    empty.style.display = 'block';                            
+      342 -    return;                                                   
+      343 -  }                                                           
+      344 -  empty.style.display = 'none';                               
+      345 -  tbody.innerHTML = leads.slice().reverse().map(function(l,i){
+      346 -    var realIdx = leads.length - 1 - i;                       
+      284 +  var leads=getLeads();                                       
+      285 +  var tbody=document.getElementById('leads-tbody');           
+      286 +  var empty=document.getElementById('leads-empty');           
+      287 +  if(!leads.length){tbody.innerHTML='';empty.style.display='bl
+          +ock';return;}                                                 
+      288 +  empty.style.display='none';                                 
+      289 +  tbody.innerHTML=leads.slice().reverse().map(function(l,i){  
+      290 +    var ri=leads.length-1-i;                                  
+      291      return '<tr>'+
+      292        '<td class="td-time">'+e(l.time||'')+'</td>'+
+      293        '<td><div class="td-name">'+e(l.name||'—')+'</div><div c
+           lass="td-co">'+e(l.company||'')+'</div></td>'+
+     ...
+      295        '<td>'+e(l.email||'')+'</td>'+
+      296        '<td><a href="'+e(l.website||'')+'">'+e((l.website||'').
+           replace(/^https?:\/\//,''))+'</a></td>'+
+      297        '<td class="td-msg">'+e(l.message||'')+'</td>'+
+      354 -      '<td class="td-del"><button class="btn-del" onclick="del
+          -eteLead('+realIdx+')" title="Xoá">×</button></td>'+           
+      298 +      '<td><button class="btn-del" onclick="delLead('+ri+')" t
+          +itle="Xoá">×</button></td>'+                                  
+      299      '</tr>';
+      300    }).join('');
+      301  }
+      358 -                                                              
+      359 -function deleteLead(idx){                                     
+      302 +function delLead(i){                                          
+      303    if(!confirm('Xoá lead này?')) return;
+      361 -  var arr = getLeads();                                       
+      362 -  arr.splice(idx,1);                                          
+      363 -  localStorage.setItem(LS_LEADS, JSON.stringify(arr));        
+      304 +  var a=getLeads(); a.splice(i,1); localStorage.setItem(LS_LEA
+          +DS,JSON.stringify(a));                                        
+      305    renderLeads(); updateStats();
+      306  }
+      366 -                                                              
+      307  function deleteAllLeads(){
+      368 -  if(!confirm('Xoá tất cả '+getLeads().length+' leads? Thao tá
+          -c không thể hoàn tác.')) return;                              
+      369 -  localStorage.removeItem(LS_LEADS);                          
+      370 -  renderLeads(); updateStats();                               
+      308 +  var n=getLeads().length;                                    
+      309 +  if(!n){showToast('Không có lead nào');return;}              
+      310 +  if(!confirm('Xoá tất cả '+n+' leads?')) return;             
+      311 +  localStorage.removeItem(LS_LEADS); renderLeads(); updateStat
+          +s();                                                          
+      312  }
+      372 -                                                              
+      313  function exportCSV(){
+      374 -  var leads = getLeads();                                     
+      375 -  if(!leads.length){ showToast('Chưa có lead nào'); return; } 
+      376 -  var cols = ['Thời gian','Họ tên','Doanh nghiệp','Điện thoại'
+          -,'Email','Website','Nhu cầu'];                                
+      377 -  var rows = leads.map(function(l){                           
+      314 +  var leads=getLeads();                                       
+      315 +  if(!leads.length){showToast('Chưa có lead nào');return;}    
+      316 +  var cols=['Thời gian','Họ tên','Doanh nghiệp','Điện thoại','
+          +Email','Website','Nhu cầu'];                                  
+      317 +  var rows=leads.map(function(l){                             
+      318      return [l.time,l.name,l.company,l.phone,l.email,l.website,
+           l.message]
+      379 -      .map(function(v){ return '"'+(v||'').replace(/"/g,'""')+
+          -'"'; }).join(',');                                            
+      319 +      .map(function(v){return '"'+(v||'').replace(/"/g,'""')+'
+          +"';}).join(',');                                              
+      320    });
+      381 -  var csv = '' + cols.join(',') + '\n' + rows.join('\n');     
+      382 -  var a = document.createElement('a');                        
+      383 -  a.href = 'data:text/csv;charset=utf-8,' + encodeURIComponent
+          -(csv);                                                        
+      384 -  a.download = 'seongon-leads-' + new Date().toISOString().sli
+          -ce(0,10) + '.csv';                                            
+      321 +  var csv=''+cols.join(',')+'\n'+rows.join('\n');             
+      322 +  var a=document.createElement('a');                          
+      323 +  a.href='data:text/csv;charset=utf-8,'+encodeURIComponent(csv
+          +);                                                            
+      324 +  a.download='seongon-leads-'+new Date().toISOString().slice(0
+          +,10)+'.csv';                                                  
+      325    a.click();
+      326  }
+      327 +function e(s){return String(s).replace(/&/g,'&amp;').replace(/
+          +</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}     
+      328  
+      388 -function e(s){ return String(s).replace(/&/g,'&amp;').replace(
+          -/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }   
+      389 -                                                              
+      390 -/* ─────────────── Content ─────────────── */                 
+      391 -var FIELDS = [                                                
+      392 -  {key:'s1_h1',    sect:'Section 1', label:'Tiêu đề chính (H1)
+          -',         def:'Bứt phá thứ hạng trên Google,\nChatGPT & Perpl
+          -exity với GEO', multi:false},                                 
+      393 -  {key:'s1_desc',  sect:'Section 1', label:'Mô tả hero dưới ti
+          -êu đề',    def:'Dịch vụ GEO giúp thương hiệu xuất hiện trên AI
+          - Overviews, ChatGPT, Gemini & Perplexity.', multi:true},      
+      394 -  {key:'s18_h2',   sect:'Section 18',label:'Tiêu đề CTA',     
+          -           def:'SEONGON TƯ VẤN NGAY',              multi:false
+          -},                                                            
+      395 -  {key:'s18_p',    sect:'Section 18',label:'Mô tả dưới tiêu đề
+          - CTA',     def:'Đội ngũ chuyên gia GEO của chúng tôi sẽ liên h
+          -ệ trong vòng 24 giờ làm việc.', multi:true},                  
+      396 -  {key:'s18_phone',sect:'Section 18',label:'Số điện thoại (hre
+          -f + hiển thị)',def:'0909.1707.090', multi:false},             
+      329 +/* ── Content fields config ── */                             
+      330 +var SECTIONS = [                                              
+      331 +  {title:'Section 1 – Hero', fields:[                         
+      332 +    {key:'s1_h1',   label:'Tiêu đề H1',         hint:'Dòng tiê
+          +u đề chính to nhất',      def:'Tối ưu hiện diện thương hiệu\nt
+          +rên ChatGPT & AI Overviews', multi:false},                    
+      333 +    {key:'s1_desc', label:'Mô tả đậm',           hint:'Dòng te
+          +xt đậm ngay dưới H1',      def:'GEO giúp thương hiệu của bạn đ
+          +ược AI tìm thấy, hiểu đúng và đề xuất đến khách hàng.', multi:
+          +true},                                                        
+      334 +    {key:'s1_sub',  label:'Mô tả nhỏ',           hint:'Đoạn nh
+          +ỏ hơn bên dưới',           def:'SEONGON cung cấp giải pháp GEO
+          + chuyên biệt giúp tối ưu nội dung\nvà uy tín thương hiệu để xu
+          +ất hiện nổi bật trên ChatGPT và AI Overviews.', multi:true},  
+      335 +  ]},                                                         
+      336 +  {title:'Section 2 – Thay đổi hành vi tìm kiếm', fields:[    
+      337 +    {key:'s2_h2', label:'Tiêu đề',  def:'Hành vi tìm kiếm đã t
+          +hay đổi\nSEO truyền thống đã không còn đủ', multi:false},     
+      338 +    {key:'s2_p',  label:'Mô tả',    def:'Người dùng dần quen v
+          +ới việc xem "câu trả lời từ AI" thay vì tự click từng link vào
+          + kết quả SEO. Đây không phải xu hướng tương lai mà đang xảy ra
+          + ngay hôm nay.', multi:true},                                 
+      339 +  ]},                                                         
+      340 +  {title:'Section 3 – ChatGPT & AI Overviews', fields:[       
+      341 +    {key:'s3_h2', label:'Tiêu đề',  def:'ChatGPT & AI Overview
+          +s đã trở thành\nkênh marketing không thể bỏ qua', multi:false}
+          +,                                                             
+      342 +    {key:'s3_p',  label:'Mô tả',    def:'Tại Việt Nam, cuộc đu
+          +a hiện diện trên AI đang diễn ra mạnh mẽ. Doanh nghiệp nào hàn
+          +h động sớm sẽ chiếm lợi thế dài hạn.', multi:true},           
+      343 +  ]},                                                         
+      344 +  {title:'Section 4 – GEO là tầng tối ưu tiếp theo', fields:[ 
+      345 +    {key:'s4_h2', label:'Tiêu đề',  def:'Bắt buộc phải có\nđể 
+          +hiện diện trong kết quả của AI', multi:false},                
+      346 +    {key:'s4_p',  label:'Mô tả',    def:'Nhiều người nghĩ GEO 
+          +là một khái niệm hoàn toàn mới. Thực ra, GEO (Generative Engin
+          +e Optimization) kế thừa và mở rộng từ SEO — giúp AI không chỉ 
+          +tìm thấy mà còn tin tưởng và trích dẫn nội dung của bạn.', mul
+          +ti:true},                                                     
+      347 +  ]},                                                         
+      348 +  {title:'Section 5 – 5 ngành ưu tiên', fields:[              
+      349 +    {key:'s5_h2', label:'Tiêu đề',  def:'5 ngành cấp thiết\ncầ
+          +n triển khai GEO ngay', multi:false},                         
+      350 +  ]},                                                         
+      351 +  {title:'Section 6 – Bộ giải pháp GEO', fields:[             
+      352 +    {key:'s6_h2',  label:'Tiêu đề',       def:'Bộ giải pháp GE
+          +O toàn diện', multi:false},                                   
+      353 +    {key:'s6_sub', label:'Sub-heading',   def:'Cùng Doanh nghi
+          +ệp chiến thắng trong Kỷ nguyên AI', multi:false},             
+      354 +    {key:'s6_p',   label:'Mô tả',         def:'Giải pháp được 
+          +thiết kế để mở rộng hiện diện thương hiệu, giúp AI hiểu, tin t
+          +ưởng và ưu tiên trích dẫn doanh nghiệp của bạn.', multi:true},
+      355 +  ]},                                                         
+      356 +  {title:'Section 7 – Kết quả thực tế', fields:[              
+      357 +    {key:'s7_h2', label:'Tiêu đề',  def:'SEONGON còn đồng hành
+          + cùng Doanh nghiệp tăng trưởng hiệu quả kinh doanh trong bối c
+          +ảnh thị trường mới', multi:true},                             
+      358 +  ]},                                                         
+      359 +  {title:'Section 8 – Giải quyết bài toán doanh nghiệp', field
+          +s:[                                                           
+      360 +    {key:'s8_h2', label:'Tiêu đề',  def:'Giải quyết mọi bài to
+          +án doanh nghiệp', multi:false},                               
+      361 +    {key:'s8_p',  label:'Mô tả',    def:'Giải pháp GEO được th
+          +iết kế linh hoạt theo 3 trục: ngành hàng, quy mô và mô hình do
+          +anh nghiệp.', multi:true},                                    
+      362 +  ]},                                                         
+      363 +  {title:'Section 9 – Tại sao chọn SEONGON', fields:[         
+      364 +    {key:'s9_h2',  label:'Tiêu đề section',    def:'là lựa chọ
+          +n đúng đắn nhất khi triển khai GEO?', multi:false},           
+      365 +    {key:'s91_h3', label:'Điểm #1 – Tiêu đề', def:'Đơn vị đầu 
+          +tiên tại Việt Nam\ncung cấp giải pháp GEO toàn diện', multi:fa
+          +lse},                                                         
+      366 +    {key:'s91_p',  label:'Điểm #1 – Mô tả',   def:'SEONGON khô
+          +ng chỉ áp dụng lý thuyết quốc tế mà đã nghiên cứu và xây dựng 
+          +phương pháp GEO riêng, phù hợp với hành vi người dùng và đặc t
+          +hù thị trường Việt Nam.', multi:true},                        
+      367 +    {key:'s92_h3', label:'Điểm #2 – Tiêu đề', def:'Hiểu hành v
+          +i người dùng\nđến cách AI hoạt động', multi:false},           
+      368 +    {key:'s92_p',  label:'Điểm #2 – Mô tả',   def:'GEO (Genera
+          +tive Engine Optimization) giúp các công cụ AI như ChatGPT hiểu
+          + rõ hơn về doanh nghiệp, dịch vụ của bạn và cải thiện khả năng
+          + được nhắc tới trong các câu trả lời do AI tạo ra.', multi:tru
+          +e},                                                           
+      369 +    {key:'s93_h3', label:'Điểm #3 – Tiêu đề', def:'Hạ tầng côn
+          +g nghệ độc quyền\nĐƯA RA CHIẾN LƯỢC DỰA TRÊN DATA', multi:fals
+          +e},                                                           
+      370 +    {key:'s93_p',  label:'Điểm #3 – Mô tả',   def:'SEONGON xây
+          + dựng hạ tầng công nghệ riêng để nghiên cứu GEO. Mỗi chiến lượ
+          +c đều được đưa ra từ data thực tế, cập nhật hàng tháng theo bi
+          +ến động AI Model.', multi:true},                              
+      371 +    {key:'s94_h3', label:'Điểm #4 – Tiêu đề', def:'Đồng bộ hóa
+          + nhận diện\nthương hiệu trên AI Search', multi:false},        
+      372 +    {key:'s94_p',  label:'Điểm #4 – Mô tả',   def:'SEONGON đảm
+          + bảo hình ảnh bản quyền của thương hiệu, đồng bộ theo Brand Gu
+          +ideline. Đội ngũ nhân sự chuyên trách đồng hành xử lý hình ảnh
+          + trong mọi giai đoạn, đảm bảo sự nhất quán và chất lượng cao n
+          +hất.', multi:true},                                           
+      373 +  ]},                                                         
+      374 +  {title:'Section 10 – Cam kết minh bạch', fields:[           
+      375 +    {key:'s10_h2', label:'Tiêu đề',  def:'Cam kết minh bạch vớ
+          +i mọi dự án GEO', multi:false},                               
+      376 +  ]},                                                         
+      377 +  {title:'Section 11 – Gói dịch vụ', fields:[                 
+      378 +    {key:'s11_h2', label:'Tiêu đề',  def:'Hãy lựa chọn gói phù
+          + hợp với quy mô của bạn', multi:false},                       
+      379 +    {key:'s11_p',  label:'Mô tả',    def:'Từ audit kiểm tra hi
+          +ện trạng đến triển khai toàn diện, SEONGON thiết kế lộ trình G
+          +EO theo đúng bài toán của doanh nghiệp', multi:true},         
+      380 +  ]},                                                         
+      381 +  {title:'Section 12 – Case Studies', fields:[                
+      382 +    {key:'s12_h2', label:'Tiêu đề',  def:'Kết quả thực tế từ k
+          +hách hàng của SEONGON', multi:false},                         
+      383 +    {key:'s12_p',  label:'Mô tả',    def:'Những dự án tiêu biể
+          +u đã được SEONGON triển khai từ SEO truyền thống đến tối ưu AI
+          + Overviews & ChatGPT.', multi:true},                          
+      384 +  ]},                                                         
+      385 +  {title:'Section 13 – Khách hàng', fields:[                  
+      386 +    {key:'s13_h2', label:'Tiêu đề',  def:'5.000+ doanh nghiệp 
+          +ở 20+ ngành hàng', multi:false},                              
+      387 +    {key:'s13_p',  label:'Mô tả',    def:'Niềm tin từ nhiều th
+          +ương hiệu dẫn đầu tại Việt Nam', multi:false},                
+      388 +  ]},                                                         
+      389 +  {title:'Section 14 – Quy trình triển khai', fields:[        
+      390 +    {key:'s14_h2',  label:'Tiêu đề',   def:'Đằng sau những thà
+          +nh tựu là\nquy trình được chuẩn hóa nghiêm ngặt', multi:false}
+          +,                                                             
+      391 +    {key:'s14_sub', label:'Mô tả nhỏ', def:'Mọi dự án GEO tại 
+          +SEONGON đều theo quy trình chuẩn — đảm bảo bạn luôn biết đang 
+          +ở đâu và kết quả đang đi đến đâu.', multi:true},              
+      392 +  ]},                                                         
+      393 +  {title:'Section 15 – Đội ngũ nhân sự', fields:[             
+      394 +    {key:'s15_h2',  label:'Tiêu đề',   def:'Đội ngũ nhân sự ch
+          +ất lượng tạo nên những dự án vượt trội', multi:false},        
+      395 +    {key:'s15_sub', label:'Mô tả nhỏ', def:'Từ SEO, Content, D
+          +ata Analytics đến AI Engineering, tất cả phối hợp để tạo ra ch
+          +iến lược SEO toàn diện cho doanh nghiệp', multi:true},        
+      396 +  ]},                                                         
+      397 +  {title:'Section 16 – Giải thưởng', fields:[                 
+      398 +    {key:'s16_h2', label:'Tiêu đề',  def:'Được công nhận bởi n
+          +hững tổ chức uy tín nhất', multi:false},                      
+      399 +    {key:'s16_p',  label:'Mô tả',    def:'Những giải thưởng da
+          +nh giá là minh chứng cho năng lực chuyên môn, hiệu quả triển k
+          +hai và cam kết mang lại giá trị bền vững cho khách hàng.', mul
+          +ti:true},                                                     
+      400 +  ]},                                                         
+      401 +  {title:'Section 17 – Khách hàng & Đồng hành', fields:[      
+      402 +    {key:'s17_h2',  label:'Tiêu đề',      def:'Giá trị SEONGON
+          + mang lại\nvượt xa cả bản hợp đồng', multi:false},            
+      403 +    {key:'s17_sub', label:'Sub-heading',  def:'SEONGON đồng hà
+          +nh như đối tác chiến lược dài hạn với từng doanh nghiệp.', mul
+          +ti:false},                                                    
+      404 +    {key:'s17_p',   label:'Mô tả',        def:'Không chỉ cung 
+          +cấp dịch vụ — SEONGON là người đồng hành thực sự, đưa ra chiến
+          + lược dựa trên data, cam kết KPI rõ ràng và liên tục tối ưu th
+          +eo biến động thị trường AI.', multi:true},                    
+      405 +  ]},                                                         
+      406 +  {title:'Section 18 – Form tư vấn', fields:[                 
+      407 +    {key:'s18_h2',    label:'Tiêu đề CTA',   def:'SEONGON TƯ V
+          +ẤN NGAY', multi:false},                                       
+      408 +    {key:'s18_p',     label:'Mô tả',          def:'Đội ngũ chu
+          +yên gia GEO của chúng tôi sẽ liên hệ trong vòng 24 giờ làm việ
+          +c.', multi:true},                                             
+      409 +    {key:'s18_phone', label:'Số điện thoại', hint:'Thay đổi cả
+          + link tel: và hiển thị', def:'0909.1707.090', multi:false},   
+      410 +  ]},                                                         
+      411  ];
+      412  
+      413  function renderContent(){
+      400 -  var saved = JSON.parse(localStorage.getItem(LS_CONTENT)||'{}
+          -');                                                           
+      401 -  document.getElementById('field-grid').innerHTML = FIELDS.map
+          -(function(f){                                                 
+      402 -    var val = (saved[f.key] !== undefined) ? saved[f.key] : f.
+          -def;                                                          
+      403 -    var disp = val.replace(/<br\s*\/?>/gi,'\n').replace(/<[^>]
+          -+>/g,'');                                                     
+      404 -    var inp = f.multi                                         
+      405 -      ? '<textarea class="field-inp" id="cf_'+f.key+'" rows="3
+          -">'+e(disp)+'</textarea>'                                     
+      406 -      : '<input type="text" class="field-inp" id="cf_'+f.key+'
+          -" value="'+e(disp)+'">';                                      
+      407 -    return '<div class="field-card">'+                        
+      408 -      '<div class="field-sect">'+f.sect+'</div>'+             
+      409 -      '<div class="field-label">'+f.label+'</div>'+           
+      410 -      inp+'</div>';                                           
+      411 -  }).join('');                                                
+      414 +  var saved=JSON.parse(localStorage.getItem(LS_CONTENT)||'{}')
+          +;                                                             
+      415 +  var html='';                                                
+      416 +  SECTIONS.forEach(function(s){                               
+      417 +    html+='<div class="section-group"><div class="section-grou
+          +p-title">'+e(s.title)+'</div><div class="field-grid">';       
+      418 +    s.fields.forEach(function(f){                             
+      419 +      var val=(saved[f.key]!==undefined)?saved[f.key]:f.def;  
+      420 +      var disp=val.replace(/<br\s*\/?>/gi,'\n').replace(/<[^>]
+          ++>/g,'');                                                     
+      421 +      var hint=f.hint?'<span>'+e(f.hint)+'</span>':'';        
+      422 +      var inp=f.multi                                         
+      423 +        ?'<textarea class="field-inp" id="cf_'+f.key+'" rows="
+          +2">'+e(disp)+'</textarea>'                                    
+      424 +        :'<input type="text" class="field-inp" id="cf_'+f.key+
+          +'" value="'+e(disp)+'">';                                     
+      425 +      html+='<div class="field-row"><div class="field-label">'
+          ++e(f.label)+hint+'</div>'+inp+'</div>';                       
+      426 +    });                                                       
+      427 +    html+='</div></div>';                                     
+      428 +  });                                                         
+      429 +  document.getElementById('content-panels').innerHTML=html;   
+      430  }
+      431  
+      432  function saveContent(){
+      415 -  var obj = {};                                               
+      416 -  FIELDS.forEach(function(f){                                 
+      417 -    var el = document.getElementById('cf_'+f.key);            
+      418 -    if(el) obj[f.key] = el.value.replace(/\n/g,'<br>');       
+      433 +  var obj={};                                                 
+      434 +  SECTIONS.forEach(function(s){                               
+      435 +    s.fields.forEach(function(f){                             
+      436 +      var el=document.getElementById('cf_'+f.key);            
+      437 +      if(el) obj[f.key]=el.value.replace(/\n/g,'<br>');       
+      438 +    });                                                       
+      439    });
+      420 -  localStorage.setItem(LS_CONTENT, JSON.stringify(obj));      
+      440 +  localStorage.setItem(LS_CONTENT,JSON.stringify(obj));       
+      441    showToast('Đã lưu! Reload landing page để thấy thay đổi.');
+      442  }
+      443  
+     ...
+      448    showToast('Đã khôi phục về mặc định');
+      449  }
+      450  
+      431 -/* ─────────────── Images ─────────────── */                  
+      432 -var IMAGES = [                                                
+      433 -  {key:'img_s1_bg',         sect:'Section 1',  label:'Ảnh nền'
+          -,             path:"Section 1/nền 1.png"},                    
+      434 -  {key:'img_s12_viettel',   sect:'Section 12', label:'Ảnh Viet
+          -tel',          path:"section 12/ChatGPT Image 23_50_06 7 thg 5
+          -, 2026 (5).png"},                                             
+      435 -  {key:'img_s12_decathlon', sect:'Section 12', label:'Ảnh Deca
+          -thlon',        path:"section 12/ChatGPT Image 17_20_57 8 thg 5
+          -, 2026.png"},                                                 
+      436 -  {key:'img_s12_ghtk',      sect:'Section 12', label:'Ảnh GHTK
+          -',             path:"section 12/ChatGPT Image 23_50_05 7 thg 5
+          -, 2026 (3).png"},                                             
+      437 -  {key:'img_s12_vna',       sect:'Section 12', label:'Ảnh Viet
+          -nam Airlines',  path:"section 12/ChatGPT Image 23_50_04 7 thg 
+          -5, 2026 (2).png"},                                            
+      438 -  {key:'img_s17_hero',      sect:'Section 17', label:'Ảnh hero
+          - trung tâm',   path:"section 17/ảnh/Ảnh chọn.png"},           
+      451 +/* ── Images config ── */                                     
+      452 +var IMG_SECTIONS = [                                          
+      453 +  {title:'Ảnh nền các section', items:[                       
+      454 +    {key:'bg_s1',  label:'Section 1 – Nền',  path:"Section 1/n
+          +ền 1.png"},                                                   
+      455 +    {key:'bg_s2',  label:'Section 2 – Nền',  path:"section 2/n
+          +ền 2.png"},                                                   
+      456 +    {key:'bg_s3',  label:'Section 3 – Nền',  path:"section 3/n
+          +ền 3.png"},                                                   
+      457 +    {key:'bg_s4',  label:'Section 4 – Nền',  path:"section 4/n
+          +ền 4.png"},                                                   
+      458 +    {key:'bg_s5',  label:'Section 5 – Nền',  path:"section 5/n
+          +ền 5.png"},                                                   
+      459 +    {key:'bg_s6',  label:'Section 6 – Nền',  path:"section 6/n
+          +ền 6.png"},                                                   
+      460 +    {key:'bg_s7',  label:'Section 7 – Nền',  path:"section 7/n
+          +ền 7.png"},                                                   
+      461 +    {key:'bg_s8',  label:'Section 8 – Nền',  path:"section 8/n
+          +ền 8.png"},                                                   
+      462 +    {key:'bg_s12', label:'Section 12 – Nền', path:"section 12/
+          +nền 12.png"},                                                 
+      463 +    {key:'bg_s13', label:'Section 13 – Nền', path:"section 13/
+          +nền 13.png"},                                                 
+      464 +    {key:'bg_s14', label:'Section 14 – Nền', path:"section 14/
+          +nền 14.png"},                                                 
+      465 +    {key:'bg_s16', label:'Section 16 – Nền', path:"section 16/
+          +nền16.png"},                                                  
+      466 +    {key:'bg_s18', label:'Section 18 – Nền', path:"section 18/
+          +nền18.png"},                                                  
+      467 +  ]},                                                         
+      468 +  {title:'Ảnh nội dung', items:[                              
+      469 +    {key:'img_s12_viettel',   label:'Section 12 – Ảnh Viettel'
+          +,         path:"section 12/ChatGPT Image 23_50_06 7 thg 5, 202
+          +6 (5).png"},                                                  
+      470 +    {key:'img_s12_decathlon', label:'Section 12 – Ảnh Decathlo
+          +n',       path:"section 12/ChatGPT Image 17_20_57 8 thg 5, 202
+          +6.png"},                                                      
+      471 +    {key:'img_s12_ghtk',      label:'Section 12 – Ảnh GHTK',  
+          +          path:"section 12/ChatGPT Image 23_50_05 7 thg 5, 202
+          +6 (3).png"},                                                  
+      472 +    {key:'img_s12_vna',       label:'Section 12 – Ảnh Vietnam 
+          +Airlines', path:"section 12/ChatGPT Image 23_50_04 7 thg 5, 20
+          +26 (2).png"},                                                 
+      473 +    {key:'img_s17_hero',      label:'Section 17 – Ảnh hero tru
+          +ng tâm',  path:"section 17/ảnh/Ảnh chọn.png"},                
+      474 +  ]},                                                         
+      475  ];
+      476  
+      477  function renderImages(){
+      442 -  var saved = JSON.parse(localStorage.getItem(LS_IMAGES)||'{}'
+          -);                                                            
+      443 -  document.getElementById('img-grid').innerHTML = IMAGES.map(f
+          -unction(f){                                                   
+      444 -    var cur = saved[f.key] || f.path;                         
+      445 -    return '<div class="img-card">'+                          
+      446 -      '<div class="img-preview-wrap">'+                       
+      447 -        '<img class="img-preview" src="'+e(cur)+'" onerror="th
+          -is.style.opacity=\'.3\'" alt="">'+                            
+      448 -      '</div>'+                                               
+      449 -      '<div class="img-card-body">'+                          
+      450 -        '<div class="img-sect">'+f.sect+'</div>'+             
+      451 -        '<div class="img-label">'+f.label+'</div>'+           
+      452 -        '<div class="img-cur">'+e(cur)+'</div>'+              
+      453 -        '<input type="text" class="img-inp" id="if_'+f.key+'" 
+          -value="'+e(cur)+'" placeholder="Đường dẫn file mới...">'+     
+      454 -        '<button class="btn-apply" onclick="applyImage(\''+f.k
+          -ey+'\')">Cập nhật</button>'+                                  
+      455 -        '<div class="img-applied" id="ia_'+f.key+'">✓ Đã lưu</
+          -div>'+                                                        
+      456 -      '</div></div>';                                         
+      457 -  }).join('');                                                
+      478 +  var saved=JSON.parse(localStorage.getItem(LS_IMAGES)||'{}');
+      479 +  var html='';                                                
+      480 +  IMG_SECTIONS.forEach(function(s){                           
+      481 +    html+='<div class="img-section-title">'+e(s.title)+'</div>
+          +<div class="img-grid">';                                      
+      482 +    s.items.forEach(function(f){                              
+      483 +      var cur=saved[f.key]||f.path;                           
+      484 +      html+='<div class="img-card">'+                         
+      485 +        '<img class="img-thumb" src="'+e(cur)+'" onerror="this
+          +.style.opacity=\'.2\'" alt="">'+                              
+      486 +        '<div class="img-body">'+                             
+      487 +          '<div class="img-label">'+e(f.label)+'</div>'+      
+      488 +          '<div class="img-cur">'+e(cur)+'</div>'+            
+      489 +          '<input type="text" class="img-inp" id="if_'+f.key+'
+          +" value="'+e(cur)+'">'+                                       
+      490 +          '<button class="btn-img-apply" onclick="applyImg(\''
+          ++f.key+'\')">Cập nhật</button>'+                              
+      491 +          '<div class="img-ok" id="io_'+f.key+'">✓ Đã lưu</div
+          +>'+                                                           
+      492 +        '</div></div>';                                       
+      493 +    });                                                       
+      494 +    html+='</div>';                                           
+      495 +  });                                                         
+      496 +  document.getElementById('img-panels').innerHTML=html;       
+      497  }
+      498  
+      460 -function applyImage(key){                                     
+      461 -  var el = document.getElementById('if_'+key);                
+      499 +function applyImg(key){                                       
+      500 +  var el=document.getElementById('if_'+key);                  
+      501    if(!el) return;
+      463 -  var saved = JSON.parse(localStorage.getItem(LS_IMAGES)||'{}'
+          -);                                                            
+      464 -  saved[key] = el.value.trim();                               
+      465 -  localStorage.setItem(LS_IMAGES, JSON.stringify(saved));     
+      466 -  var ok = document.getElementById('ia_'+key);                
+      467 -  if(ok){ ok.style.display='block'; setTimeout(function(){ok.s
+          -tyle.display='none';},2000); }                                
+      502 +  var saved=JSON.parse(localStorage.getItem(LS_IMAGES)||'{}');
+      503 +  saved[key]=el.value.trim();                                 
+      504 +  localStorage.setItem(LS_IMAGES,JSON.stringify(saved));      
+      505 +  var ok=document.getElementById('io_'+key);                  
+      506 +  if(ok){ok.style.display='block';setTimeout(function(){ok.sty
+          +le.display='none';},2000);}                                   
+      507    renderImages();
+      508  }
+      509  
+      471 -/* ─────────────── Toast ─────────────── */                   
+      472 -var _toastTimer;                                              
+      510 +/* ── Toast ── */                                             
+      511 +var _tt;                                                      
+      512  function showToast(msg){
+      474 -  var t = document.getElementById('toast');                   
+      475 -  t.textContent = msg || 'Đã lưu!';                           
+      476 -  t.classList.add('show');                                    
+      477 -  clearTimeout(_toastTimer);                                  
+      478 -  _toastTimer = setTimeout(function(){ t.classList.remove('sho
+          -w'); }, 2800);                                                
+      513 +  var t=document.getElementById('toast');                     
+      514 +  t.textContent=msg||'Đã lưu!'; t.classList.add('show');      
+      515 +  clearTimeout(_tt); _tt=setTimeout(function(){t.classList.rem
+          +ove('show');},2800);                                          
+      516  }
+      517  
+      481 -/* ─────────────── Init ─────────────── */                    
+      482 -function init(){                                              
+      483 -  updateStats();                                              
+      484 -  renderLeads();                                              
+      485 -  renderContent();                                            
+      486 -  renderImages();                                             
+      487 -}                                                             
+      488 -                                                              
+      518 +/* ── Init ── */                                              
+      519 +function init(){ updateStats(); renderLeads(); renderContent()
+          +; renderImages(); }                                           
+      520  checkAuth();
+      521  </script>
+      522  </body>
+
+● Giờ cập nhật contentMap trong index.html để apply đủ tất cả 18 sections:
+
+● Update(LDP GEO\index.html)
+  ⎿  Added 29 lines, removed 5 lines
+      1348  // ── Admin: content/image overrides + lead capture ──
+      1349  (function(){
+      1350    var contentMap = {
+      1351 -    's1_h1':   '#s1 h1',                                     
+      1352 -    's1_desc': '#s1 .hero-desc',                             
+      1353 -    's18_h2':  '#s18 h2',                                    
+      1354 -    's18_p':   '#s18 .s18-p'                                 
+      1351 +    's1_h1':   '#s1 h1',         's1_desc': '#s1 .hero-desc',
+           +    's1_sub':  '#s1 .hero-sub',                              
+      1352 +    's2_h2':   '#s2 h2',         's2_p':    '#s2 .sec-hd p', 
+      1353 +    's3_h2':   '#s3 h2',         's3_p':    '#s3 .sec-hd p', 
+      1354 +    's4_h2':   '#s4 h2',         's4_p':    '#s4 .sec-hd p', 
+      1355 +    's5_h2':   '#s5 h2',                                     
+      1356 +    's6_h2':   '#s6 h2',         's6_sub':  '#s6 p.sub',     
+           +    's6_p': '#s6 .s6-left p:not(.sub)',                      
+      1357 +    's7_h2':   '#s7 h2',                                     
+      1358 +    's8_h2':   '#s8 h2',         's8_p':    '#s8 .sec-hd p', 
+      1359 +    's9_h2':   '.s9-hd h2',                                  
+      1360 +    's91_h3':  '#s91 .s9-t',     's91_p':   '#s91 .s9-p',    
+      1361 +    's92_h3':  '#s92 .s9-t',     's92_p':   '#s92 .s9-p',    
+      1362 +    's93_h3':  '#s93 .s9-t',     's93_p':   '#s93 .s9-p',    
+      1363 +    's94_h3':  '#s94 .s9-t',     's94_p':   '#s94 .s9-p',    
+      1364 +    's10_h2':  '#s10 h2',                                    
+      1365 +    's11_h2':  '#s11 h2',        's11_p':   '#s11 .sec-hd p',
+      1366 +    's12_h2':  '#s12 h2',        's12_p':   '#s12 .sec-hd p',
+      1367 +    's13_h2':  '#s13 h2',        's13_p':   '#s13 .sec-hd p',
+      1368 +    's14_h2':  '#s14 h2',        's14_sub': '#s14 .s14-sub', 
+      1369 +    's15_h2':  '#s15 h2',        's15_sub': '#s15 .s15-sub', 
+      1370 +    's16_h2':  '#s16 h2',        's16_p':   '#s16 .sec-hd p',
+      1371 +    's17_h2':  '#s17 h2',        's17_sub': '#s17 .s17-sub', 
+           +    's17_p': '#s17 .s17-p',                                  
+      1372 +    's18_h2':  '#s18 h2',        's18_p':   '#s18 .s18-p'    
+      1373    };
+      1374    var imgMap = {
+      1357 -    'img_s1_bg':         {type:'bg',  sel:'#s1'},            
+      1375 +    'bg_s1':  {type:'bg',sel:'#s1'},   'bg_s2': {type:'bg',se
+           +l:'#s2'},                                                    
+      1376 +    'bg_s3':  {type:'bg',sel:'#s3'},   'bg_s4': {type:'bg',se
+           +l:'#s4'},                                                    
+      1377 +    'bg_s5':  {type:'bg',sel:'#s5'},   'bg_s6': {type:'bg',se
+           +l:'#s6'},                                                    
+      1378 +    'bg_s7':  {type:'bg',sel:'#s7'},   'bg_s8': {type:'bg',se
+           +l:'#s8'},                                                    
+      1379 +    'bg_s12': {type:'bg',sel:'#s12'},  'bg_s13':{type:'bg',se
+           +l:'#s13'},                                                   
+      1380 +    'bg_s14': {type:'bg',sel:'#s14'},  'bg_s16':{type:'bg',se
+           +l:'#s16'},                                                   
+      1381 +    'bg_s18': {type:'bg',sel:'#s18'},                        
+      1382      'img_s12_viettel':   {type:'img', sel:'#s12 .case-card:nt
+            h-child(1) .case-img'},
+      1383      'img_s12_decathlon': {type:'img', sel:'#s12 .case-card:nt
+            h-child(2) .case-img'},
+      1384      'img_s12_ghtk':      {type:'img', sel:'#s12 .case-card:nt
+            h-child(3) .case-img'},
+
+● Xong. Trang admin giờ có đầy đủ:
+
+  Tab "Nội dung (18 sections)" — chỉnh được tất cả tiêu đề và mô tả của từng
+  section:
+  - Section 1: H1, mô tả đậm, mô tả nhỏ
+  - Section 2–8: Tiêu đề + mô tả
+  - Section 9: Tiêu đề chính + cả 4 điểm lý do (#1→#4), mỗi điểm có tiêu đề + mô
+   tả riêng
+  - Section 10–18: Tiêu đề + mô tả + số điện thoại (S18)
+
+  Tab "Ảnh & Nền" — đổi ảnh nền của 13 sections + 5 ảnh nội dung (case studies,
+  hero S17)
+
+  Lưu xong → reload index.html là thấy thay đổi ngay.
+
+✻ Churned for 5m 19s
+
+❯ chưa được đầy đủ phần sửa ảnh, cần có thể sửa được các phần ảnh mà tôi tải    
+  lên cho bạn                                                                   
+
+● Cần liệt kê toàn bộ ảnh trong tất cả thư mục section.
+
+● PowerShell(Get-ChildItem -Recurse "C:\Users\ADMIN\Folder lưu claude\LDP GEO"
+            -Include "*.png","*.jpg","*.jpeg","*.webp","*.svg" | Where-Object {
+            $_.FullName -notmatch "des…)
+  ⎿  rel                                                      dir
+
+     ---                                                      ---
+     … +69 lines (ctrl+o to expand)
+
+● Cần đọc thêm HTML để lấy đúng src của từng ảnh trong section 2, 3, 10, 15, 16,
+   17.
+
+  Searched for 1 pattern (ctrl+o to expand)
+
+● Giờ tôi có đủ toàn bộ. Sẽ dùng cách tiếp cận thông minh hơn — thay ảnh bằng
+  cách match src gốc, không cần selector riêng từng ảnh. Cập nhật cả admin.html
+  và logic apply trong index.html.
+
+● Update(LDP GEO\index.html)
+  ⎿  Added 10 lines, removed 4 lines
+      1398      }
+      1399      var im=JSON.parse(localStorage.getItem('seongon_images')|
+            |'{}');
+      1400      Object.keys(im).forEach(function(k){
+      1401 -      var m=imgMap[k]; if(!m) return;                        
+      1402 -      var el=document.querySelector(m.sel); if(!el) return;  
+      1403 -      if(m.type==='bg') el.style.backgroundImage="url('"+im[k
+           -]+"')";                                                      
+      1404 -      else el.src=im[k];                                     
+      1401 +      if(imgMap[k]){                                         
+      1402 +        // background image with known selector              
+      1403 +        var el=document.querySelector(imgMap[k].sel); if(!el)
+           + return;                                                     
+      1404 +        el.style.backgroundImage="url('"+im[k]+"')";         
+      1405 +      } else {                                               
+      1406 +        // img src replacement — find all img with this src a
+           +nd replace                                                   
+      1407 +        document.querySelectorAll('img').forEach(function(img
+           +){                                                           
+      1408 +          if(img.getAttribute('src')===k) img.setAttribute('s
+           +rc',im[k]);                                                  
+      1409 +        });                                                  
+      1410 +      }                                                      
+      1411      });
+      1412    }
+      1413    function initForm(){
+
+● Giờ viết lại phần ảnh trong admin.html với đầy đủ 60+ ảnh:
+
+  Searched for 1 pattern, read 1 file (ctrl+o to expand)
+
+● Thay toàn bộ khối IMG_SECTIONS và hàm applyImg trong admin.html để cover 60+
+  ảnh:
+
+● Update(LDP GEO\admin.html)
+  ⎿  Added 121 lines, removed 32 lines
+      450  
+      451  /* ── Images config ── */
+      452  var IMG_SECTIONS = [
+      453 -  {title:'Ảnh nền các section', items:[                       
+      454 -    {key:'bg_s1',  label:'Section 1 – Nền',  path:"Section 1/n
+          -ền 1.png"},                                                   
+      455 -    {key:'bg_s2',  label:'Section 2 – Nền',  path:"section 2/n
+          -ền 2.png"},                                                   
+      456 -    {key:'bg_s3',  label:'Section 3 – Nền',  path:"section 3/n
+          -ền 3.png"},                                                   
+      457 -    {key:'bg_s4',  label:'Section 4 – Nền',  path:"section 4/n
+          -ền 4.png"},                                                   
+      458 -    {key:'bg_s5',  label:'Section 5 – Nền',  path:"section 5/n
+          -ền 5.png"},                                                   
+      459 -    {key:'bg_s6',  label:'Section 6 – Nền',  path:"section 6/n
+          -ền 6.png"},                                                   
+      460 -    {key:'bg_s7',  label:'Section 7 – Nền',  path:"section 7/n
+          -ền 7.png"},                                                   
+      461 -    {key:'bg_s8',  label:'Section 8 – Nền',  path:"section 8/n
+          -ền 8.png"},                                                   
+      462 -    {key:'bg_s12', label:'Section 12 – Nền', path:"section 12/
+          -nền 12.png"},                                                 
+      463 -    {key:'bg_s13', label:'Section 13 – Nền', path:"section 13/
+          -nền 13.png"},                                                 
+      464 -    {key:'bg_s14', label:'Section 14 – Nền', path:"section 14/
+          -nền 14.png"},                                                 
+      465 -    {key:'bg_s16', label:'Section 16 – Nền', path:"section 16/
+          -nền16.png"},                                                  
+      466 -    {key:'bg_s18', label:'Section 18 – Nền', path:"section 18/
+          -nền18.png"},                                                  
+      453 +  {title:'Ảnh nền (backgrounds)', items:[                     
+      454 +    {key:'bg_s1',  label:'S1 – Nền hero',          path:"Secti
+          +on 1/nền 1.png"},                                             
+      455 +    {key:'bg_s2',  label:'S2 – Nền',               path:"secti
+          +on 2/nền 2.png"},                                             
+      456 +    {key:'bg_s3',  label:'S3 – Nền',               path:"secti
+          +on 3/nền 3.png"},                                             
+      457 +    {key:'bg_s4',  label:'S4 – Nền',               path:"secti
+          +on 4/nền 4.png"},                                             
+      458 +    {key:'bg_s5',  label:'S5 – Nền',               path:"secti
+          +on 5/nền 5.png"},                                             
+      459 +    {key:'bg_s6',  label:'S6 – Nền',               path:"secti
+          +on 6/nền 6.png"},                                             
+      460 +    {key:'bg_s7',  label:'S7 – Nền',               path:"secti
+          +on 7/nền 7.png"},                                             
+      461 +    {key:'bg_s8',  label:'S8 – Nền',               path:"secti
+          +on 8/nền 8.png"},                                             
+      462 +    {key:'bg_s10', label:'S10 – Nền',              path:"secti
+          +on 10/nền section 10.png"},                                   
+      463 +    {key:'bg_s11', label:'S11 – Nền',              path:"secti
+          +on 11/nền 11.png"},                                           
+      464 +    {key:'bg_s12', label:'S12 – Nền',              path:"secti
+          +on 12/nền 12.png"},                                           
+      465 +    {key:'bg_s13', label:'S13 – Nền',              path:"secti
+          +on 13/nền 13.png"},                                           
+      466 +    {key:'bg_s14', label:'S14 – Nền',              path:"secti
+          +on 14/nền 14.png"},                                           
+      467 +    {key:'bg_s15', label:'S15 – Nền',              path:"secti
+          +on 15/nền 15.png"},                                           
+      468 +    {key:'bg_s16', label:'S16 – Nền',              path:"secti
+          +on 16/nền16.png"},                                            
+      469 +    {key:'bg_s17', label:'S17 – Nền',              path:"secti
+          +on 17/nền 17.png"},                                           
+      470 +    {key:'bg_s18', label:'S18 – Nền',              path:"secti
+          +on 18/nền18.png"},                                            
+      471    ]},
+      468 -  {title:'Ảnh nội dung', items:[                              
+      469 -    {key:'img_s12_viettel',   label:'Section 12 – Ảnh Viettel'
+          -,         path:"section 12/ChatGPT Image 23_50_06 7 thg 5, 202
+          -6 (5).png"},                                                  
+      470 -    {key:'img_s12_decathlon', label:'Section 12 – Ảnh Decathlo
+          -n',       path:"section 12/ChatGPT Image 17_20_57 8 thg 5, 202
+          -6.png"},                                                      
+      471 -    {key:'img_s12_ghtk',      label:'Section 12 – Ảnh GHTK',  
+          -          path:"section 12/ChatGPT Image 23_50_05 7 thg 5, 202
+          -6 (3).png"},                                                  
+      472 -    {key:'img_s12_vna',       label:'Section 12 – Ảnh Vietnam 
+          -Airlines', path:"section 12/ChatGPT Image 23_50_04 7 thg 5, 20
+          -26 (2).png"},                                                 
+      473 -    {key:'img_s17_hero',      label:'Section 17 – Ảnh hero tru
+          -ng tâm',  path:"section 17/ảnh/Ảnh chọn.png"},                
+      472 +  {title:'Section 2 – Icon thẻ', items:[                      
+      473 +    {key:'section 2/ChatGPT Image 22_46_50 7 thg 5, 2026 (1).p
+          +ng', label:'S2 – Icon thẻ 1'},                                
+      474 +    {key:'section 2/ChatGPT Image 22_46_50 7 thg 5, 2026 (2).p
+          +ng', label:'S2 – Icon thẻ 2'},                                
+      475 +    {key:'section 2/ChatGPT Image 22_46_51 7 thg 5, 2026 (3).p
+          +ng', label:'S2 – Icon thẻ 3'},                                
+      476    ]},
+      477 +  {title:'Section 3 – Icon thống kê', items:[                 
+      478 +    {key:'section 3/ChatGPT Image 22_50_05 7 thg 5, 2026 (2).p
+          +ng', label:'S3 – Icon stat 1'},                               
+      479 +    {key:'section 3/ChatGPT Image 22_50_05 7 thg 5, 2026 (3).p
+          +ng', label:'S3 – Icon stat 2'},                               
+      480 +    {key:'section 3/ChatGPT Image 22_50_05 7 thg 5, 2026 (4).p
+          +ng', label:'S3 – Icon stat 3'},                               
+      481 +  ]},                                                         
+      482 +  {title:'Section 5 – Icon ngành hàng', items:[               
+      483 +    {key:'section 5/ChatGPT Image 23_00_55 7 thg 5, 2026 (2).p
+          +ng', label:'S5 – Dịch vụ & B2B'},                             
+      484 +    {key:'section 5/ChatGPT Image 23_00_55 7 thg 5, 2026 (3).p
+          +ng', label:'S5 – Du lịch & Khách sạn'},                       
+      485 +    {key:'section 5/ChatGPT Image 23_00_56 7 thg 5, 2026 (4).p
+          +ng', label:'S5 – Thương mại điện tử'},                        
+      486 +    {key:'section 5/ChatGPT Image 23_00_56 7 thg 5, 2026 (5).p
+          +ng', label:'S5 – Sức khỏe & Y tế'},                           
+      487 +    {key:'section 5/ChatGPT Image 23_00_56 7 thg 5, 2026 (6).p
+          +ng', label:'S5 – Tài chính & Ngân hàng'},                     
+      488 +  ]},                                                         
+      489 +  {title:'Section 6 – Icon giải pháp GEO', items:[            
+      490 +    {key:'section 6/ChatGPT Image 23_16_18 7 thg 5, 2026 (2).p
+          +ng', label:'S6 – Query Fan Out'},                             
+      491 +    {key:'section 6/ChatGPT Image 23_16_18 7 thg 5, 2026 (3).p
+          +ng', label:'S6 – Content Ngữ Nghĩa'},                         
+      492 +    {key:'section 6/ChatGPT Image 23_16_18 7 thg 5, 2026 (4).p
+          +ng', label:'S6 – Technical GEO'},                             
+      493 +    {key:'section 6/ChatGPT Image 23_16_18 7 thg 5, 2026 (5).p
+          +ng', label:'S6 – Brand Authority'},                           
+      494 +  ]},                                                         
+      495 +  {title:'Section 7 – Ảnh minh họa', items:[                  
+      496 +    {key:'section 7/Screenshot_3.png', label:'S7 – Ảnh case st
+          +udy Viettel'},                                                
+      497 +  ]},                                                         
+      498 +  {title:'Section 8 – Icon giải pháp', items:[                
+      499 +    {key:'section 8/ChatGPT Image 23_20_01 7 thg 5, 2026 (4).p
+          +ng', label:'S8 – Theo ngành hàng'},                           
+      500 +    {key:'section 8/ChatGPT Image 23_20_02 7 thg 5, 2026 (5).p
+          +ng', label:'S8 – Theo quy mô'},                               
+      501 +    {key:'section 8/ChatGPT Image 23_20_02 7 thg 5, 2026 (6).p
+          +ng', label:'S8 – Theo mô hình'},                              
+      502 +  ]},                                                         
+      503 +  {title:'Section 9 – Ảnh minh họa lý do chọn', items:[       
+      504 +    {key:'section 9.1/ChatGPT Image 23_25_00 7 thg 5, 2026 (1)
+          +.png', label:'S9 – Lý do #1'},                                
+      505 +    {key:'section 9.2/ChatGPT Image 23_25_00 7 thg 5, 2026 (2)
+          +.png', label:'S9 – Lý do #2'},                                
+      506 +    {key:'section 9.3/ChatGPT Image 23_29_29 7 thg 5, 2026 (1)
+          +.png', label:'S9 – Lý do #3'},                                
+      507 +    {key:'section 9.4/ChatGPT Image 23_29_29 7 thg 5, 2026 (2)
+          +.png', label:'S9 – Lý do #4'},                                
+      508 +  ]},                                                         
+      509 +  {title:'Section 10 – Icon cam kết', items:[                 
+      510 +    {key:'section 10/ChatGPT Image 23_44_40 7 thg 5, 2026 (2).
+          +png', label:'S10 – KPI tốt nhất'},                            
+      511 +    {key:'section 10/ChatGPT Image 23_44_40 7 thg 5, 2026 (3).
+          +png', label:'S10 – Chất lượng cao nhất'},                     
+      512 +    {key:'section 10/ChatGPT Image 23_44_40 7 thg 5, 2026 (4).
+          +png', label:'S10 – Chi phí tốt nhất'},                        
+      513 +  ]},                                                         
+      514 +  {title:'Section 12 – Ảnh case study', items:[               
+      515 +    {key:'section 12/ChatGPT Image 23_50_06 7 thg 5, 2026 (5).
+          +png', label:'S12 – Viettel Telecom'},                         
+      516 +    {key:'section 12/ChatGPT Image 17_20_57 8 thg 5, 2026.png'
+          +,     label:'S12 – Decathlon'},                               
+      517 +    {key:'section 12/ChatGPT Image 23_50_05 7 thg 5, 2026 (3).
+          +png', label:'S12 – GHTK Logistics'},                          
+      518 +    {key:'section 12/ChatGPT Image 23_50_04 7 thg 5, 2026 (2).
+          +png', label:'S12 – Vietnam Airlines'},                        
+      519 +  ]},                                                         
+      520 +  {title:'Section 15 – Ảnh nhân sự', items:[                  
+      521 +    {key:'section 15/ảnh nhân su.png', label:'S15 – Ảnh chuyên
+          + gia'},                                                       
+      522 +  ]},                                                         
+      523 +  {title:'Section 16 – Giải thưởng', items:[                  
+      524 +    {key:'section 16/ChatGPT Image 23_53_42 7 thg 5, 2026 (1).
+          +png', label:'S16 – Giải thưởng 1'},                           
+      525 +    {key:'section 16/ChatGPT Image 23_53_43 7 thg 5, 2026 (2).
+          +png', label:'S16 – Giải thưởng 2'},                           
+      526 +    {key:'section 16/ChatGPT Image 23_53_43 7 thg 5, 2026 (3).
+          +png', label:'S16 – Giải thưởng 3'},                           
+      527 +    {key:'section 16/ChatGPT Image 23_53_43 7 thg 5, 2026 (4).
+          +png', label:'S16 – Giải thưởng 4'},                           
+      528 +    {key:'section 16/ChatGPT Image 23_53_44 7 thg 5, 2026 (5).
+          +png', label:'S16 – Giải thưởng 5'},                           
+      529 +  ]},                                                         
+      530 +  {title:'Section 17 – Carousel trái (cuộn lên)', items:[     
+      531 +    {key:'section 17/ảnh/0. Retouch 5.png', label:'S17 Trái – 
+          +Ảnh 1'},                                                      
+      532 +    {key:'section 17/ảnh/1 (1).jpg',        label:'S17 Trái – 
+          +Ảnh 2'},                                                      
+      533 +    {key:'section 17/ảnh/1 (2).jpg',        label:'S17 Trái – 
+          +Ảnh 3'},                                                      
+      534 +    {key:'section 17/ảnh/2 (1).jpg',        label:'S17 Trái – 
+          +Ảnh 4'},                                                      
+      535 +    {key:'section 17/ảnh/2 (2).jpg',        label:'S17 Trái – 
+          +Ảnh 5'},                                                      
+      536 +  ]},                                                         
+      537 +  {title:'Section 17 – Hero slideshow (ảnh chính giữa)', items
+          +:[                                                            
+      538 +    {key:'section 17/ảnh/Ảnh chọn.png',          label:'S17 He
+          +ro – Ảnh 1 (mặc định)'},                                      
+      539 +    {key:'section 17/ảnh/20250515-152917.jpg',    label:'S17 H
+          +ero – Ảnh 2'},                                                
+      540 +    {key:'section 17/ảnh/20250729-154440.jpg',    label:'S17 H
+          +ero – Ảnh 3'},                                                
+      541 +    {key:'section 17/ảnh/20260114-112822.jpg',    label:'S17 H
+          +ero – Ảnh 4'},                                                
+      542 +    {key:'section 17/ảnh/VNPay (1).jpg',          label:'S17 H
+          +ero – Ảnh 5'},                                                
+      543 +    {key:'section 17/ảnh/Decathlon final.jpg',    label:'S17 H
+          +ero – Ảnh 6'},                                                
+      544 +  ]},                                                         
+      545 +  {title:'Section 17 – Carousel phải (cuộn xuống)', items:[   
+      546 +    {key:'section 17/ảnh/20250515-152917.jpg', label:'S17 Phải
+          + – Ảnh 1'},                                                   
+      547 +    {key:'section 17/ảnh/20250729-154440.jpg', label:'S17 Phải
+          + – Ảnh 2'},                                                   
+      548 +    {key:'section 17/ảnh/20260114-112822.jpg', label:'S17 Phải
+          + – Ảnh 3'},                                                   
+      549 +    {key:'section 17/ảnh/VNPay (1).jpg',       label:'S17 Phải
+          + – Ảnh 4'},                                                   
+      550 +    {key:'section 17/ảnh/Decathlon final.jpg', label:'S17 Phải
+          + – Ảnh 5'},                                                   
+      551 +  ]},                                                         
+      552  ];
+      553  
+      554 +// Flatten all items for index-based access                   
+      555 +var ALL_IMG_ITEMS = (function(){                              
+      556 +  var arr=[];                                                 
+      557 +  IMG_SECTIONS.forEach(function(s){ s.items.forEach(function(f
+          +){ arr.push(f); }); });                                       
+      558 +  return arr;                                                 
+      559 +})();                                                         
+      560 +                                                              
+      561  function renderImages(){
+      562    var saved=JSON.parse(localStorage.getItem(LS_IMAGES)||'{}');
+      563    var html='';
+      564 +  var idx=0;                                                  
+      565    IMG_SECTIONS.forEach(function(s){
+      566      html+='<div class="img-section-title">'+e(s.title)+'</div>
+           <div class="img-grid">';
+      567      s.items.forEach(function(f){
+      483 -      var cur=saved[f.key]||f.path;                           
+      568 +      var cur=saved[f.key]||(f.path||f.key);                  
+      569 +      var iid='ii_'+idx;                                      
+      570        html+='<div class="img-card">'+
+      485 -        '<img class="img-thumb" src="'+e(cur)+'" onerror="this
+          -.style.opacity=\'.2\'" alt="">'+                              
+      571 +        '<img class="img-thumb" src="'+e(cur)+'" onerror="this
+          +.style.opacity=\'.15\'" alt="">'+                             
+      572          '<div class="img-body">'+
+      573            '<div class="img-label">'+e(f.label)+'</div>'+
+      488 -          '<div class="img-cur">'+e(cur)+'</div>'+            
+      489 -          '<input type="text" class="img-inp" id="if_'+f.key+'
+          -" value="'+e(cur)+'">'+                                       
+      490 -          '<button class="btn-img-apply" onclick="applyImg(\''
+          -+f.key+'\')">Cập nhật</button>'+                              
+      491 -          '<div class="img-ok" id="io_'+f.key+'">✓ Đã lưu</div
+          ->'+                                                           
+      574 +          '<div class="img-cur" title="'+e(cur)+'">'+e(cur.len
+          +gth>50?'...'+cur.slice(-48):cur)+'</div>'+                    
+      575 +          '<input type="text" class="img-inp" id="'+iid+'" val
+          +ue="'+e(cur)+'" placeholder="Đường dẫn file mới...">'+        
+      576 +          '<button class="btn-img-apply" onclick="applyImgAt('
+          ++idx+')">Cập nhật</button>'+                                  
+      577 +          '<div class="img-ok" id="ok_'+idx+'">✓ Đã lưu</div>'
+          ++                                                             
+      578          '</div></div>';
+      579 +      idx++;                                                  
+      580      });
+      581      html+='</div>';
+      582    });
+      583    document.getElementById('img-panels').innerHTML=html;
+      584  }
+      585  
+      499 -function applyImg(key){                                       
+      500 -  var el=document.getElementById('if_'+key);                  
+      586 +function applyImgAt(idx){                                     
+      587 +  var f=ALL_IMG_ITEMS[idx];                                   
+      588 +  if(!f) return;                                              
+      589 +  var el=document.getElementById('ii_'+idx);                  
+      590    if(!el) return;
+      591    var saved=JSON.parse(localStorage.getItem(LS_IMAGES)||'{}');
+      503 -  saved[key]=el.value.trim();                                 
+      592 +  saved[f.key]=el.value.trim();                               
+      593    localStorage.setItem(LS_IMAGES,JSON.stringify(saved));
+      505 -  var ok=document.getElementById('io_'+key);                  
+      506 -  if(ok){ok.style.display='block';setTimeout(function(){ok.sty
+          -le.display='none';},2000);}                                   
+      507 -  renderImages();                                             
+      594 +  var ok=document.getElementById('ok_'+idx);                  
+      595 +  if(ok){ok.style.display='block';setTimeout(function(){ok.sty
+          +le.display='none';renderImages();},1200);}                    
+      596 +  showToast('Đã lưu! Reload landing page để thấy thay đổi.'); 
+      597  }
+      598  
+      599  /* ── Toast ── */
+
+● Giờ cập nhật imgMap trong index.html để thêm bg_s10, bg_s11, bg_s15, bg_s17:
+
+● Update(LDP GEO\index.html)
+  ⎿  Added 6 lines, removed 12 lines
+      1372      's18_h2':  '#s18 h2',        's18_p':   '#s18 .s18-p'
+      1373    };
+      1374    var imgMap = {
+      1375 -    'bg_s1':  {type:'bg',sel:'#s1'},   'bg_s2': {type:'bg',se
+           -l:'#s2'},                                                    
+      1376 -    'bg_s3':  {type:'bg',sel:'#s3'},   'bg_s4': {type:'bg',se
+           -l:'#s4'},                                                    
+      1377 -    'bg_s5':  {type:'bg',sel:'#s5'},   'bg_s6': {type:'bg',se
+           -l:'#s6'},                                                    
+      1378 -    'bg_s7':  {type:'bg',sel:'#s7'},   'bg_s8': {type:'bg',se
+           -l:'#s8'},                                                    
+      1379 -    'bg_s12': {type:'bg',sel:'#s12'},  'bg_s13':{type:'bg',se
+           -l:'#s13'},                                                   
+      1380 -    'bg_s14': {type:'bg',sel:'#s14'},  'bg_s16':{type:'bg',se
+           -l:'#s16'},                                                   
+      1381 -    'bg_s18': {type:'bg',sel:'#s18'},                        
+      1382 -    'img_s12_viettel':   {type:'img', sel:'#s12 .case-card:nt
+           -h-child(1) .case-img'},                                      
+      1383 -    'img_s12_decathlon': {type:'img', sel:'#s12 .case-card:nt
+           -h-child(2) .case-img'},                                      
+      1384 -    'img_s12_ghtk':      {type:'img', sel:'#s12 .case-card:nt
+           -h-child(3) .case-img'},                                      
+      1385 -    'img_s12_vna':       {type:'img', sel:'#s12 .case-card:nt
+           -h-child(4) .case-img'},                                      
+      1386 -    'img_s17_hero':      {type:'img', sel:'.s17-hero-img img.
+           -s17-active'}                                                 
+      1375 +    'bg_s1': {sel:'#s1'}, 'bg_s2': {sel:'#s2'}, 'bg_s3': {sel
+           +:'#s3'},                                                     
+      1376 +    'bg_s4': {sel:'#s4'}, 'bg_s5': {sel:'#s5'}, 'bg_s6': {sel
+           +:'#s6'},                                                     
+      1377 +    'bg_s7': {sel:'#s7'}, 'bg_s8': {sel:'#s8'}, 'bg_s10':{sel
+           +:'#s10'},                                                    
+      1378 +    'bg_s11':{sel:'#s11'},'bg_s12':{sel:'#s12'},'bg_s13':{sel
+           +:'#s13'},                                                    
+      1379 +    'bg_s14':{sel:'#s14'},'bg_s15':{sel:'#s15'},'bg_s16':{sel
+           +:'#s16'},                                                    
+      1380 +    'bg_s17':{sel:'#s17'},'bg_s18':{sel:'#s18'}              
+      1381    };
+      1382    function applyOverrides(){
+      1383      var ct = JSON.parse(localStorage.getItem('seongon_content
+            ')||'{}');
+
+● Xong. Tab "Ảnh & Nền" trong admin giờ có đầy đủ:
+
+  ┌───────────────────────┬──────────────────────┐
+  │         Nhóm          │        Số ảnh        │
+  ├───────────────────────┼──────────────────────┤
+  │ Ảnh nền (backgrounds) │ 17 sections (S1–S18) │
+  ├───────────────────────┼──────────────────────┤
+  │ S2 icon thẻ           │ 3                    │
+  ├───────────────────────┼──────────────────────┤
+  │ S3 icon thống kê      │ 3                    │
+  ├───────────────────────┼──────────────────────┤
+  │ S5 icon ngành hàng    │ 5                    │
+  ├───────────────────────┼──────────────────────┤
+  │ S6 icon giải pháp GEO │ 4                    │
+  ├───────────────────────┼──────────────────────┤
+  │ S7 ảnh minh họa       │ 1                    │
+  ├───────────────────────┼──────────────────────┤
+  │ S8 icon giải pháp     │ 3                    │
+  ├───────────────────────┼──────────────────────┤
+  │ S9 ảnh lý do          │ 4                    │
+  ├───────────────────────┼──────────────────────┤
+  │ S10 icon cam kết      │ 3                    │
+  ├───────────────────────┼──────────────────────┤
+  │ S12 ảnh case study    │ 4                    │
+  ├───────────────────────┼──────────────────────┤
+  │ S15 ảnh nhân sự       │ 1                    │
+  ├───────────────────────┼──────────────────────┤
+  │ S16 giải thưởng       │ 5                    │
+  ├───────────────────────┼──────────────────────┤
+  │ S17 carousel trái     │ 5                    │
+  ├───────────────────────┼──────────────────────┤
+  │ S17 hero slideshow    │ 6                    │
+  ├───────────────────────┼──────────────────────┤
+  │ S17 carousel phải     │ 5                    │
+  └───────────────────────┴──────────────────────┘
+
+  Cách dùng: Nhập đường dẫn file mới → bấm "Cập nhật" → reload index.html là
+  thấy ngay.
+
+✻ Worked for 3m 42s
+
+❯ hướng dẫn tôi cách publish landipage này                                      
+
+● Có 3 cách phổ biến tùy nhu cầu:
+
+  ---
+  Cách 1: Netlify — Dễ nhất, miễn phí (Khuyên dùng)
+
+  Bước 1: Vào https://netlify.com → Đăng ký tài khoản miễn phí
+
+  Bước 2: Sau khi đăng nhập, kéo thả toàn bộ thư mục LDP GEO vào ô deploy:
+
+  Sites → Add new site → Deploy manually
+  → Kéo thả folder "LDP GEO" vào đây
+
+  Bước 3: Netlify tự tạo link dạng random-name.netlify.app — dùng được ngay
+
+  Bước 4 (tuỳ chọn): Đổi tên miền thành geo.seongon.com trong phần Domain 
+  settings nếu bạn có domain riêng
+
+  ▎ Quan trọng: Phải kéo cả thư mục, không phải chỉ file index.html — vì ảnh nằm
+  ▎  trong các folder con
+
+  ---
+  Cách 2: Upload lên hosting sẵn có của SEONGON
+
+  Nếu SEONGON đã có hosting (server), dùng FTP:
+
+  Bước 1: Dùng FileZilla (miễn phí) kết nối vào server qua FTP
+
+  Bước 2: Upload toàn bộ thư mục LDP GEO vào thư mục public_html (hoặc tạo
+  subfolder như public_html/geo/)
+
+  Bước 3: Truy cập qua seongon.com/geo/ hoặc subdomain geo.seongon.com
+
+  ---
+  Cách 3: GitHub Pages — Miễn phí, có version control
+
+  1. Tạo repo mới trên github.com
+  2. Upload toàn bộ folder LDP GEO
+  3. Settings → Pages → Deploy from branch (main)
+  4. Link: username.github.io/ten-repo
+
+  ---
+  Lưu ý khi publish
+
+  Vấn đề: Ảnh không hiện
+  Giải pháp: Upload đủ tất cả folder con (section 1, section 2...)
+  ────────────────────────────────────────
+  Vấn đề: Admin leads bị mất
+  Giải pháp: localStorage chỉ lưu trên browser — xem mục dưới
+  ────────────────────────────────────────
+  Vấn đề: Tên file có tiếng Việt
+  Giải pháp: Netlify/GitHub xử lý được UTF-8, không cần đổi tên
+
+  ▎ Về trang Admin: Sau khi publish, leads từ form sẽ lưu vào localStorage của 
+  ▎ trình duyệt khách hàng, không phải máy bạn. Để thu thập leads thực tế, cần 
+  ▎ kết nối form với dịch vụ như Formspree, Google Sheets, hoặc Mautic (SEONGON 
+  ▎ đang dùng). Bạn muốn tôi tích hợp không?
+
+✻ Sautéed for 26s
+
+❯ cho tôi folder để kéo vào https://netlify.com                                 
+  ⎿  You've hit your limit · resets May 10, 8pm (Asia/Bangkok)
+     /upgrade or /extra-usage to finish what you’re working on.
+✻ Cooked for 1s

@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Giải Pháp GEO | SEONGON</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --blue:#1A56DB;--blue-dark:#0A1628;--blue-navy:#001080;
+  --blue-deep:#0D1B9E;--blue-light:#EEF4FF;--cyan:#0DD1FF;
+  --white:#fff;--gray:#6B7280;--gray2:#374151
+}
+body{font-family:'Be Vietnam Pro',sans-serif;color:#0A1628;overflow-x:hidden}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:999;height:68px;
+  background:rgba(255,255,255,.96);backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(26,86,219,.1);
+  display:flex;align-items:center;justify-content:space-between;padding:0 6%}
+.nav-logo{font-size:22px;font-weight:900;color:var(--blue);letter-spacing:-.5px;text-decoration:none}
+.nav-cta{background:var(--blue);color:#fff;padding:10px 26px;border-radius:8px;
+  font-weight:700;font-size:14px;text-decoration:none;transition:.2s}
+.nav-cta:hover{background:#1546BC;box-shadow:0 6px 20px rgba(26,86,219,.3)}
+
+/* UTILS */
+.wrap{max-width:1200px;margin:0 auto;padding:0 5%}
+.badge{display:inline-block;background:rgba(26,86,219,.1);color:var(--blue);
+  font-size:11px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;
+  padding:6px 16px;border-radius:100px;margin-bottom:14px}
+.badge-w{background:rgba(255,255,255,.2);color:#fff}
+.btn{display:inline-block;padding:14px 32px;border-radius:10px;font-weight:700;
+  font-size:15px;text-decoration:none;transition:.2s;cursor:pointer;border:none;font-family:inherit}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover{background:#1546BC;transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,86,219,.3)}
+.btn-outline{background:transparent;color:var(--blue);border:2px solid var(--blue)}
+.btn-outline:hover{background:var(--blue);color:#fff}
+.btn-outline-w{background:transparent;color:#fff;border:2px solid #fff}
+.btn-outline-w:hover{background:#fff;color:var(--blue)}
+h2{font-size:clamp(26px,3.5vw,42px);font-weight:800;line-height:1.25}
+h3{font-size:clamp(20px,2.5vw,30px);font-weight:800;line-height:1.3}
+
+/* ── SECTION 1 HERO ── */
+#s1{min-height:100vh;padding-top:68px;
+  background-image:url('Section 1/nền 1.png');
+  background-size:cover;background-position:center right;
+  display:flex;align-items:center}
+#s1 .wrap{padding:60px 5% 60px 6%;max-width:none;margin:0}
+#s1 .wrap>div{max-width:none}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:#fff;
+  border:1px solid rgba(26,86,219,.2);padding:8px 18px;border-radius:100px;
+  font-size:13px;font-weight:700;color:var(--blue);margin-bottom:22px;
+  box-shadow:0 2px 10px rgba(26,86,219,.1)}
+#s1 h1{font-size:clamp(24px,2.8vw,42px);font-weight:900;line-height:1.25;
+  color:var(--blue-dark);margin-bottom:18px;white-space:nowrap}
+#s1 h1 span{color:var(--blue)}
+.hero-desc{font-size:16px;font-weight:700;line-height:1.7;color:var(--gray2);margin-bottom:10px}
+.hero-sub{font-size:15px;line-height:1.7;color:var(--gray2);margin-bottom:36px}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+.hero-img img{width:100%;max-width:540px;object-fit:contain}
+
+/* ── SECTION 2 ── */
+#s2{padding:100px 0;
+  background-image:url('section 2/nền 2.png');
+  background-size:cover;background-position:center}
+.sec-hd{text-align:center;margin-bottom:56px}
+.sec-hd h2{color:var(--blue-dark);margin-bottom:14px}
+.sec-hd p{font-size:15px;color:var(--gray);max-width:680px;margin:0 auto;line-height:1.7}
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.card-w{background:#fff;border-radius:20px;padding:36px 28px;
+  box-shadow:0 4px 24px rgba(26,86,219,.08);transition:.2s}
+.card-w:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(26,86,219,.15)}
+.card-num{font-size:38px;font-weight:900;color:rgba(26,86,219,.1);line-height:1;margin-bottom:14px}
+.card-ico{width:80px;height:80px;object-fit:contain;margin-bottom:18px}
+.card-title{font-size:17px;font-weight:700;color:var(--blue-dark);margin-bottom:10px}
+.card-txt{font-size:14px;line-height:1.7;color:var(--gray)}
+
+/* ── SECTION 3 ── */
+#s3{padding:100px 0;
+  background-image:url('section 3/nền 3.png');
+  background-size:cover;background-position:center}
+#s3 .sec-hd h2{color:var(--blue-dark)}
+.s3-card{border-radius:20px;padding:36px 28px;background:#fff;
+  box-shadow:0 4px 24px rgba(0,0,0,.06)}
+.s3-card{border-top:4px solid var(--blue)}
+.s3-card.cyan{border-top-color:var(--cyan)}
+.s3-card.orange{border-top-color:#F97316}
+.s3-ico{width:52px;height:52px;object-fit:contain;margin-bottom:14px}
+.s3-stat{font-size:34px;font-weight:900;color:var(--blue);line-height:1.1;margin-bottom:8px}
+.s3-card.cyan .s3-stat{color:#0097B2}
+.s3-card.orange .s3-stat{color:#F97316}
+.s3-t{font-size:16px;font-weight:700;color:var(--blue-dark);margin-bottom:10px}
+.s3-p{font-size:13px;line-height:1.7;color:var(--gray)}
+
+/* ── SECTION 4 ── */
+#s4{padding:100px 0;
+  background-image:url('section 4/nền 4.png');
+  background-size:cover;background-position:center;color:#fff}
+#s4 .sec-hd h2{color:#fff}
+#s4 .sec-hd p{color:rgba(255,255,255,.75)}
+/* equation section 4 */
+.eq-wrap{display:flex;justify-content:center;align-items:stretch;gap:0;flex-wrap:wrap;margin-top:56px}
+.eq-box{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);
+  border-radius:20px;padding:36px 40px;text-align:center;min-width:220px}
+.eq-box.result{background:linear-gradient(135deg,rgba(13,209,255,.25),rgba(26,86,219,.4));
+  border-color:var(--cyan);border-width:2px;box-shadow:0 0 40px rgba(13,209,255,.3);
+  min-width:280px}
+.eq-label{font-size:36px;font-weight:900;color:#fff;margin-bottom:10px}
+.eq-label.c{color:var(--cyan)}
+.eq-sub{font-size:14px;color:rgba(255,255,255,.8);line-height:1.5}
+.eq-op{display:flex;align-items:center;justify-content:center;padding:0 20px;
+  font-size:40px;font-weight:900;color:var(--cyan);align-self:center}
+/* s4 comparison grid */
+.cmp-vs{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:40px 0 0}
+.cmp-col{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);
+  border-radius:20px;padding:28px 28px 24px}
+.cmp-col.geo-col{border-color:var(--cyan);border-width:2px;
+  background:rgba(13,209,255,.08)}
+.cmp-hd{font-size:20px;font-weight:800;color:#fff;margin-bottom:16px;
+  text-align:center;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.2)}
+.cmp-col.geo-col .cmp-hd{color:var(--cyan)}
+.cmp-list{list-style:none;margin-bottom:14px}
+.cmp-list li{font-size:13.5px;color:rgba(255,255,255,.85);padding:6px 0 6px 20px;
+  border-bottom:1px solid rgba(255,255,255,.07);position:relative}
+.cmp-list li::before{content:'—';position:absolute;left:0;color:var(--cyan)}
+.cmp-list li:last-child{border-bottom:none}
+.cmp-result{font-size:13.5px;color:var(--cyan);font-weight:700;
+  padding:10px 0 6px;border-top:1px solid rgba(255,255,255,.2)}
+.cmp-note{font-size:12.5px;color:rgba(255,255,255,.7);margin-top:8px;line-height:1.6;
+  padding:8px 12px;background:rgba(13,209,255,.07);border-radius:8px;font-style:italic}
+.cmp-result-list{list-style:none;margin-top:8px}
+.cmp-result-list li{font-size:12.5px;color:rgba(255,255,255,.82);padding:4px 0 4px 18px;
+  position:relative;line-height:1.55}
+.cmp-result-list li::before{content:'▸';position:absolute;left:0;color:var(--cyan);font-size:10px;top:6px}
+
+/* ── SECTION 5 ── */
+#s5{padding:100px 0;
+  background-image:url('section 5/nền 5.png');
+  background-size:cover;background-position:center}
+.ind-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+.ind-card{background:#fff;border-radius:20px;padding:30px 18px;text-align:center;
+  box-shadow:0 4px 20px rgba(26,86,219,.08);transition:.2s}
+.ind-card:hover{transform:translateY(-4px)}
+.ind-ico{width:72px;height:72px;object-fit:contain;margin:0 auto 14px}
+.ind-name{font-size:14px;font-weight:700;color:var(--blue-dark);margin-bottom:10px;line-height:1.3}
+.ind-p{font-size:12px;color:var(--gray);line-height:1.6}
+
+/* ── SECTION 6 ── */
+#s6{padding:100px 0;
+  background-image:url('section 6/nền 6.png');
+  background-size:cover;background-position:center;color:#fff}
+#s6 .s6-inner{display:grid;grid-template-columns:1fr 1.6fr;gap:64px;align-items:start}
+#s6 .s6-left h2{font-size:clamp(24px,3vw,38px);color:#fff;margin-bottom:14px}
+#s6 .s6-left .sub{font-size:16px;color:rgba(255,255,255,.8);margin-bottom:12px}
+#s6 .s6-left p{font-size:14px;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:28px}
+.cards4{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.geo-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);
+  border-radius:20px;padding:30px 22px;backdrop-filter:blur(10px);transition:.2s}
+.geo-card:hover{background:rgba(255,255,255,.18)}
+.geo-ico{width:62px;height:62px;object-fit:contain;margin-bottom:18px}
+.geo-tag{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--cyan);margin-bottom:5px}
+.geo-name{font-size:17px;font-weight:800;color:#fff;margin-bottom:14px;line-height:1.3}
+.geo-list{list-style:none}
+.geo-list li{font-size:12.5px;color:rgba(255,255,255,.8);line-height:1.6;margin-bottom:7px;
+  padding-left:14px;position:relative}
+.geo-list li::before{content:'—';position:absolute;left:0;color:var(--cyan)}
+
+/* ── SECTION 7 ── */
+#s7{padding:100px 0;
+  background-image:url('section 7/nền 7.png');
+  background-size:cover;background-position:center}
+#s7 .wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+#s7 h2{color:var(--blue-dark);margin-bottom:12px}
+.s7-lbl{font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;
+  color:var(--blue);margin-bottom:8px}
+.s7-sub{font-size:14px;color:var(--gray);line-height:1.7;margin-bottom:36px}
+.stats3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.stat-n{font-size:30px;font-weight:900;color:var(--blue);line-height:1;margin-bottom:8px}
+.stat-l{font-size:12px;color:var(--gray);line-height:1.5}
+#s7 .s7-img img{width:100%;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.15)}
+
+/* ── SECTION 8 ── */
+#s8{padding:100px 0;
+  background-image:url('section 8/nền 8.png');
+  background-size:cover;background-position:center}
+.sol-card{background:#fff;border-radius:20px;padding:36px 28px;text-align:center;
+  box-shadow:0 4px 24px rgba(26,86,219,.08)}
+.sol-ico{width:80px;height:80px;object-fit:contain;margin:0 auto 18px}
+.sol-lbl{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--blue);margin-bottom:5px}
+.sol-name{font-size:17px;font-weight:800;color:var(--blue-dark);margin-bottom:10px}
+.sol-p{font-size:13px;color:var(--gray);line-height:1.7}
+
+/* ── SECTION 9 HEADER ── */
+.s9-hd{padding:70px 0 0;background:var(--blue-light);text-align:center}
+.s9-hd h2{color:var(--blue-dark);margin-top:8px}
+
+/* ── SECTION 9.x ── */
+.s9x{padding:80px 0}
+.s9x:nth-of-type(odd){background:var(--blue-light)}
+.s9x:nth-of-type(even){background:#fff}
+.s9x .wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.s9x.rev .wrap{direction:rtl}
+.s9x.rev .wrap>*{direction:ltr}
+.s9-num{font-size:12px;font-weight:700;letter-spacing:1.5px;color:var(--blue);
+  text-transform:uppercase;margin-bottom:8px}
+.s9-t{font-size:clamp(20px,2.5vw,30px);font-weight:800;color:var(--blue-dark);
+  margin-bottom:14px;line-height:1.3}
+.s9-t span{color:var(--blue)}
+.s9-p{font-size:15px;color:var(--gray);line-height:1.7;margin-bottom:20px}
+.s9-ul{list-style:none}
+.s9-ul li{display:flex;align-items:flex-start;gap:10px;font-size:14px;
+  color:var(--gray2);line-height:1.6;margin-bottom:10px}
+.s9-ul li::before{content:'✓';color:var(--blue);font-weight:700;flex-shrink:0;margin-top:1px}
+.s9x .s9-img img{width:100%;border-radius:20px}
+
+/* ── SECTION 10 ── */
+#s10{padding:100px 0;
+  background:linear-gradient(135deg,#071260 0%,#0D1B9E 40%,#0B1F6E 70%,#040d44 100%);
+  color:#fff}
+#s10 .sec-hd h2{color:#fff}
+.cm-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);
+  border-radius:20px;padding:40px 30px;text-align:center}
+.cm-ico{width:72px;height:72px;object-fit:contain;margin:0 auto 18px}
+.cm-t{font-size:20px;font-weight:800;color:#fff;margin-bottom:14px}
+.cm-p{font-size:14px;color:rgba(255,255,255,.8);line-height:1.7}
+
+/* ── SECTION 11 ── */
+#s11{padding:100px 0;background:#fff}
+.pkg-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:28px;margin-bottom:44px;align-items:start}
+.pkg{background:#fff;border-radius:24px;padding:36px 30px;
+  box-shadow:0 4px 24px rgba(26,86,219,.08);border:1px solid #e8eef8}
+.pkg.feat{background:var(--blue);color:#fff;padding:44px 36px;
+  box-shadow:0 12px 48px rgba(26,86,219,.25);border:none;
+  position:relative;transform:none}
+.pkg-badge{display:inline-block;background:var(--blue-light);color:var(--blue);
+  font-size:11px;font-weight:700;padding:4px 14px;border-radius:100px;margin-bottom:14px}
+.pkg.feat .pkg-badge{background:rgba(255,255,255,.2);color:#fff}
+.pkg-name{font-size:26px;font-weight:900;color:var(--blue);margin-bottom:6px}
+.pkg.feat .pkg-name{color:#fff}
+.pkg-tag{font-size:14px;color:var(--gray);margin-bottom:6px;line-height:1.5}
+.pkg.feat .pkg-tag{color:rgba(255,255,255,.8)}
+.pkg-price{font-size:18px;font-weight:800;color:var(--blue-dark);margin:14px 0}
+.pkg.feat .pkg-price{color:var(--cyan)}
+hr.div{border:none;border-top:1px solid #E5E7EB;margin:20px 0}
+.pkg.feat hr.div{border-top-color:rgba(255,255,255,.2)}
+.pkg-ul{list-style:none;margin-bottom:24px}
+.pkg-ul li{display:flex;align-items:flex-start;gap:9px;font-size:13px;
+  color:#374151;line-height:1.6;margin-bottom:9px}
+.pkg.feat .pkg-ul li{color:rgba(255,255,255,.9)}
+.pkg-ul li::before{content:'✓';color:var(--blue);font-weight:700;flex-shrink:0}
+.pkg.feat .pkg-ul li::before{color:var(--cyan)}
+.pkg-note{font-size:12px;font-style:italic;color:var(--gray);border-top:1px solid #E5E7EB;
+  padding-top:14px;line-height:1.6}
+.pkg.feat .pkg-note{color:rgba(255,255,255,.65);border-top-color:rgba(255,255,255,.2)}
+
+/* ── SECTION 12 ── */
+#s12{padding:100px 0;
+  background-image:url('section 12/nền 12.png');
+  background-size:cover;background-position:center;color:#fff}
+#s12 .sec-hd h2{color:#fff}
+#s12 .sec-hd p{color:rgba(255,255,255,.75)}
+.case-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.case-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);
+  border-radius:20px;overflow:hidden;position:relative}
+.case-logo{position:absolute;top:10px;left:10px;z-index:3;
+  padding:4px 10px;border-radius:6px;font-size:11px;font-weight:800;
+  color:#fff;letter-spacing:.3px;white-space:nowrap}
+.case-img{width:100%;height:150px;object-fit:cover}
+.case-body{padding:26px}
+.case-co{font-size:18px;font-weight:800;color:#fff;margin-bottom:3px}
+.case-ind{font-size:12px;color:var(--cyan);margin-bottom:18px}
+.case-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:16px}
+.cs-n{font-size:21px;font-weight:900;color:#fff}
+.cs-l{font-size:11px;color:rgba(255,255,255,.6);line-height:1.4;margin-top:2px}
+.case-q{font-size:12.5px;color:rgba(255,255,255,.75);line-height:1.6;
+  border-top:1px solid rgba(255,255,255,.15);padding-top:14px}
+
+/* ── SECTION 13 ── */
+#s13{padding:100px 0;
+  background-image:url('section 13/nền 13.png');
+  background-size:cover;background-position:center;color:#fff}
+#s13 .sec-hd h2{color:#fff}
+#s13 .sec-hd p{color:rgba(255,255,255,.75)}
+.logo-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:10px 20px}
+.logo-item{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);
+  border-radius:8px;padding:11px 8px;text-align:center;font-size:11px;font-weight:600;
+  color:rgba(255,255,255,.9);line-height:1.3}
+
+/* ── SECTION 14 ── */
+#s14{padding:100px 0;
+  background-image:url('section 14/nền 14.png');
+  background-size:cover;background-position:center}
+#s14 h2{color:var(--blue-dark);margin-bottom:8px;font-size:clamp(20px,2.6vw,32px)}
+.s14-sub{font-size:11px;color:var(--gray);line-height:1.6;margin-bottom:28px}
+.acc-list{display:flex;flex-direction:column;gap:12px;max-width:800px;
+  margin-left:auto;margin-right:0}
+details.acc{background:#fff;border-radius:14px;box-shadow:0 2px 16px rgba(0,0,0,.08);overflow:hidden}
+details.acc[open]{box-shadow:0 4px 24px rgba(26,86,219,.15)}
+details.acc summary{display:flex;align-items:center;gap:16px;padding:20px 24px;
+  cursor:pointer;list-style:none;user-select:none}
+details.acc summary::-webkit-details-marker{display:none}
+.acc-dot{width:40px;height:40px;background:var(--blue);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-size:14px;
+  font-weight:800;color:#fff;flex-shrink:0}
+details.acc[open] .acc-dot{background:#004aef}
+.acc-title{font-size:15px;font-weight:700;color:var(--blue-dark);flex:1}
+.acc-arrow{font-size:18px;color:var(--blue);transition:.2s;margin-left:auto}
+details.acc[open] .acc-arrow{transform:rotate(180deg)}
+.acc-body{padding:0 24px 20px 80px;font-size:14px;color:var(--gray);line-height:1.8;
+  border-top:1px solid #eef2ff;padding-top:16px}
+
+/* ── SECTION 15 ── */
+#s15{padding:100px 0;background:var(--blue-light)}
+#s15 .wrap{display:grid;grid-template-columns:1fr 0.5fr;gap:60px;align-items:stretch}
+#s15 h2{color:var(--blue-dark);margin-bottom:10px}
+.s15-sub{font-size:12px;color:var(--gray);line-height:1.7;margin-bottom:24px}
+.exp-card{background:#fff;border-radius:16px;padding:22px 20px;
+  box-shadow:0 6px 28px rgba(0,0,0,.1)}
+.exp-name{font-size:15px;font-weight:900;color:var(--blue-dark);margin-bottom:3px}
+.exp-role{font-size:11px;color:var(--blue);font-weight:600;margin-bottom:14px}
+.exp-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.exp-n{font-size:22px;font-weight:900;color:var(--blue)}
+.exp-l{font-size:11px;color:var(--gray);margin-top:2px}
+.exp-p{font-size:11px;color:var(--gray);line-height:1.6;margin-bottom:14px}
+#s15 .s15-photo{position:relative;min-height:60px}
+#s15 .s15-photo img{position:absolute;inset:0;width:100%;height:100%;
+  object-fit:contain;border-radius:20px}
+
+/* ── SECTION 16 ── */
+#s16{padding:100px 0;
+  background-image:url('section 16/nền16.png');
+  background-size:cover;background-position:center}
+#s16 .sec-hd h2{color:var(--blue-dark)}
+#s16 .sec-hd p{color:var(--gray)}
+.aw-grid{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;
+  padding-bottom:16px;-webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;scrollbar-color:var(--blue) rgba(0,0,0,.08)}
+.aw-grid::-webkit-scrollbar{height:6px}
+.aw-grid::-webkit-scrollbar-track{background:rgba(0,0,0,.06);border-radius:3px}
+.aw-grid::-webkit-scrollbar-thumb{background:var(--blue);border-radius:3px}
+.aw-card{flex:0 0 300px;scroll-snap-align:start;background:#fff;border-radius:16px;
+  padding:32px 20px;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,.06)}
+.aw-img{width:100%;height:260px;object-fit:cover}
+
+/* ── SECTION 17 ── */
+#s17{padding:80px 0;background:#fff;overflow:hidden}
+#s17 .wrap{text-align:center}
+#s17 .s17-text{background:transparent;border:none;padding:0;
+  display:block;margin-bottom:52px}
+#s17 h2{color:var(--blue-dark);margin-bottom:12px}
+.s17-sub{font-size:17px;font-weight:700;color:var(--blue);margin-bottom:18px}
+.s17-p{font-size:15px;color:var(--gray);max-width:640px;margin:0 auto;line-height:1.7}
+/* 3-col layout */
+.s17-layout{display:flex;align-items:center;gap:0;max-width:1400px;margin:0 auto}
+.s17-side{width:220px;flex-shrink:0;height:580px;overflow:hidden;position:relative;cursor:grab}
+.s17-side:active{cursor:grabbing}
+.s17-side::before,.s17-side::after{content:'';position:absolute;left:0;right:0;
+  height:100px;z-index:2;pointer-events:none}
+.s17-side::before{top:0;background:linear-gradient(to bottom,#fff 0%,transparent 100%)}
+.s17-side::after{bottom:0;background:linear-gradient(to top,#fff 0%,transparent 100%)}
+.s17-track{display:flex;flex-direction:column;gap:14px;will-change:transform;padding:8px 0}
+.s17-vcard{border-radius:22px;overflow:hidden;flex-shrink:0;
+  box-shadow:0 4px 18px rgba(0,0,0,.12)}
+.s17-vcard img{width:100%;height:165px;object-fit:cover;display:block;pointer-events:none}
+.s17-left .s17-vcard{clip-path:polygon(0 0,100% 5%,100% 95%,0 100%)}
+.s17-right .s17-vcard{clip-path:polygon(0 5%,100% 0,100% 100%,0 95%)}
+.s17-center-col{flex:1;padding:0 10px;display:flex;flex-direction:column;
+  align-items:center;gap:18px}
+.s17-hero-img{border-radius:28px;overflow:hidden;width:100%;max-width:520px;height:360px;
+  position:relative;box-shadow:0 20px 60px rgba(0,0,0,.15)}
+.s17-hero-img img{position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;opacity:0;transition:opacity .8s ease}
+.s17-hero-img img.s17-active{opacity:1}
+.s17-info-card{background:#f0f5ff;border-radius:18px;padding:18px 26px;
+  width:100%;max-width:520px;display:flex;align-items:center;gap:16px;
+  box-shadow:0 2px 12px rgba(26,86,219,.08)}
+.s17-logo-circle{width:50px;height:50px;border-radius:50%;
+  background:linear-gradient(135deg,var(--blue),#0A1628);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  font-size:8px;font-weight:900;color:#fff;letter-spacing:.4px;
+  text-align:center;line-height:1.3}
+.s17-info-title{font-size:17px;font-weight:900;color:var(--blue-dark)}
+.s17-info-sub{font-size:12px;color:var(--gray);margin-top:3px;line-height:1.4}
+@media(max-width:1024px){.s17-side{width:160px}}
+@media(max-width:768px){
+  .s17-side{display:none}
+  .s17-center-col{padding:0}
+}
+
+/* ── SECTION 18 ── */
+#s18{padding:100px 0;
+  background-image:url('section 18/nền18.png');
+  background-size:cover;background-position:center}
+#s18 .wrap{display:grid;grid-template-columns:1.5fr 1fr;gap:60px;align-items:start}
+#s18 h2{color:#fff;margin-bottom:14px;text-shadow:0 2px 10px rgba(0,0,0,.3)}
+.s18-p{font-size:15px;color:rgba(255,255,255,.85);line-height:1.7;margin-bottom:36px}
+.ctc-links{display:flex;flex-direction:column;gap:16px}
+.ctc-link{display:flex;align-items:center;gap:12px;font-size:15px;font-weight:600;
+  color:#fff;text-decoration:none}
+.ctc-ico{width:44px;height:44px;background:var(--blue);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;color:#fff;
+  font-size:18px;flex-shrink:0}
+.form-box{background:#fff;border-radius:24px;padding:40px;
+  box-shadow:0 20px 60px rgba(26,86,219,.15)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fgrp{margin-bottom:14px}
+.fgrp label{display:block;font-size:12px;font-weight:700;color:var(--blue-dark);margin-bottom:5px}
+.fgrp input,.fgrp textarea{width:100%;padding:12px 16px;
+  border:1.5px solid #E5E7EB;border-radius:10px;font-size:14px;
+  font-family:'Be Vietnam Pro',sans-serif;color:var(--blue-dark);
+  background:#F9FAFB;transition:.2s}
+.fgrp input:focus,.fgrp textarea:focus{outline:none;border-color:var(--blue);background:#fff}
+.fgrp textarea{height:95px;resize:vertical}
+.form-btn{width:100%;background:var(--blue);color:#fff;padding:15px;border-radius:12px;
+  font-size:16px;font-weight:700;font-family:'Be Vietnam Pro',sans-serif;
+  border:none;cursor:pointer;transition:.2s}
+.form-btn:hover{background:#1546BC;transform:translateY(-1px);
+  box-shadow:0 8px 24px rgba(26,86,219,.35)}
+
+/* FOOTER */
+footer{background:#0A1628;padding:40px 5%;text-align:center;
+  color:rgba(255,255,255,.55);font-size:13px}
+.f-logo{font-size:20px;font-weight:900;color:#fff;margin-bottom:10px}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .ind-grid{grid-template-columns:repeat(3,1fr)}
+  .cards4{grid-template-columns:repeat(2,1fr)}
+  .logo-grid{grid-template-columns:repeat(5,1fr)}
+}
+@media(max-width:768px){
+  #s1 .wrap,#s7 .wrap,#s15 .wrap,#s18 .wrap{grid-template-columns:1fr}
+  #s15 .s15-photo{min-height:280px}
+  #s1 h1{white-space:normal;font-size:clamp(22px,5vw,32px)}
+  .s9x .wrap{grid-template-columns:1fr}
+  .s9x.rev .wrap{direction:ltr}
+  .cards3,.cards4,.cards3+.cards3{grid-template-columns:1fr}
+  .cmp-grid,.cmp-vs,.ind-grid,.pkg-grid,.case-grid{grid-template-columns:1fr}
+  .logo-grid{grid-template-columns:repeat(3,1fr)}
+  .form-row{grid-template-columns:1fr}
+  #s13 .logo-grid{grid-template-columns:repeat(3,1fr)}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="#" class="nav-logo">SEONGON</a>
+  <a href="#s18" class="btn nav-cta">Nhận tư vấn miễn phí</a>
+</nav>
+
+<!-- ════════════════════════════════════════════
+     SECTION 1 — HERO
+════════════════════════════════════════════ -->
+<section id="s1">
+  <div class="wrap">
+    <div>
+      <div class="hero-tag">✦ GIẢI PHÁP GEO</div>
+      <h1>Tối ưu hiện diện thương hiệu<br>trên <span>ChatGPT & AI Overviews</span></h1>
+      <p class="hero-desc">GEO giúp thương hiệu của bạn được AI tìm thấy, hiểu đúng và đề xuất đến khách hàng.</p>
+      <p class="hero-sub">SEONGON cung cấp giải pháp GEO chuyên biệt giúp tối ưu nội dung<br>và uy tín thương hiệu để xuất hiện nổi bật trên ChatGPT và AI Overviews.</p>
+      <div class="hero-btns">
+        <a href="#s18" class="btn btn-blue">Nhận tư vấn GEO miễn phí</a>
+        <a href="#s11" class="btn btn-outline">Xem gói dịch vụ</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     SECTION 2 — THAY ĐỔI HÀNH VI TÌM KIẾM
+════════════════════════════════════════════ -->
+<section id="s2">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div class="badge">THAY ĐỔI HÀNH VI TÌM KIẾM</div>
+      <h2>Hành vi tìm kiếm đã thay đổi<br>SEO truyền thống đã không còn đủ</h2>
+      <p>Người dùng dần quen với việc xem "câu trả lời từ AI" thay vì tự click từng link vào kết quả SEO. Đây không phải xu hướng tương lai mà đang xảy ra ngay hôm nay.</p>
+    </div>
+    <div class="cards3">
+      <div class="card-w">
+        <div class="card-num">01</div>
+        <img src="section 2/ChatGPT Image 22_46_50 7 thg 5, 2026 (1).png" class="card-ico" alt="">
+        <div class="card-title">Truy vấn hội thoại</div>
+        <p class="card-txt">Người dùng dần quen với cảm giác trò chuyện với các công cụ AI tạo sinh, thay vì tìm kiếm thông tin trên rất nhiều website khác nhau. Hành vi tìm kiếm đã thay đổi căn bản.</p>
+      </div>
+      <div class="card-w">
+        <div class="card-num">02</div>
+        <img src="section 2/ChatGPT Image 22_46_50 7 thg 5, 2026 (2).png" class="card-ico" alt="">
+        <div class="card-title">Zero-click Search</div>
+        <p class="card-txt">Thông tin tạo sinh từ AI đáp ứng được nội dung của khách hàng, tỷ lệ click vào website đang sụt giảm nghiêm trọng. Hơn 58% lượt tìm kiếm Google kết thúc mà không có click nào (Search Engine Land, 2024).</p>
+      </div>
+      <div class="card-w">
+        <div class="card-num">03</div>
+        <img src="section 2/ChatGPT Image 22_46_51 7 thg 5, 2026 (3).png" class="card-ico" alt="">
+        <div class="card-title">Tăng engagement khi trở thành traffic</div>
+        <p class="card-txt">Một khi khách hàng click vào đường dẫn để tìm hiểu thêm, traffic giờ đây chất lượng hơn trước rất nhiều — họ đã qua giai đoạn cân nhắc, sẵn sàng chuyển đổi hơn nhiều.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     SECTION 3 — TẠI SAO DN CẦN QUAN TÂM
+════════════════════════════════════════════ -->
+<section id="s3">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div class="badge">TẠI SAO DOANH NGHIỆP CẦN QUAN TÂM ĐẾN TỐI ƯU GEO</div>
+      <h2>ChatGPT & AI Overviews đã trở thành<br>kênh marketing không thể bỏ qua</h2>
+      <p>Tại Việt Nam, cuộc đua hiện diện trên AI đang diễn ra mạnh mẽ. Doanh nghiệp nào hành động sớm sẽ chiếm lợi thế dài hạn.</p>
+    </div>
+    <div class="cards3">
+      <div class="s3-card">
+        <img src="section 3/ChatGPT Image 22_50_05 7 thg 5, 2026 (2).png" class="s3-ico" alt="">
+        <div class="s3-stat">83 TRIỆU</div>
+        <div class="s3-t">lượt truy cập ChatGPT/tháng tại VN</div>
+        <p class="s3-p">ChatGPT đạt ~83 triệu lượt truy cập hàng tháng tại Việt Nam, xếp thứ 4 website có nhiều lượt truy cập nhất. ChatGPT chiếm 80% thị phần AI ChatBot — nền tảng cơ hội tiếp cận người dùng nhất hiện tại.</p>
+      </div>
+      <div class="s3-card cyan">
+        <img src="section 3/ChatGPT Image 22_50_05 7 thg 5, 2026 (3).png" class="s3-ico" alt="">
+        <div class="s3-stat">70%</div>
+        <div class="s3-t">AI đang trở thành nguồn đáng tin cậy cho đề xuất</div>
+        <p class="s3-p">70% Gen Z và Millennials tin tưởng vào các thương hiệu khi được AI nhắc đến trong câu trả lời.</p>
+      </div>
+      <div class="s3-card orange">
+        <img src="section 3/ChatGPT Image 22_50_05 7 thg 5, 2026 (4).png" class="s3-ico" alt="">
+        <div class="s3-stat">Thách thức</div>
+        <div class="s3-t">Doanh nghiệp đang đối mặt với áp lực mới</div>
+        <p class="s3-p">Sụt giảm traffic nhất là với từ khóa mang tính thông tin · Khó đo lường hiệu quả · Cạnh tranh khốc liệt với các đối thủ đã bắt đầu triển khai GEO.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     SECTION 4 — GEO VS SEO
+════════════════════════════════════════════ -->
+<section id="s4">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div class="badge badge-w">GEO LÀ TẦNG TỐI ƯU TIẾP THEO</div>
+      <h2>Bắt buộc phải có<br>để hiện diện trong kết quả của AI</h2>
+      <p>Nhiều người nghĩ GEO là một khái niệm hoàn toàn mới. Thực ra, GEO (Generative Engine Optimization) kế thừa và mở rộng từ SEO — giúp AI không chỉ tìm thấy mà còn tin tưởng và trích dẫn nội dung của bạn.</p>
+    </div>
+    <div class="cmp-vs">
+      <div class="cmp-col">
+        <div class="cmp-hd">SEO Truyền thống</div>
+        <ul class="cmp-list">
+          <li>Tối ưu cho công cụ tìm kiếm</li>
+          <li>Tối ưu để xếp hạng cao trên SERP</li>
+          <li>Tập trung vào từ khóa &amp; backlink</li>
+          <li>Đo bằng thứ hạng &amp; organic traffic</li>
+        </ul>
+        <div class="cmp-result">✓ Kết quả: người dùng thấy link của bạn</div>
+        <div class="cmp-note">Vẫn cần thiết: nền tảng SEO tốt làm tăng khả năng AI trích dẫn bạn</div>
+      </div>
+      <div class="cmp-col geo-col">
+        <div class="cmp-hd">GEO</div>
+        <ul class="cmp-list">
+          <li>Tối ưu cho câu trả lời AI</li>
+          <li>Tối ưu để AI lựa chọn và trích dẫn</li>
+          <li>Tập trung vào ngữ nghĩa, intent &amp; authority</li>
+          <li>Đo bằng Brand Mention &amp; URL Citation</li>
+        </ul>
+        <div class="cmp-result">✓ Kết quả:</div>
+        <ul class="cmp-result-list">
+          <li>Tối đa hóa tiếp cận khách hàng toàn diện trên kênh AI Search</li>
+          <li>Tăng trưởng nguồn lead chất lượng nhờ vào câu trả lời AI mang tính khách quan</li>
+          <li>Bảo vệ thông tin thương hiệu trước AI: chuẩn hóa thông tin AI nhắc đến nhất quán</li>
+          <li>Theo dõi đối thủ định kỳ và đề xuất giành lại độ phủ từ đối thủ cạnh tranh</li>
+        </ul>
+      </div>
+    </div>
+    <div class="eq-wrap">
+      <div class="eq-box">
+        <div class="eq-label">SEO</div>
+        <div class="eq-sub">Giúp nội dung được xếp hạng cao</div>
+      </div>
+      <div class="eq-op">+</div>
+      <div class="eq-box">
+        <div class="eq-label c">GEO</div>
+        <div class="eq-sub">Giúp nội dung được AI lựa chọn</div>
+      </div>
+      <div class="eq-op">=</div>
+      <div class="eq-box result">
+        <div class="eq-label c" style="font-size:22px;line-height:1.3">Hiện diện trên<br>Google, ChatGPT,<br>AI Overviews</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     SECTION 5 — 5 NGÀNH ƯU TIÊN
+════════════════════════════════════════════ -->
+<section id="s5">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div class="badge">NHÓM NGÀNH ƯU TIÊN</div>
+      <h2>5 ngành cấp thiết<br><span style="color:#004aef">cần triển khai GEO ngay</span></h2>
+    </div>
+    <div class="ind-grid">
+      <div class="ind-card">
+        <img src="section 5/ChatGPT Image 23_00_55 7 thg 5, 2026 (2).png" class="ind-ico" alt="">
+        <div class="ind-name">Dịch vụ &amp; B2B</div>
+        <p class="ind-p">Người dùng hỏi AI để đề xuất các công ty uy tín với góc nhìn khách quan — cơ hội lớn cho B2B và dịch vụ chuyên môn.</p>
+      </div>
+      <div class="ind-card">
+        <img src="section 5/ChatGPT Image 23_00_55 7 thg 5, 2026 (3).png" class="ind-ico" alt="">
+        <div class="ind-name">Du lịch &amp; Nhà hàng khách sạn</div>
+        <p class="ind-p">Người dùng lên lịch trình chuyến đi với AI thay vì Google, từ chọn khách sạn, ăn uống, đến di chuyển.</p>
+      </div>
+      <div class="ind-card">
+        <img src="section 5/ChatGPT Image 23_00_56 7 thg 5, 2026 (4).png" class="ind-ico" alt="">
+        <div class="ind-name">Thương mại điện tử</div>
+        <p class="ind-p">Tính năng mua hàng trên AI Chatbot ngày càng hiện đại, khách hàng dễ dàng so sánh, đánh giá và mua trực tiếp.</p>
+      </div>
+      <div class="ind-card">
+        <img src="section 5/ChatGPT Image 23_00_56 7 thg 5, 2026 (5).png" class="ind-ico" alt="">
+        <div class="ind-name">Sức khỏe &amp; Y tế</div>
+        <p class="ind-p">AI Chatbot gợi ý đầy đủ từ liệu pháp điều trị, bệnh viện đến thăm khám phù hợp với góc nhìn khách quan.</p>
+      </div>
+      <div class="ind-card">
+        <img src="section 5/ChatGPT Image 23_00_56 7 thg 5, 2026 (6).png" class="ind-ico" alt="">
+        <div class="ind-name">Tài chính &amp; Ngân hàng</div>
+        <p class="ind-p">AI chatbot và trợ lý tài chính giúp người dùng phân tích lãi suất, khoản vay và lựa chọn sản phẩm phù hợp.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     SECTION 6 — BỘ GIẢI PHÁP GEO
+════════════════════════════════════════════ -->
+<section id="s6">
+  <div class="wrap">
+    <div class="s6-inner">
+      <div class="s6-left">
+        <div class="badge badge-w">BỘ GIẢI PHÁP GEO</div>
+        <h2>Bộ giải pháp GEO toàn diện</h2>
+        <p class="sub">Cùng Doanh nghiệp chiến thắng trong Kỷ nguyên AI</p>
+        <p>Giải pháp được thiết kế để mở rộng hiện diện thương hiệu, giúp AI hiểu, tin tưởng và ưu tiên trích dẫn doanh nghiệp của bạn.</p>
+        <a href="#s11" class="btn btn-outline-w">Xem giải pháp</a>
+      </div>
+      <div class="cards4">
+      <div class="geo-card">
+        <img src="section 6/ChatGPT Image 23_16_18 7 thg 5, 2026 (2).png" class="geo-ico" alt="">
+        <div class="geo-tag">Query Fan Out</div>
+        <div class="geo-name">Mở rộng &amp; Chiếm lĩnh Query</div>
+        <ul class="geo-list">
+          <li>Mở rộng bộ từ khóa mục tiêu theo hành vi hỏi thoại AI</li>
+          <li>Tối ưu hoá để bắt được nhiều Query Fan-out</li>
+          <li>Theo dõi 50–300 prompt mục tiêu mỗi tháng</li>
+        </ul>
+      </div>
+      <div class="geo-card">
+        <img src="section 6/ChatGPT Image 23_16_18 7 thg 5, 2026 (3).png" class="geo-ico" alt="">
+        <div class="geo-tag">Content Ngữ Nghĩa</div>
+        <div class="geo-name">Nội dung AI hiểu &amp; tin tưởng</div>
+        <ul class="geo-list">
+          <li>Tạo nội dung thấu hiểu ý định tìm kiếm của người dùng</li>
+          <li>Tối ưu cấu trúc logic ngắn, đoạn định nghĩa, FAQ</li>
+          <li>Comparison content &amp; use case content chuẩn AI</li>
+          <li>Xây 2–6 content assets/tháng thân thiện với AI</li>
+        </ul>
+      </div>
+      <div class="geo-card">
+        <img src="section 6/ChatGPT Image 23_16_18 7 thg 5, 2026 (4).png" class="geo-ico" alt="">
+        <div class="geo-tag">Technical GEO</div>
+        <div class="geo-name">Tăng kỹ thuật cho AI crawl</div>
+        <ul class="geo-list">
+          <li>Cải thiện technical để AI có thể crawl và hiểu website</li>
+          <li>Tối ưu Schema / Structured data / Internal link</li>
+          <li>Tối ưu brand entity signals toàn diện</li>
+          <li>Tối ưu 4–15 URLs/tháng theo ưu tiên chiến lược</li>
+        </ul>
+      </div>
+      <div class="geo-card">
+        <img src="section 6/ChatGPT Image 23_16_18 7 thg 5, 2026 (5).png" class="geo-ico" alt="">
+        <div class="geo-tag">Brand Authority</div>
+        <div class="geo-name">Xây dựng uy tín để AI trích dẫn</div>
+        <ul class="geo-list">
+          <li>Xây dựng authority và trust signals được AI tin tưởng</li>
+          <li>2–4 hoạt động PR/tháng: Citation building, digital PR</li>
+          <li>Seeding thương hiệu trên social &amp; diễn đàn</li>
+          <li>Tối ưu nội dung thương hiệu đồng bộ đa kênh</li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     SECTION 7 — CASE STUDY VIETTEL
+════════════════════════════════════════════ -->
+<section id="s7">
+  <div class="wrap">
+    <div>
+      <div class="badge">KHÔNG CHỈ GIÚP TRIỂN KHAI GEO &amp; SEO</div>
+      <h2 style="color:#0a1f6e;font-size:clamp(22px,2.8vw,34px)">SEONGON còn đồng hành cùng Doanh nghiệp tăng trưởng hiệu quả kinh doanh trong bối cảnh thị trường mới</h2>
+      <div class="stats3" style="margin-top:36px">
+        <div>
+          <div class="stat-n">75%</div>
+          <div class="stat-l">Khách hàng xuất hiện trong câu trả lời của AI Overviews</div>
+        </div>
+        <div>
+          <div class="stat-n">&gt;200%</div>
+          <div class="stat-l">Lượng leads tăng trưởng sau khi áp dụng mô hình SEO AI</div>
+        </div>
+        <div>
+          <div class="stat-n">+10M</div>
+          <div class="stat-l">Lượt tiếp cận đến khách hàng mục tiêu trên AIO</div>
+        </div>
+      </div>
+    </div>
+    <div class="s7-img">
+      <img src="section 7/Screenshot_3.png" alt="SEONGON x Viettel Telecom">
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     SECTION 8 — GIẢI QUYẾT MỌI BÀI TOÁN
+════════════════════════════════════════════ -->
+<section id="s8">
+  <div class="wrap">
+    <div class="sec-hd">
+      <h2>Giải quyết mọi bài toán doanh nghiệp</h2>
+      <p>Giải pháp GEO được thiết kế linh hoạt theo 3 trục: ngành hàng, quy mô và mô hình doanh nghiệp.</p>
+    </div>
+    <div class="cards3">
+      <div class="sol-card">
+        <img src="section 8/ChatGPT Image 23_20_01 7 thg 5, 2026 (4).png" class="sol-ico" alt="">
+        <div class="sol-lbl">Giải pháp</div>
+        <div class="sol-name">THEO NGÀNH HÀNG</div>
+        <p class="sol-p">Tùy chỉnh chiến lược GEO theo đặc thù từng ngành để tăng mức độ phù hợp và khả năng được AI đề xuất.</p>
+      </div>
+      <div class="sol-card">
+        <img src="section 8/ChatGPT Image 23_20_02 7 thg 5, 2026 (5).png" class="sol-ico" alt="">
+        <div class="sol-lbl">Giải pháp</div>
+        <div class="sol-name">THEO QUY MÔ DOANH NGHIỆP</div>
+        <p class="sol-p">Xây dựng lộ trình GEO phù hợp từ SME đến doanh nghiệp lớn, theo mục tiêu và nguồn lực thực tế.</p>
+      </div>
+      <div class="sol-card">
+        <img src="section 8/ChatGPT Image 23_20_02 7 thg 5, 2026 (6).png" class="sol-ico" alt="">
+        <div class="sol-lbl">Giải pháp</div>
+        <div class="sol-name">THEO MÔ HÌNH DOANH NGHIỆP</div>
+        <p class="sol-p">Thiết kế giải pháp theo hành trình người dùng và mô hình kinh doanh như B2B, B2C, C2C, D2C.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     SECTION 9 — TẠI SAO CHỌN SEONGON
+════════════════════════════════════════════ -->
+<div class="s9-hd">
+  <div class="wrap">
+    <div class="badge">TẠI SAO CHỌN SEONGON</div>
+    <h2>là lựa chọn đúng đắn nhất khi triển khai GEO?</h2>
+  </div>
+</div>
+
+<section class="s9x" id="s91" style="background:var(--blue-light)">
+  <div class="wrap">
+    <div>
+      <div class="s9-num">#1</div>
+      <h3 class="s9-t">Đơn vị đầu tiên tại Việt Nam<br>cung cấp giải pháp <span>GEO toàn diện</span></h3>
+      <p class="s9-p">SEONGON không chỉ áp dụng lý thuyết quốc tế mà đã nghiên cứu và xây dựng phương pháp GEO riêng, phù hợp với hành vi người dùng và đặc thù thị trường Việt Nam.</p>
+      <ul class="s9-ul">
+        <li>Phương pháp nghiên cứu thực tế trên 3.000+ website doanh nghiệp Việt Nam</li>
+        <li>Dữ liệu độc quyền về cách AI trích dẫn nội dung trong thị trường Việt Nam</li>
+        <li>Bộ phận R&amp;D AI Center chuyên biệt, cập nhật liên tục mọi thay đổi từ Google &amp; AI</li>
+      </ul>
+    </div>
+    <div class="s9-img">
+      <img src="section 9.1/ChatGPT Image 23_25_00 7 thg 5, 2026 (1).png" alt="GEO Research Framework">
+    </div>
+  </div>
+</section>
+
+<section class="s9x rev" id="s92" style="background:#fff">
+  <div class="wrap">
+    <div>
+      <div class="s9-num">#2</div>
+      <h3 class="s9-t">Hiểu hành vi người dùng<br>đến cách <span>AI hoạt động</span></h3>
+      <p class="s9-p">GEO (Generative Engine Optimization) giúp các công cụ AI như ChatGPT hiểu rõ hơn về doanh nghiệp, dịch vụ của bạn và cải thiện khả năng được nhắc tới trong các câu trả lời do AI tạo ra.</p>
+      <ul class="s9-ul">
+        <li>Phân tích hành vi truy vấn hội thoại của người dùng Việt Nam</li>
+        <li>Hiểu cách AI phân tích, đánh giá và lựa chọn nguồn trích dẫn</li>
+        <li>Tối ưu trải nghiệm thương hiệu xuyên suốt từ Google đến ChatGPT</li>
+      </ul>
+    </div>
+    <div class="s9-img">
+      <img src="section 9.2/ChatGPT Image 23_25_00 7 thg 5, 2026 (2).png" alt="AI Search Flow">
+    </div>
+  </div>
+</section>
+
+<section class="s9x" id="s93" style="background:var(--blue-light)">
+  <div class="wrap">
+    <div>
+      <div class="s9-num">#3</div>
+      <h3 class="s9-t">Hạ tầng công nghệ độc quyền<br><span>ĐƯA RA CHIẾN LƯỢC DỰA TRÊN DATA</span></h3>
+      <p class="s9-p">SEONGON xây dựng hạ tầng công nghệ riêng để nghiên cứu GEO. Mỗi chiến lược đều được đưa ra từ data thực tế, cập nhật hàng tháng theo biến động AI Model.</p>
+      <ul class="s9-ul">
+        <li>Giả lập người dùng ảo tìm kiếm, lặp lại 20 lần để lấy mẫu số lớn</li>
+        <li>Theo dõi 50–300 prompt mục tiêu, tracking data hằng ngày</li>
+        <li>Phân tích đối thủ định kỳ, đề xuất giành lại độ phủ cạnh tranh</li>
+      </ul>
+    </div>
+    <div class="s9-img">
+      <img src="section 9.3/ChatGPT Image 23_29_29 7 thg 5, 2026 (1).png" alt="Data Pipeline">
+    </div>
+  </div>
+</section>
+
+<section class="s9x rev" id="s94" style="background:#fff">
+  <div class="wrap">
+    <div>
+      <div class="s9-num">#4</div>
+      <h3 class="s9-t">Đồng bộ hóa nhận diện<br>thương hiệu trên <span>AI Search</span></h3>
+      <p class="s9-p">SEONGON đảm bảo hình ảnh bản quyền của thương hiệu, đồng bộ theo Brand Guideline. Đội ngũ nhân sự chuyên trách đồng hành xử lý hình ảnh trong mọi giai đoạn, đảm bảo sự nhất quán và chất lượng cao nhất.</p>
+      <ul class="s9-ul">
+        <li>Đồng bộ hình ảnh theo Brand Guideline</li>
+        <li>Kiểm soát chất lượng và tính nhất quán</li>
+        <li>Tối ưu hiển thị thương hiệu trên AI Search</li>
+      </ul>
+    </div>
+    <div class="s9-img">
+      <img src="section 9.4/ChatGPT Image 23_29_29 7 thg 5, 2026 (2).png" alt="Brand Sync">
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     SECTION 10 — CAM KẾT MINH BẠCH
+════════════════════════════════════════════ -->
+<section id="s10">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div class="badge badge-w">CAM KẾT MINH BẠCH</div>
+      <h2>Cam kết minh bạch với mọi dự án GEO</h2>
+    </div>
+    <div class="cards3">
+      <div class="cm-card">
+        <img src="section 10/ChatGPT Image 23_44_40 7 thg 5, 2026 (2).png" class="cm-ico" alt="">
+        <div class="cm-t">KPI tốt nhất</div>
+        <p class="cm-p">SEONGON cam kết chỉ số Brand Visibility, URL Citation — Tần suất xuất hiện của tên thương hiệu/website trong câu trả lời của AI</p>
+      </div>
+      <div class="cm-card">
+        <img src="section 10/ChatGPT Image 23_44_40 7 thg 5, 2026 (3).png" class="cm-ico" alt="">
+        <div class="cm-t">Chất lượng cao nhất</div>
+        <p class="cm-p">01 Dashboard theo dõi sức mạnh thương hiệu &amp; đối thủ · Báo cáo định kỳ hằng tháng · Dịch vụ từ Google Marketing Agency TOP 1 Việt Nam</p>
+      </div>
+      <div class="cm-card">
+        <img src="section 10/ChatGPT Image 23_44_40 7 thg 5, 2026 (4).png" class="cm-ico" alt="">
+        <div class="cm-t">Chi phí tốt nhất</div>
+        <p class="cm-p">SEONGON tối ưu GEO với chi phí hợp lý nhất cho Doanh nghiệp. Chỉ từ 300 triệu VNĐ cho thời gian 06~12 tháng</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     SECTION 11 — GÓI DỊCH VỤ
+════════════════════════════════════════════ -->
+<section id="s11">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div class="badge">GÓI DỊCH VỤ GEO</div>
+      <h2>Hãy lựa chọn gói phù hợp với quy mô của bạn</h2>
+      <p>Từ audit kiểm tra hiện trạng đến triển khai toàn diện, SEONGON thiết kế lộ trình GEO theo đúng bài toán của doanh nghiệp</p>
+    </div>
+    <div class="pkg-grid">
+      <div class="pkg">
+        <div class="pkg-badge">Khởi đầu</div>
+        <div class="pkg-name">GEO Audit</div>
+        <p class="pkg-tag">Hiểu rõ thương hiệu đang đứng ở đâu trên AI — trước khi hành động</p>
+        <div class="pkg-price">Từ 30 triệu / gói · Thời gian: 1–2 tháng</div>
+        <hr class="div">
+        <ul class="pkg-ul">
+          <li>AI Search Audit tổng quan: kiểm tra hiện diện thương hiệu trên Google AI Overviews &amp; ChatGPT</li>
+          <li>Phân tích 30–50 prompt quan trọng theo hành vi tìm kiếm thực tế</li>
+          <li>Audit entity: thương hiệu, content, technical ảnh hưởng đến AI crawl &amp; citation</li>
+          <li>Audit nguồn trích dẫn bởi 3Y (mentions / review / PR / social)</li>
+          <li>Benchmark 3–5 đối thủ cạnh tranh</li>
+          <li>Tư vấn nền tảng website &amp; các tài sản số liên quan</li>
+        </ul>
+        <div class="pkg-note">Bàn giao: 1 bản audit hoàn chỉnh + 1 buổi trình bày 90–120 phút</div>
+      </div>
+      <div class="pkg feat">
+        <div class="pkg-badge">Toàn diện</div>
+        <div class="pkg-name">GEO Enterprise</div>
+        <p class="pkg-tag">Triển khai toàn diện 4 cấp độ: Audit — Optimize — Build Authority — Measure</p>
+        <div class="pkg-price">SME: Từ 30 triệu/tháng · Bigcorp: Từ 500 triệu/gói</div>
+        <hr class="div">
+        <ul class="pkg-ul">
+          <li>Theo dõi 50–300 prompt mục tiêu</li>
+          <li>01 Dashboard theo dõi sức mạnh thương hiệu &amp; đối thủ cạnh tranh</li>
+          <li>Tối ưu 4–15 URL/tháng · Xây 2–8 content assets/tháng</li>
+          <li>Tối ưu brand entity signals &amp; kỹ thuật (schema / structured data)</li>
+          <li>Tối ưu cấu trúc liên kết, FAQ, comparison &amp; use-case content</li>
+          <li>2–4 hoạt động PR: citation building / digital PR / third-party mentions</li>
+          <li>Cam kết % Brand Mention trên AIO &amp; ChatGPT</li>
+          <li>Cam kết % URL Citation trên AIO</li>
+        </ul>
+        <div class="pkg-note">Thời gian triển khai: 6–9 tháng (khuyến nghị 6 tháng) · Bảo hành 1 tháng</div>
+      </div>
+    </div>
+    <div style="text-align:center">
+      <p style="font-size:15px;color:var(--gray);margin-bottom:20px">Cần tư vấn gói phù hợp với ngân sách &amp; mục tiêu của bạn?</p>
+      <a href="#s18" class="btn btn-blue">Nhận báo giá chi tiết</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     SECTION 12 — CASE STUDIES
+════════════════════════════════════════════ -->
+<section id="s12">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div class="badge badge-w">KẾT QUẢ THỰC TẾ</div>
+      <h2>Kết quả thực tế từ khách hàng của SEONGON</h2>
+      <p>Những dự án tiêu biểu đã được SEONGON triển khai từ SEO truyền thống đến tối ưu AI Overviews &amp; ChatGPT.</p>
+    </div>
+    <div class="case-grid">
+      <div class="case-card">
+        <div class="case-logo" style="background:#E30613">Viettel</div>
+        <img src="section 12/ChatGPT Image 23_50_06 7 thg 5, 2026 (5).png" class="case-img" alt="Viettel">
+        <div class="case-body">
+          <div class="case-co">Viettel Telecom</div>
+          <div class="case-ind">Viễn thông · GEO/AIO Tiên phong</div>
+          <div class="case-stats">
+            <div><div class="cs-n">100%</div><div class="cs-l">Prompt ChatGPT xuất hiện Viettel</div></div>
+            <div><div class="cs-n">84%</div><div class="cs-l">Từ khóa AIO được trích nguồn</div></div>
+            <div><div class="cs-n">+186%</div><div class="cs-l">Từ khóa tăng thứ hạng Google</div></div>
+          </div>
+          <p class="case-q">Vào tháng 2/2025, Viettel &amp; SEONGON đặt ra bài toán "xuất hiện đầu tiên khi khách hàng hỏi AI" — biến yêu cầu tưởng chừng bất khả thi thành tiêu chuẩn ngành mới cho Marketing Việt Nam.</p>
+        </div>
+      </div>
+      <div class="case-card">
+        <div class="case-logo" style="background:#0082C3">Decathlon</div>
+        <img src="section 12/ChatGPT Image 17_20_57 8 thg 5, 2026.png" class="case-img" alt="Decathlon">
+        <div class="case-body">
+          <div class="case-co">Decathlon</div>
+          <div class="case-ind">Bán lẻ thể thao · O2O GEO Strategy</div>
+          <div class="case-stats">
+            <div><div class="cs-n">60%</div><div class="cs-l">Prompt ChatGPT xuất hiện Decathlon</div></div>
+            <div><div class="cs-n">+300K</div><div class="cs-l">Organic traffic/tháng</div></div>
+            <div><div class="cs-n">+80K</div><div class="cs-l">Traffic nhóm chuyển đổi cao</div></div>
+          </div>
+          <p class="case-q">SEO Decathlon không chỉ để đạt thứ hạng, mà để trở thành nguồn dữ liệu đáng tin cho AI-driven search — định hướng người dùng từ AI về hệ thống cửa hàng vật lý.</p>
+        </div>
+      </div>
+      <div class="case-card">
+        <div class="case-logo" style="background:#00A94F">GHTK</div>
+        <img src="section 12/ChatGPT Image 23_50_05 7 thg 5, 2026 (3).png" class="case-img" alt="GHTK">
+        <div class="case-body">
+          <div class="case-co">GHTK Logistics</div>
+          <div class="case-ind">Logistics · Brand Mention GEO</div>
+          <div class="case-stats">
+            <div><div class="cs-n">90%</div><div class="cs-l">Prompt ChatGPT xuất hiện GHTK</div></div>
+            <div><div class="cs-n">&gt;1.000</div><div class="cs-l">Từ khóa AIO được trích nguồn</div></div>
+            <div><div class="cs-n">&gt;430</div><div class="cs-l">Từ khóa ngành nhắc đến GHTK</div></div>
+          </div>
+          <p class="case-q">Tối ưu nội dung 3 WIN — truyền tải đúng màu sắc thương hiệu, giải đáp nhu cầu người dùng, và được Google &amp; ChatGPT tin tưởng. Kết quả: 850+ từ khóa trong Top 1–5 AIO.</p>
+        </div>
+      </div>
+      <div class="case-card">
+        <div class="case-logo" style="background:#0033A0">Vietnam Airlines</div>
+        <img src="section 12/ChatGPT Image 23_50_04 7 thg 5, 2026 (2).png" class="case-img" alt="Vietnam Airlines">
+        <div class="case-body">
+          <div class="case-co">Vietnam Airlines</div>
+          <div class="case-ind">Hàng không · Multi-platform GEO</div>
+          <div class="case-stats">
+            <div><div class="cs-n">100%</div><div class="cs-l">Prompt Brand Mention VNA</div></div>
+            <div><div class="cs-n">90%</div><div class="cs-l">Từ khóa AIO mục tiêu trích dẫn</div></div>
+            <div><div class="cs-n">+320K</div><div class="cs-l">Traffic khách du lịch</div></div>
+          </div>
+          <p class="case-q">Phủ rộng toàn bộ công cụ AI mà người dùng đang sử dụng tại Việt Nam. Xây dựng mạng lưới offpage tại thị trường trong và ngoài nước. Hơn 25 triệu lượt hiển thị trên Google.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     SECTION 13 — CLIENT LOGOS
+════════════════════════════════════════════ -->
+<section id="s13">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div class="badge badge-w">SEONGON ĐỒNG HÀNH CÙNG</div>
+      <h2>5.000+ doanh nghiệp ở 20+ ngành hàng</h2>
+      <p>Niềm tin từ nhiều thương hiệu dẫn đầu tại Việt Nam</p>
+    </div>
+    <div class="logo-grid">
+      <div class="logo-item">VinHomes</div>
+      <div class="logo-item">FPT Telecom</div>
+      <div class="logo-item">VNPAY QR</div>
+      <div class="logo-item">LPBank</div>
+      <div class="logo-item">SeABank</div>
+      <div class="logo-item">Techcombank</div>
+      <div class="logo-item">Vietnam Airlines</div>
+      <div class="logo-item">AEON</div>
+      <div class="logo-item">Sun World</div>
+      <div class="logo-item">Thế Giới Kim Cương</div>
+      <div class="logo-item">Sun Group</div>
+      <div class="logo-item">Traphaco</div>
+      <div class="logo-item">Vietnam International Clinic</div>
+      <div class="logo-item">H Medcare</div>
+      <div class="logo-item">PSA</div>
+      <div class="logo-item">CHIVAS</div>
+      <div class="logo-item">Nam Long NLG</div>
+      <div class="logo-item">HDBank</div>
+      <div class="logo-item">MSB</div>
+      <div class="logo-item">VPBank</div>
+      <div class="logo-item">BIDV</div>
+      <div class="logo-item">Viettel</div>
+      <div class="logo-item">Mobifone</div>
+      <div class="logo-item">BAOVIET</div>
+      <div class="logo-item">TPBank</div>
+      <div class="logo-item">Vietcombank</div>
+      <div class="logo-item">Unilever</div>
+      <div class="logo-item">Nestlé</div>
+      <div class="logo-item">SAMSUNG</div>
+      <div class="logo-item">Intel</div>
+      <div class="logo-item">Dell Technologies</div>
+      <div class="logo-item">Shopee</div>
+      <div class="logo-item">Lazada</div>
+      <div class="logo-item">TikTok</div>
+      <div class="logo-item">TKI</div>
+      <div class="logo-item">Saigontourist Group</div>
+      <div class="logo-item">VINPEARL</div>
+      <div class="logo-item">HOAPHAT</div>
+      <div class="logo-item">THACO</div>
+      <div class="logo-item">PNJ</div>
+      <div class="logo-item">LOTTE</div>
+      <div class="logo-item">California Fitness &amp; Yoga</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     SECTION 14 — QUY TRÌNH TRIỂN KHAI
+════════════════════════════════════════════ -->
+<section id="s14">
+  <div class="wrap">
+    <div style="text-align:right;margin-bottom:48px">
+      <div class="badge">QUY TRÌNH TRIỂN KHAI GEO</div>
+      <h2>Đằng sau những thành tựu là<br>quy trình được chuẩn hóa nghiêm ngặt</h2>
+      <p class="s14-sub">Mọi dự án GEO tại SEONGON đều theo quy trình chuẩn — đảm bảo bạn luôn biết đang ở đâu và kết quả đang đi đến đâu.</p>
+    </div>
+    <div class="acc-list">
+      <details class="acc">
+        <summary><div class="acc-dot">1</div><div class="acc-title">Tiếp nhận Brief &amp; Nghiên cứu sơ bộ</div><div class="acc-arrow">▾</div></summary>
+        <div class="acc-body">Thu thập thông tin từ doanh nghiệp về mục tiêu kinh doanh, website, ngân sách và lịch sử làm SEO. Phân tích sơ bộ hiện trạng website, thị trường và đối thủ cạnh tranh để có bức tranh tổng quan trước khi đề xuất giải pháp.</div>
+      </details>
+      <details class="acc">
+        <summary><div class="acc-dot">2</div><div class="acc-title">Lập kế hoạch &amp; Đề xuất sơ bộ</div><div class="acc-arrow">▾</div></summary>
+        <div class="acc-body">Thực hiện thảo luận dự án để xác định mục tiêu cụ thể, phạm vi công việc và các KPI đo lường thành công. Đề xuất phương án GEO phù hợp với ngân sách và định hướng chiến lược của doanh nghiệp.</div>
+      </details>
+      <details class="acc">
+        <summary><div class="acc-dot">3</div><div class="acc-title">Gặp gỡ &amp; Trình bày giải pháp (Pitching)</div><div class="acc-arrow">▾</div></summary>
+        <div class="acc-body">Tổ chức buổi meeting để trình bày báo cáo nghiên cứu, chiến lược GEO đề xuất và lộ trình triển khai chi tiết. Giải đáp thắc mắc và tiếp nhận phản hồi từ phía doanh nghiệp để điều chỉnh phương án.</div>
+      </details>
+      <details class="acc">
+        <summary><div class="acc-dot">4</div><div class="acc-title">Thống nhất phương án &amp; KPI</div><div class="acc-arrow">▾</div></summary>
+        <div class="acc-body">Thảo luận để đi đến thống nhất cuối cùng về phạm vi dự án, phương pháp triển khai, KPI cam kết và timeline thực hiện. Đảm bảo cả hai bên có cùng kỳ vọng và hiểu rõ trách nhiệm từng phía.</div>
+      </details>
+      <details class="acc">
+        <summary><div class="acc-dot">5</div><div class="acc-title">Xây dựng Chiến lược &amp; Giải pháp chi tiết</div><div class="acc-arrow">▾</div></summary>
+        <div class="acc-body">Tư vấn chiến lược GEO đồng bộ với SEO truyền thống, content marketing và các kênh digital khác. Xây dựng kế hoạch triển khai chi tiết theo từng giai đoạn với mục tiêu và deliverable rõ ràng.</div>
+      </details>
+      <details class="acc">
+        <summary><div class="acc-dot">6</div><div class="acc-title">Thiết lập lộ trình &amp; Bộ công cụ đo lường</div><div class="acc-arrow">▾</div></summary>
+        <div class="acc-body">Xây dựng bộ từ khóa AIO chi tiết, thiết lập dashboard theo dõi hiệu quả GEO trên các nền tảng AI. Cài đặt hệ thống tracking để đo lường mức độ xuất hiện trong AI Overviews và AI-generated answers.</div>
+      </details>
+      <details class="acc">
+        <summary><div class="acc-dot">7</div><div class="acc-title">Ký kết hợp đồng &amp; Cam kết triển khai</div><div class="acc-arrow">▾</div></summary>
+        <div class="acc-body">Hoàn thiện hợp đồng với các điều khoản minh bạch về phạm vi công việc, KPI cam kết, báo cáo định kỳ và cơ chế xử lý phát sinh. Bắt đầu triển khai với đội ngũ chuyên gia GEO được phân công rõ ràng.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     SECTION 15 — ĐỘI NGŨ CHUYÊN GIA
+════════════════════════════════════════════ -->
+<section id="s15">
+  <div class="wrap">
+    <div>
+      <div class="badge">ĐỘI NGŨ CHUYÊN GIA SEONGON</div>
+      <h2>Đội ngũ nhân sự chất lượng tạo nên những dự án vượt trội</h2>
+      <p class="s15-sub">Từ SEO, Content, Data Analytics đến AI Engineering, tất cả phối hợp để tạo ra chiến lược SEO toàn diện cho doanh nghiệp</p>
+      <div class="exp-card">
+        <div class="exp-name">NGUYỄN VĂN PHÚC</div>
+        <div class="exp-role">Giám đốc vận hành</div>
+        <div class="exp-stats">
+          <div><div class="exp-n">8+</div><div class="exp-l">Năm kinh nghiệm</div></div>
+          <div><div class="exp-n">50+</div><div class="exp-l">Dự án SEO</div></div>
+        </div>
+        <p class="exp-p">Nghiên cứu và triển khai SEO đa dạng lĩnh vực, ngành nghề: Công nghệ, Y dược, Kiến trúc - Xây dựng, Gia dụng,...</p>
+        <br>
+        <a href="#s18" class="btn btn-blue" style="font-size:14px;padding:11px 22px">Khám phá đội ngũ chuyên gia</a>
+      </div>
+    </div>
+    <div class="s15-photo">
+      <img src="section 15/ảnh nhân su.png" alt="Expert SEONGON">
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     SECTION 16 — GIẢI THƯỞNG & CHỨNG NHẬN
+════════════════════════════════════════════ -->
+<section id="s16">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div class="badge">GIẢI THƯỞNG &amp; CHỨNG NHẬN</div>
+      <h2>Được công nhận bởi những tổ chức uy tín nhất</h2>
+      <p>Những giải thưởng danh giá là minh chứng cho năng lực chuyên môn, hiệu quả triển khai và cam kết mang lại giá trị bền vững cho khách hàng.</p>
+    </div>
+    <div class="aw-grid">
+      <div class="aw-card"><img src="section 16/ChatGPT Image 23_53_42 7 thg 5, 2026 (1).png" class="aw-img" alt="Agency Excellence Awards"></div>
+      <div class="aw-card"><img src="section 16/ChatGPT Image 23_53_43 7 thg 5, 2026 (2).png" class="aw-img" alt="Google Partner Premier"></div>
+      <div class="aw-card"><img src="section 16/ChatGPT Image 23_53_43 7 thg 5, 2026 (3).png" class="aw-img" alt="Premier Partner Awards 2024"></div>
+      <div class="aw-card"><img src="section 16/ChatGPT Image 23_53_43 7 thg 5, 2026 (4).png" class="aw-img" alt="Workplace Excellence"></div>
+      <div class="aw-card"><img src="section 16/ChatGPT Image 23_53_44 7 thg 5, 2026 (5).png" class="aw-img" alt="MOA"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     SECTION 17 — KHÁCH HÀNG & ĐỒNG HÀNH
+════════════════════════════════════════════ -->
+<section id="s17">
+  <div class="wrap">
+    <div class="s17-text">
+      <div class="badge">KHÁCH HÀNG &amp; ĐỒNG HÀNH</div>
+      <h2>Giá trị SEONGON mang lại<br>vượt xa cả bản hợp đồng</h2>
+      <p class="s17-sub">SEONGON đồng hành như đối tác chiến lược dài hạn với từng doanh nghiệp.</p>
+      <p class="s17-p">Không chỉ cung cấp dịch vụ — SEONGON là người đồng hành thực sự, đưa ra chiến lược dựa trên data, cam kết KPI rõ ràng và liên tục tối ưu theo biến động thị trường AI.</p>
+    </div>
+  </div>
+
+  <div class="s17-layout">
+
+    <!-- Carousel trái — cuộn lên -->
+    <div class="s17-side s17-left">
+      <div class="s17-track" id="s17-track-l">
+        <div class="s17-vcard"><img src="section 17/ảnh/0. Retouch 5.png" alt=""></div>
+        <div class="s17-vcard"><img src="section 17/ảnh/1 (1).jpg" alt=""></div>
+        <div class="s17-vcard"><img src="section 17/ảnh/1 (2).jpg" alt=""></div>
+        <div class="s17-vcard"><img src="section 17/ảnh/2 (1).jpg" alt=""></div>
+        <div class="s17-vcard"><img src="section 17/ảnh/2 (2).jpg" alt=""></div>
+      </div>
+    </div>
+
+    <!-- Trung tâm: ảnh hero + info card -->
+    <div class="s17-center-col">
+      <div class="s17-hero-img">
+        <img src="section 17/ảnh/Ảnh chọn.png"          alt="" class="s17-active">
+        <img src="section 17/ảnh/0. Retouch 5.png"       alt="">
+        <img src="section 17/ảnh/1 (1).jpg"              alt="">
+        <img src="section 17/ảnh/1 (2).jpg"              alt="">
+        <img src="section 17/ảnh/2 (1).jpg"              alt="">
+        <img src="section 17/ảnh/2 (2).jpg"              alt="">
+        <img src="section 17/ảnh/20250515-152917.jpg"    alt="">
+        <img src="section 17/ảnh/20250729-154440.jpg"    alt="">
+        <img src="section 17/ảnh/20260114-112822.jpg"    alt="">
+        <img src="section 17/ảnh/VNPay (1).jpg"          alt="">
+        <img src="section 17/ảnh/Decathlon final.jpg"    alt="">
+      </div>
+      <div class="s17-info-card">
+        <div class="s17-logo-circle">SEO<br>NGON</div>
+        <div>
+          <div class="s17-info-title">SEONGON Agency</div>
+          <div class="s17-info-sub">Google Marketing Agency TOP 1 Việt Nam · 5.000+ doanh nghiệp tin tưởng</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel phải — cuộn xuống -->
+    <div class="s17-side s17-right">
+      <div class="s17-track" id="s17-track-r">
+        <div class="s17-vcard"><img src="section 17/ảnh/20250515-152917.jpg" alt=""></div>
+        <div class="s17-vcard"><img src="section 17/ảnh/20250729-154440.jpg" alt=""></div>
+        <div class="s17-vcard"><img src="section 17/ảnh/20260114-112822.jpg" alt=""></div>
+        <div class="s17-vcard"><img src="section 17/ảnh/VNPay (1).jpg" alt=""></div>
+        <div class="s17-vcard"><img src="section 17/ảnh/Decathlon final.jpg" alt=""></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     SECTION 18 — CONTACT FORM
+════════════════════════════════════════════ -->
+<section id="s18">
+  <div class="wrap">
+    <div><!-- background visible --></div>
+    <div>
+      <div class="badge">ĐỂ LẠI THÔNG TIN</div>
+      <h2>SEONGON TƯ VẤN NGAY</h2>
+      <p class="s18-p">Đội ngũ chuyên gia GEO của chúng tôi sẽ liên hệ trong vòng 24 giờ làm việc.</p>
+      <div class="ctc-links" style="margin-bottom:32px">
+        <div>
+          <a href="#s18" class="btn btn-blue">Đặt lịch tư vấn ngay</a>
+        </div>
+        <a href="tel:0909170709" class="ctc-link">
+          <div class="ctc-ico">☎</div>
+          0909.1707.090
+        </a>
+        <a href="#s18" class="ctc-link">
+          <div class="ctc-ico">💬</div>
+          Chat với tư vấn viên
+        </a>
+      </div>
+      <div class="form-box">
+        <form id="geo-form">
+          <div class="form-row">
+            <div class="fgrp"><label>Họ và tên</label><input type="text" placeholder="Nguyễn Văn A"></div>
+            <div class="fgrp"><label>Tên doanh nghiệp</label><input type="text" placeholder="Công ty ABC"></div>
+          </div>
+          <div class="form-row">
+            <div class="fgrp"><label>Số điện thoại</label><input type="tel" placeholder="0900 000 000"></div>
+            <div class="fgrp"><label>Email</label><input type="email" placeholder="email@company.com"></div>
+          </div>
+          <div class="fgrp"><label>Link website/fanpage</label><input type="url" placeholder="https://website.com"></div>
+          <div class="fgrp"><label>Bạn cần trợ giúp điều gì?</label><textarea placeholder="Mô tả nhu cầu của bạn..."></textarea></div>
+          <button type="submit" class="form-btn">Gửi</button>
+        </form>
+        <div id="form-success" style="display:none;text-align:center;padding:48px 20px">
+          <div style="font-size:40px;margin-bottom:12px">✓</div>
+          <div style="font-size:17px;font-weight:800;color:#10b981;margin-bottom:8px">Gửi thành công!</div>
+          <div style="font-size:13px;color:#6B7280">Chúng tôi sẽ liên hệ trong vòng 24 giờ làm việc.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-logo">SEONGON</div>
+  <p>© 2026 SEONGON. Google Marketing Agency TOP 1 Việt Nam.</p>
+  <p style="margin-top:10px"><a href="admin.html" style="font-size:11px;color:rgba(255,255,255,.25);text-decoration:none">Admin</a></p>
+</footer>
+
+<script>
+(function(){
+  function makeCarousel(side, speed){
+    var track = side.querySelector('.s17-track');
+    if(!track) return;
+    var items = Array.from(track.children);
+    // clone 2× for infinite loop
+    items.forEach(function(item){ track.appendChild(item.cloneNode(true)); });
+    items.forEach(function(item){ track.appendChild(item.cloneNode(true)); });
+
+    var gap = 14;
+    function itemH(){ return (track.children[0].offsetHeight||165) + gap; }
+    function totalH(){ return items.length * itemH(); }
+
+    var y = 0, paused = false, dragging = false, startY = 0, startPos = 0;
+
+    function setY(v){ track.style.transform = 'translateY('+v+'px)'; }
+
+    side.addEventListener('mouseenter', function(){ if(!dragging) paused=true; });
+    side.addEventListener('mouseleave', function(){ if(!dragging) paused=false; });
+
+    side.addEventListener('mousedown', function(e){
+      dragging=true; paused=true;
+      startY=e.clientY; startPos=y; e.preventDefault();
+    });
+    document.addEventListener('mousemove', function(e){
+      if(!dragging) return;
+      y = startPos + (e.clientY - startY);
+      normalize(); setY(y);
+    });
+    document.addEventListener('mouseup', function(){
+      if(!dragging) return;
+      dragging=false; paused=false;
+    });
+
+    side.addEventListener('touchstart', function(e){
+      startY=e.touches[0].clientY; startPos=y; paused=true;
+    },{passive:true});
+    side.addEventListener('touchmove', function(e){
+      y = startPos + (e.touches[0].clientY - startY);
+      normalize(); setY(y);
+    },{passive:true});
+    side.addEventListener('touchend', function(){
+      setTimeout(function(){ paused=false; }, 600);
+    });
+
+    function normalize(){
+      var t = totalH();
+      while(y <= -t) y += t;
+      while(y > 0)   y -= t;
+    }
+
+    function tick(){
+      if(!paused && !dragging){
+        y += speed;
+        normalize();
+        setY(y);
+      }
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  function initHeroSlider(){
+    var imgs = document.querySelectorAll('.s17-hero-img img');
+    if(imgs.length < 2) return;
+    var cur = 0;
+    setInterval(function(){
+      imgs[cur].classList.remove('s17-active');
+      cur = (cur + 1) % imgs.length;
+      imgs[cur].classList.add('s17-active');
+    }, 5000);
+  }
+
+  function init(){
+    var left  = document.querySelector('.s17-left');
+    var right = document.querySelector('.s17-right');
+    if(left)  makeCarousel(left,  -0.5);
+    if(right) makeCarousel(right,  0.5);
+    initHeroSlider();
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', init);
+  } else { init(); }
+})();
+
+// ── Admin: content/image overrides + lead capture ──
+(function(){
+  var contentMap = {
+    's1_h1':   '#s1 h1',         's1_desc': '#s1 .hero-desc',    's1_sub':  '#s1 .hero-sub',
+    's2_h2':   '#s2 h2',         's2_p':    '#s2 .sec-hd p',
+    's3_h2':   '#s3 h2',         's3_p':    '#s3 .sec-hd p',
+    's4_h2':   '#s4 h2',         's4_p':    '#s4 .sec-hd p',
+    's5_h2':   '#s5 h2',
+    's6_h2':   '#s6 h2',         's6_sub':  '#s6 p.sub',         's6_p': '#s6 .s6-left p:not(.sub)',
+    's7_h2':   '#s7 h2',
+    's8_h2':   '#s8 h2',         's8_p':    '#s8 .sec-hd p',
+    's9_h2':   '.s9-hd h2',
+    's91_h3':  '#s91 .s9-t',     's91_p':   '#s91 .s9-p',
+    's92_h3':  '#s92 .s9-t',     's92_p':   '#s92 .s9-p',
+    's93_h3':  '#s93 .s9-t',     's93_p':   '#s93 .s9-p',
+    's94_h3':  '#s94 .s9-t',     's94_p':   '#s94 .s9-p',
+    's10_h2':  '#s10 h2',
+    's11_h2':  '#s11 h2',        's11_p':   '#s11 .sec-hd p',
+    's12_h2':  '#s12 h2',        's12_p':   '#s12 .sec-hd p',
+    's13_h2':  '#s13 h2',        's13_p':   '#s13 .sec-hd p',
+    's14_h2':  '#s14 h2',        's14_sub': '#s14 .s14-sub',
+    's15_h2':  '#s15 h2',        's15_sub': '#s15 .s15-sub',
+    's16_h2':  '#s16 h2',        's16_p':   '#s16 .sec-hd p',
+    's17_h2':  '#s17 h2',        's17_sub': '#s17 .s17-sub',     's17_p': '#s17 .s17-p',
+    's18_h2':  '#s18 h2',        's18_p':   '#s18 .s18-p'
+  };
+  var imgMap = {
+    'bg_s1': {sel:'#s1'}, 'bg_s2': {sel:'#s2'}, 'bg_s3': {sel:'#s3'},
+    'bg_s4': {sel:'#s4'}, 'bg_s5': {sel:'#s5'}, 'bg_s6': {sel:'#s6'},
+    'bg_s7': {sel:'#s7'}, 'bg_s8': {sel:'#s8'}, 'bg_s10':{sel:'#s10'},
+    'bg_s11':{sel:'#s11'},'bg_s12':{sel:'#s12'},'bg_s13':{sel:'#s13'},
+    'bg_s14':{sel:'#s14'},'bg_s15':{sel:'#s15'},'bg_s16':{sel:'#s16'},
+    'bg_s17':{sel:'#s17'},'bg_s18':{sel:'#s18'}
+  };
+  function applyOverrides(){
+    var ct = JSON.parse(localStorage.getItem('seongon_content')||'{}');
+    Object.keys(ct).forEach(function(k){
+      var s=contentMap[k]; if(!s) return;
+      var el=document.querySelector(s); if(el) el.innerHTML=ct[k];
+    });
+    if(ct['s18_phone']){
+      var ph=document.querySelector('#s18 a[href^="tel"]');
+      if(ph){ ph.href='tel:'+ct['s18_phone'].replace(/\D/g,'');
+        var t=ph.lastChild; if(t&&t.nodeType===3) t.textContent=ct['s18_phone']; }
+    }
+    var im=JSON.parse(localStorage.getItem('seongon_images')||'{}');
+    Object.keys(im).forEach(function(k){
+      if(imgMap[k]){
+        // background image with known selector
+        var el=document.querySelector(imgMap[k].sel); if(!el) return;
+        el.style.backgroundImage="url('"+im[k]+"')";
+      } else {
+        // img src replacement — find all img with this src and replace
+        document.querySelectorAll('img').forEach(function(img){
+          if(img.getAttribute('src')===k) img.setAttribute('src',im[k]);
+        });
+      }
+    });
+  }
+  function initForm(){
+    var form=document.getElementById('geo-form');
+    var succ=document.getElementById('form-success');
+    if(!form) return;
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var g=function(sel){var el=form.querySelector(sel);return el?el.value.trim():'';};
+      var lead={
+        id:Date.now(),
+        time:new Date().toLocaleString('vi-VN'),
+        name:   g('[placeholder="Nguyễn Văn A"]'),
+        company:g('[placeholder="Công ty ABC"]'),
+        phone:  g('[type="tel"]'),
+        email:  g('[type="email"]'),
+        website:g('[type="url"]'),
+        message:g('textarea')
+      };
+      var arr=JSON.parse(localStorage.getItem('seongon_leads')||'[]');
+      arr.push(lead);
+      localStorage.setItem('seongon_leads',JSON.stringify(arr));
+      form.style.display='none';
+      if(succ) succ.style.display='block';
+    });
+  }
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',function(){applyOverrides();initForm();});
+  } else { applyOverrides(); initForm(); }
+})();
+</script>
+</body>
+</html>
